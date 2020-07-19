@@ -1,2 +1,0 @@
-# myHost
-basic host
