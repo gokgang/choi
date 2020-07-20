@@ -93,6 +93,7 @@
 .ps24 {text-align:center;}
 .ps25 {text-align:right;}
 .ps26 {text-align:center;}
+.ps27 {text-align:center;}
 @media print {
 .hpa {margin:0;border:0 black none;box-shadow:none;}
 body {padding:0;}
