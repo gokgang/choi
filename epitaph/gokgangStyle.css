@@ -1,4 +1,60 @@
-﻿body {margin:10;padding-left:10;padding-right:10;padding-bottom:10;padding-top:2mm;}
-div {font-size:16pt;color:#000000;font-family:"Batang";}
-span {font-size:16pt;color:#000000;font-family:"한양해서";}
-body {padding:0;}
+﻿body {
+    font-family: Batang;
+	margin-top:24pt;
+	margin-bottom:24pt;
+	text-align:justify;
+	text-indent:0.0pt;
+	line-height:160%;
+	font-size:11pt;
+	letter-spacing:0;
+	font-weight:normal;
+	font-style:normal;
+	color:#000000;
+    }
+h1 {
+    font-size: 20pt;font-family: '한양해서';text-align: center;color:rgb(200, 200, 200);
+  }
+  
+ h2 {
+    font-size: 24pt; text-align: center;
+  }
+  
+a {
+    color: black; text-decoration: none;
+}
+
+span {
+    font-size:11pt;color:#000000;font-family:"한양해서";
+}
+
+tr{
+    text-align: center;
+}
+td{
+    width: 33pt;
+}
+.StyleBatang {
+	margin-top:0.0pt;
+	margin-bottom:0.0pt;
+	text-align:justify;
+	text-indent:0.0pt;
+	line-height:160%;
+	font-size:11.0pt;
+	font-family:Batang;
+	letter-spacing:0;
+	font-weight:normal;
+	font-style:normal;
+	color:#000000;
+}
+.active {
+    color: yellowgreen;
+}
+.saw {
+    color: gray;
+}
+.Hanyang{
+    font-family: '한양해서';color: gray;
+}
+.grayBatang{
+    font-family: '바탕';    color: rgb(177, 183, 189);
+}
