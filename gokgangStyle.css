@@ -15,14 +15,17 @@
 a {
     color: darkslateblue; text-decoration: none;
 }
+li {
+	list-style-type: none;
+}
 
 span {
     font-family:"한양해서";
 }
 
 .StyleBatang {
-	margin-top:0.0pt;
-	margin-bottom:0.0pt;
+	margin-top:10px;
+	margin-bottom:10px;
 	text-align:justify;
 	text-indent:0.0pt;
 	line-height:160%;
