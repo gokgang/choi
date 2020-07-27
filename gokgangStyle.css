@@ -24,15 +24,9 @@ a {
 }
 
 span {
-    font-size:11pt;color:#000000;font-family:"한양해서";
+    font-family:"한양해서";
 }
 
-tr{
-    text-align: center;
-}
-td{
-    width: 33pt;
-}
 .StyleBatang {
 	margin-top:0.0pt;
 	margin-bottom:0.0pt;
