@@ -20,11 +20,36 @@ h1 {
 	padding: 20px;
 }
 
-#grid ol {
-	border-right: 1px solid gray;
-	width: 100px;
-	margin: 0;
-	padding: 20px;
+@media(min-width:800px){
+	#grid ol {
+		border-right: 1px solid gray;
+		width: 100px;
+		margin: 0;
+		padding: 20px;
+	}
+	#grid {
+		display: grid;
+		grid-template-columns: 150px 1fr;
+	}
+
+	#leftFadding25 {
+		padding-left: 25px;
+	}
+
+	.marginLeft {
+		margin-left: 45px;
+	}
+
+	.alignCenterFont40 {
+		text-align: center;
+		font-size: 40px;
+	}
+
+	.alignCenterFont30 {
+		text-align: center;
+		font-size: 30px;
+		color: lightgray;
+	}
 }
 
 @media(max-width:800px) {
@@ -53,30 +78,6 @@ li {
 
 span {
 	font-family: "한양해서";
-}
-
-#grid {
-	display: grid;
-	grid-template-columns: 150px 1fr;
-}
-
-#leftFadding25 {
-	padding-left: 25px;
-}
-
-.marginLeft {
-	margin-left: 45px;
-}
-
-.alignCenterFont40 {
-	text-align: center;
-	font-size: 40px;
-}
-
-.alignCenterFont30 {
-	text-align: center;
-	font-size: 30px;
-	color: lightgray;
 }
 
 .Hanyang {
