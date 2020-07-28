@@ -1,48 +1,85 @@
 ﻿body {
-    font-family: Batang;
-	margin-top:24pt;
-	margin-bottom:24pt;
-	text-align:justify;
-	text-indent:0.0pt;
-	line-height:160%;
-	font-size:11pt;
-	letter-spacing:0;
-	font-weight:normal;
-	font-style:normal;
-	color:#000000;
-    }
+	font-family: Batang;
+	margin: 5px;
+	margin-top: 24pt;
+	margin-bottom: 24pt;
+	text-align: justify;
+	text-indent: 0.0pt;
+	line-height: 160%;
+	font-size: 11pt;
+	letter-spacing: 0;
+	font-weight: normal;
+	font-style: normal;
+	color: #000000;
+}
+
 h1 {
-    font-size: 20pt;font-family: '한양해서';text-align: center;color:rgb(200, 200, 200);
-  }
-  
- h2 {
-    font-size: 24pt; text-align: center;
-  }
-  
+	font-size: 45px;
+	border-bottom: 1px solid gray;
+	margin: 0;
+	padding: 20px;
+}
+
+#grid ol {
+	border-right: 1px solid gray;
+	width: 100px;
+	margin: 0;
+	padding: 20px;
+}
+
+@media(max-width:800px) {
+	#grid {
+		display: block;
+	}
+
+	#grid ol {
+			border-right: none;
+		}
+
+	h1 {
+		font-size: inherit;
+		border-bottom: none;
+	}
+}
+
 a {
-    color: black; text-decoration: none;
+	color: blue;
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
 }
 
 span {
-    font-family:"한양해서";
+	font-family: "한양해서";
 }
 
-.StyleBatang {
-	margin-top:0.0pt;
-	margin-bottom:0.0pt;
-	text-align:justify;
-	text-indent:0.0pt;
-	line-height:160%;
-	font-size:11.0pt;
-	font-family:Batang;
-	letter-spacing:0;
-	font-weight:normal;
-	font-style:normal;
-	color:#000000;
+#grid {
+	display: grid;
+	grid-template-columns: 150px 1fr;
 }
-.Hanyang{
-    font-family: '한양해서';color: gray;
+
+#leftFadding25 {
+	padding-left: 25px;
 }
-.grayBatang{
-    font-family: '바탕';    color: rgb(177, 183, 189);
+
+.marginLeft {
+	margin-left: 45px;
+}
+
+.alignCenterFont40 {
+	text-align: center;
+	font-size: 40px;
+}
+
+.alignCenterFont30 {
+	text-align: center;
+	font-size: 30px;
+	color: lightgray;
+}
+
+.Hanyang {
+	font-family: '한양해서';
+	color: gray;
 }
