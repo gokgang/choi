@@ -1,9 +1,9 @@
 ﻿body {
-	font-family: Batang;
+	font-family: '바탕' 'sans serif';
 	line-height: 100%;
 	font-size: 15px;
 	letter-spacing: 0;
-	background-color: rgb(224, 229, 235);
+	margin: 20 20 20;
 }
 
 a {
