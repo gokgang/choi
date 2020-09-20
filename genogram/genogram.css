@@ -62,6 +62,11 @@ a {
 .borderBottom{
 	border-bottom: 1px solid lightblue;
 }
+
 .borderAll{
 	border: 1px solid lightblue;
+}
+
+.borderTop{
+	border-top: 1px solid lightblue;
 }
