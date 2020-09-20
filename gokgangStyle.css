@@ -1,5 +1,5 @@
 ﻿body {
-	font-family: '바탕';
+	font-family: Batang;
 	margin: 0px;
 	margin-top: 24pt;
 	margin-bottom: 24pt;
@@ -11,7 +11,7 @@
 	font-weight: normal;
 	font-style: normal;
 	color: black;
-	/*background-color: grey;*/
+	background-color: grey;
 }
 
 @media(min-width:800px){
