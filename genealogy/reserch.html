@@ -15,19 +15,13 @@
 		}
 		p{ text-align: center;}
 	</style>
-	<script>
-		function findName(){
-			const id_input = document.getElementById('input');
-           if(id_input.value=="") {
-			   alert("이름을 입력하세요^-^");
-		   } else if(!find(id_input.value)) alert("같은 이름의 친족이 더 계시지 않습니다!");
-		}
+	<script src="./Script/reserch.js">
 	</script>
 </head>
 <body>
 	<section class="hero">
 		<p style="font-size: x-large; padding-top: 10px;">곡강최가 가계보 차례</p>
-		<p><input type="text" id="input" value="" onclick="value='';" onkeypress="findName();"><button onclick="findName();">찾 기</button></p>
+		<p><input type="text" id="input" value="이름" onclick="value='';" onkeypress="findName();"><button onclick="findName();">찾 기</button></p>
 		<p>이름이 한글자이면 성과 이름을 함께 입력하세요(예 : 최영)</p>
 	</section>
 <nav>
@@ -93,6 +87,8 @@
 			<td width="50" style="text-align: center;" > 3</td>
 			<td class="borderLeft">
 				<a href="./page003.html">
+					16세<br>
+					17세<br>
 					18세 대윤(大潤)<br>
 					19세 유항(有恒) 유보(有輔)<br>
 					20세 만영(萬英) 만봉(萬峯) 만리(萬里) 만현(萬賢) 만상(萬相)<br>
@@ -108,6 +104,9 @@
 			<td width="50" style="text-align: center;"> 4</td>
 			<td class="borderLeft">
 				<a href="./page004.html">
+					16세<br>
+					17세<br>
+					18세<br>
 					19세 남두(南斗) 유진(有軫) <br>
 					20세 만재(萬載) 준흥(俊興) 준걸(俊傑)<br>
 					21세 최순(淳) 시담(時聃)<br>
@@ -121,6 +120,7 @@
 			<td width="50" style="text-align: center;"> 5</td>
 			<td class="borderLeft">
 				<a href="./page005.html">
+					16세<br>
 					17세 경화(慶華)<br>
 					18세 대준(大俊)<br>
 					19세 유장(有章) 봉초(鳳楚) 여성(汝成) 지원(之元) <br>
@@ -156,7 +156,6 @@
 					23세 영호(永豪) 득재(得載) 봉언(鳳彦) 봉운(鳳雲)<br>
 					24세 운학(雲鶴) 운관(雲寬) 원일(元一) 성손(聖孫) 복손(卜孫) 복수(卜守) <br>
 					25세 동식(東植) 영식(迎植) 종식(宗植) 은택(恩澤) <br>
-					26세 덕호(德祜) <br>
 				</a>
 			</td>
 		</tr>
@@ -172,7 +171,6 @@
 					23세 봉조(鳳祚) 치덕(致德) 경덕(敬德) <br>
 					24세 수범(綏範) 수서(綏書) 수주(綏疇)  창록(昌祿) 창득(昌得) <br>
 					25세 순택(舜澤) 경택(擎澤) 경순(擎淳) <br>
-					26세 기식(基植) 진식(晉植) <br>
 				</a>
 			</td>
 		</tr>
@@ -198,10 +196,11 @@
 			<td width="50" style="text-align: center;">10</td>
 			<td class="borderLeft">
 				<a href="./page010.html">
+					21세<br>
+					22세<br>
 					23세 주한(胄漢) <br>
 					24세 영억(永檍) <br>
 					25세 인택(仁澤) 흥택(興澤) 능택(能澤) <br>
-					26세 중식(重植) <br>
 				</a>
 			</td>
 		</tr>
@@ -212,17 +211,17 @@
 			<td width="50" style="text-align: center;">11</td>
 			<td class="borderLeft">
 				<a href="./page011.html">
+					21세<br>
 					22세 최박(崔璞)<br>
 					23세 명한(明漢) 우한(祐漢)<br>
 					24세 기억(杞億)<br>
 					25세 능택(能澤) 임택(林澤) 만택(萬澤) 원택(遠澤) <br>
-					26세 원식(元植) 석출(石出)<br>
 				</a>
 			</td>
 		</tr>
 	</table>
 
-	<table id="page012" cellspacing=0 cellpadding=0 width="1500" height="180px" class="borderBottom">
+	<table id="page012" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
 		<tr>
 			<td width="50" style="text-align: center;">12</td>
 			<td class="borderLeft">
@@ -237,11 +236,12 @@
 		</tr>
 	</table>
 
-	<table id="page013" cellspacing=0 cellpadding=0 width="1500" height="180px" class="borderBottom">
+	<table id="page013" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
 		<tr>
 			<td width="50" style="text-align: center;">13</td>
 			<td class="borderLeft">
 				<a href="./page013.html">
+					21세<br>
 					22세 최침(崔琛) <br>
 					23세 응한(應漢) <br>
 					24세 창범(昌範) <br>
@@ -251,11 +251,12 @@
 		</tr>
 	</table>
 
-	<table id="page014" cellspacing=0 cellpadding=0 width="1500" height="180px" class="borderBottom">
+	<table id="page014" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
 		<tr>
 			<td width="50" style="text-align: center;">14</td>
 			<td class="borderLeft">
 				<a href="./page014.html">
+					21세<br>
 					22세 최역(崔瓅) <br>
 					23세 광한(光漢) <br>
 					24세 상범(象範) 성범(成範) <br>
@@ -265,7 +266,7 @@
 		</tr>
 	</table>
 
-	<table id="page015" cellspacing=0 cellpadding=0 width="1500" height="180px" class="borderBottom">
+	<table id="page015" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
 		<tr>
 			<td width="50" style="text-align: center;">15</td>
 			<td class="borderLeft">
@@ -280,7 +281,7 @@
 		</tr>
 	</table>
 
-	<table id="page016" cellspacing=0 cellpadding=0 width="1500" height="180px" class="borderBottom">
+	<table id="page016" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
 		<tr>
 			<td width="50" style="text-align: center;">16</td>
 			<td class="borderLeft">
@@ -295,7 +296,7 @@
 		</tr>
 	</table>
 
-	<table id="page017" cellspacing=0 cellpadding=0 width="1500" height="180px" class="borderBottom">
+	<table id="page017" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
 		<tr>
 			<td width="50" style="text-align: center;">17</td>
 			<td class="borderLeft">
@@ -309,23 +310,164 @@
 			</td>
 		</tr>
 	</table>
+	<table id="page018" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
+		<tr>
+			<td width="50" style="text-align: center;">18</td>
+			<td class="borderLeft">
+				<a href="./page018.html">
+					21세 천운(天運) 천한(天翰)<br>
+					22세 정진(貞晉) 광진(光晉) 득후(得厚) 용득(龍得) 원삼(願三)<br>
+					23세 문헌(文憲) 달민(達民) 달복(達福) 후시(厚時) 집성(集成)<br>
+					24세 상규(祥奎) 귀영(貴永) 녹이(祿伊)<br>
+					25세 경순(景淳) 치순(致淳) 복삼(福三)<br>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<table id="page019" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
+		<tr>
+			<td width="50" style="text-align: center;">19</td>
+			<td class="borderLeft">
+				<a href="./page019.html">
+					21세 천주(天柱)<br>
+					22세 용진(龍晉)<br> 
+					23세 벽헌(檘憲)<br>
+					24세 근규(根奎) 희규(希奎)<br>
+					25세 상순(翔淳) 응순(應淳)<br>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<table id="page020" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
+		<tr>
+			<td width="50" style="text-align: center;">20</td>
+			<td class="borderLeft">
+				<a href="./page020.html">
+					21세 천익(天翼)<br>
+					22세 종진(宗晉)<br>
+					23세 치헌(致憲)<br>
+					24세 경규(慶奎) 흥규(興奎)<br>
+					25세 영순(永淳) 필순(弼淳) 도순(導淳)<br>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<table id="page021" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
+		<tr>
+			<td width="50" style="text-align: center;">21</td>
+			<td class="borderLeft">
+				<a href="./page021.html">
+					21세 운익(雲翼)<br>
+					22세 우신(雨新)<br>
+					23세 종학(宗學) 종열(宗烈)<br>
+					24세 원극(元極) 덕암(德巖) 규한(奎漢) 영주(永周) 경기(景琦)<br>
+					25세 철석(喆碩) 철수(喆壽) 철완(喆完) 철영(喆韺) 철한(喆翰)<br>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<table id="page022" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
+		<tr>
+			<td width="50" style="text-align: center;">22</td>
+			<td class="borderLeft">
+				<a href="./page022.html">
+					21세 <br>
+					22세 <br>
+					23세 종엽(宗曄)<br>
+					24세 경수(景琇) 상봉(相鳳)<br>
+					25세 철원(喆源) 철하(喆河) 철순(喆淳)<br>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<table id="page023" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
+		<tr>
+			<td width="50" style="text-align: center;">23</td>
+			<td class="borderLeft">
+				<a href="./page023.html">
+					21세 <br>
+					22세 우함(雨咸)<br>
+					23세 종묵(宗黙)<br>
+					24세 지범(志範) 은범(恩範)<br>
+					25세 재돈(在敬) 재경(在敬) 재교(在敎) 재민(在敏) 수문(守文)<br>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<table id="page024" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
+		<tr>
+			<td width="50" style="text-align: center;">24</td>
+			<td class="borderLeft">
+				<a href="./page024.html">
+					21세 덕창(德昌)<br>
+					22세 태재(泰才)<br>
+					23세 도일(道一)<br>
+					24세 영악(榮岳) 영흥(榮興)<br>
+					25세 돌몽(乭夢) 돌명(乭明) 돌수(乭守) 돌등(乭嶝) 돌현(乭賢)<br>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<table id="page025" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
+		<tr>
+			<td width="50" style="text-align: center;">25</td>
+			<td class="borderLeft">
+				<a href="./page025.html">
+					21세 <br>
+					22세 <br>
+					23세 도칠(道七) <br>
+					24세 영득(榮得) 영은(榮殷) 영진(榮進) 영중(榮中)<br>
+					25세 돌흥(乭興) 돌식(乭植) 돌우(乭佑) 돌경(乭敬)<br>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<table id="page026" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
+		<tr>
+			<td width="50" style="text-align: center;">26</td>
+			<td class="borderLeft">
+				<a href="./page026.html">
+					21세 덕륜(德崙)<br>
+					22세 일경(日鏡) 일신(日新)<br>
+					23세 용기(龍起) 종헌(宗憲) 종철(宗哲)<br>
+					24세 건극(建極) 건곡(建鵠)<br>
+					25세 도순(道淳) 종순(鍾淳) 하순(河淳)<br>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<table id="page027" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
+		<tr>
+			<td width="50" style="text-align: center;">27</td>
+			<td class="borderLeft">
+				<a href="./page027.html">
+					26세 용식(容植)<br>
+					27세 종호(宗祜)<br>
+					28세 재기(在琪) 재해(在海) 재일(在日)<br>
+					29세 은석(銀錫) 준석(俊錫) 성석(聖錫) 창석(昌錫) 석근(錫根)<br>
+					30세 운학(雲鶴) 신학(新鶴) 경학(慶鶴) 원학(元鶴) 위곤(渭坤) 금태(今泰) 경태(慶泰) 태훈(泰勳)<br>
+					31세 형길(亨吉) 지욱(智旭) 형윤(亨允) 재혁(宰赫) 영걸(榮杰) 용걸(溶杰)<br>
+				</a>
+			</td>
+		</tr>
+	</table>
+	<!-- <table id="page028" cellspacing=0 cellpadding=0 width="1500" height="150px" class="borderBottom">
+		<tr>
+			<td width="50" style="text-align: center;">28</td>
+			<td class="borderLeft">
+				<a href="./page028.html">
+					26세 
+					27세 
+					28세 
+					29세 
+					30세 
+					31세 
+				</a>
+			</td>
+		</tr>
+	</table> -->
+
 </div>
 </nav>
-<script>
-    const section = document.querySelector('section');
-    const sectionTopOffset = section.offsetTop;
-
-    window.addEventListener('scroll', e => {
-        if (window.pageYOffset >= sectionTopOffset){
-            section.style.position = 'fixed';
-            section.style.top = 0;
-            section.style.left = 0;
-            section.style.right = 0;
-        } else {
-            section.style.position = ' ';
-            section.style.top = ' ';
-        }
-    });
-</script>
 </body>
 </html>
