@@ -5,7 +5,7 @@
     text-size-adjust: auto;
     text-align:justify;
     text-indent: 0px;
-    font-family: '바탕';
+    font-family: serif;
     font-size: 20px;
     font-weight: normal;
     font-style: normal;
@@ -88,7 +88,6 @@ td{
         text-align: center;
         font-size: 13pt;
         margin: 1px;
-        border: none;
     }
     h2 {
         text-align: center;
@@ -96,7 +95,7 @@ td{
         margin: 1px;
     }
     h3 {
-        font-family: "한양해서";
+        font-family: serif;
         text-align: center;
         font-size: 13pt;
         margin: 1px;
@@ -104,7 +103,7 @@ td{
 }
 
 a{
-        color:blue;
+        color:darkblue;
         text-decoration:none;
     }
     li{
@@ -112,14 +111,14 @@ a{
         list-style-type:none;
     }
 span {
-    font-family: "한양해서";
+    font-family: "한양해서" serif;
 }
 .gainHan{
-        font-family:"한양해서";
-       color:gainsboro;
+        font-family:"한양해서" serif;
+        color:gainsboro;
     }
 .Batang{
-        font-family:Batang;
+        font-family:"Batang" serif;
         font-size:13pt;
         color:darkblue;
     }
