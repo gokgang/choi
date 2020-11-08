@@ -1,0 +1,63 @@
+body{
+	margin-left:5;
+	margin-right:0;
+	margin-top:5;
+	margin-bottom:5;
+	text-align:justify;
+	text-indent:0;
+	line-height:150%;
+	font-size: 15px;
+	font-family: Serif;
+	letter-spacing:0;
+	font-weight: normal;
+	font-style: normal;
+	background-color: rgb(213, 213, 213);
+}
+
+a {
+	text-decoration: unset;
+	color: darkblue;
+}
+
+span {
+	font-family: "한양해서";
+	font-size: 13px;
+	color: grey;
+}
+
+.hTable{
+	width: 1500px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+td{
+	vertical-align: center;
+}
+
+small{
+	font-size: 13px;
+}
+
+.borderBottom{
+	border-bottom:grey solid 1px;
+}
+
+.borderLeft{
+	border-left: grey solid 0.5px;
+}
+
+.borderRight{
+	border-left: grey solid 0.5px;
+}
+
+.alignCenter{
+	text-align:center;
+	font-size: 20px;
+}
+
+.textCenter{
+	text-align: center;
+	font-size: 15px;
+}

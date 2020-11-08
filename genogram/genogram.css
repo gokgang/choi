@@ -1,5 +1,5 @@
 ﻿body {
-	font-family: '바탕' 'sans serif';
+	font-family: serif;
 	line-height: 100%;
 	font-size: 15px;
 	letter-spacing: 0;
@@ -54,19 +54,19 @@ a {
 }
 
 .borderLeftBottomRight{
-	border-left: 1px solid gray;
-	border-bottom: 1px solid gray;
-	border-right: 1px solid gray;
+	border-left: 0.5px solid gray;
+	border-bottom: 0.5px solid gray;
+	border-right: 0.5px solid gray;
 }
 
 .borderBottom{
-	border-bottom: 1px solid lightblue;
+	border-bottom: 0.5px solid lightblue;
 }
 
 .borderAll{
-	border: 1px solid lightblue;
+	border: 0.5px solid lightblue;
 }
 
 .borderTop{
-	border-top: 1px solid lightblue;
+	border-top: 0.5px solid lightblue;
 }
