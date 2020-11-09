@@ -14,9 +14,12 @@ body{
 	background-color: rgb(213, 213, 213);
 }
 
-a {
-	text-decoration: unset;
+a:link, a:visited{
+	text-decoration: none;
 	color: darkblue;
+}
+a:hover, a:active{
+    color: blue;
 }
 
 span {
