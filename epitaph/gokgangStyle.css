@@ -19,10 +19,13 @@ h1 {
     font-size: 24pt; text-align: center;
   }
   
-a {
-    color: black; text-decoration: none;
+  a:link, a:visited{
+	text-decoration: none;
+	color: darkblue;
 }
-
+a:hover, a:active{
+    color: blue;
+}
 span {
     font-family:"한양해서";
 }
