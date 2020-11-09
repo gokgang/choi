@@ -14,15 +14,17 @@ body{
 	background-color: rgb(213, 213, 213);
 }
 
-a {
-	text-decoration: unset;
+a:link, a:visited{
+	text-decoration: none;
 	color: darkblue;
+}
+a:hover, a:active{
+    color: blue;
 }
 
 div{
 	margin-left: auto;
 	margin-right: auto;
-    width: 3000px;
 }
 table{
 	border-collapse: collapse;
@@ -38,7 +40,6 @@ span {
 }
 
 .hTable{
-	width: 3000px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 20px;
