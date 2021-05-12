@@ -1,5 +1,5 @@
 ﻿body {
-    font-family: Batang;
+  font-family: serif;
 	margin-top:24pt;
 	margin-bottom:24pt;
 	text-align:justify;
@@ -9,13 +9,15 @@
 	letter-spacing:0;
 	font-weight:normal;
 	font-style:normal;
-	color:#000000;
-    }
+  background-color: rgb(213, 213, 213);
+  }
 h1 {
-    font-size: 20pt;font-family: '한양해서';text-align: center;color:rgb(200, 200, 200);
+    font-size: 20pt;font-family: '한양해서';
+    text-align: center;
+    color:rgb(200, 200, 200);
   }
   
- h2 {
+h2 {
     font-size: 24pt; text-align: center;
   }
   
