@@ -5,7 +5,7 @@
     text-size-adjust: auto;
     text-align:justify;
     text-indent: 0px;
-    font-family: serif;
+    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     font-weight: normal;
     font-style: normal;
@@ -44,7 +44,7 @@ td{
 .borderAll{
     border: 1px solid lightskyblue;
 }
-
+/* 
 @media(min-width:1080px){
     #grid ol {
         border-right: 1px solid gainsboro;
@@ -54,7 +54,8 @@ td{
     #grid {
         display: grid;
         grid-template-columns: 180px 180px 180px 180px 1fr;
-    }
+    } */
+
     h1 {
         font-size: 30px;
         text-align: center;
@@ -104,7 +105,7 @@ td{
 
 a:link, a:visited{
 	text-decoration: none;
-	color: darkblue;
+	color: navy;
 }
 a:hover, a:active{
     color: blue;
@@ -114,14 +115,14 @@ li{
     list-style-type:none;
 }
 span {
-    font-family: "한양해서" serif;
+    font-family: "한양해서", serif;
 }
 .gainHan{
-        font-family:"한양해서" serif;
+        font-family:"한양해서", serif;
         color:gainsboro;
     }
 .Batang{
-        font-family:"Batang" serif;
+        font-family:"Batang", serif;
         font-size:13pt;
         color:darkblue;
     }
