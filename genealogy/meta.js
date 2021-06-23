@@ -2089,3 +2089,29 @@ const Family = [];
     {father: "차섭",    self: "재문",    url: "page060_3.html"},
     {father: "재문",    self: "훈석",    url: "page060_3.html"},
   ];
+
+  Family[61] = [
+    {father: "필순",    self: "병기",    url: "page061.html"},
+    {father: "병기",    self: "창섭",    url: "page061.html"},
+    {father: "창섭",    self: "재수",    url: "page061.html"},
+    {father: "재수",    self: "용석",    url: "page061.html"},
+    {father: "창섭",    self: "원도",    url: "page061.html"},
+    {father: "원도",    self: "용석",    url: "page061.html"},
+    {father: "창섭",    self: "재순",    url: "page061.html"},
+    {father: "재순",    self: "광석",    url: "page061.html"},
+    {father: "창섭",    self: "원호",    url: "page061.html"},
+    {father: "원호",    self: "광석",    url: "page061.html"},
+    {father: "창섭",    self: "재흠",    url: "page061.html"},
+    {father: "창섭",    self: "재우",    url: "page061.html"},
+    {father: "재우",    self: "중석",    url: "page061.html"},
+
+    {father: "병기",    self: "동섭",    url: "page061_1.html"},
+    {father: "동섭",    self: "재표",    url: "page061_1.html"},
+    {father: "재표",    self: "현석",    url: "page061_1.html"},
+    {father: "재표",    self: "홍석",    url: "page061_1.html"},
+    {father: "동섭",    self: "재일",    url: "page061_1.html"},
+    {father: "재일",    self: "윤석",    url: "page061_1.html"},
+    {father: "재일",    self: "영석",    url: "page061_1.html"},
+    {father: "동섭",    self: "재호",    url: "page061_1.html"},
+    {father: "재호",    self: "정석",    url: "page061_1.html"},
+  ];
