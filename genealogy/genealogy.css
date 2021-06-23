@@ -35,6 +35,8 @@ table{
   margin: auto;
 }
 
+table.family tr:hover {background-color: white;}
+
 td{
 	border: 1px solid #def;
   vertical-align: center;

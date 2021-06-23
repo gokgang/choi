@@ -14,7 +14,7 @@
 </head>
 <body style="font-size: 16px;">
   <section style="text-align: center; background-color: rgb(213, 213, 213);">
-    <h1 style="font-size: 36px; color: navy;text-align: center;">곡 강 최 가</h1>
+    <h1 style="font-family: 한양해서; font-size: 48px; letter-spacing: 2rem; color: navy;text-align: center; text-shadow: 2px 2px 3px green;">曲 江 崔 家</h1>
     아버지 : <input name="father" id="father" type="text" value=""onkeypress="findFamily(this.value, document.getElementById('selfName').value);" onclick="this.value=''">
     족친 이름 : <input id="selfName" type="text" value="" onkeypress="findFamily(document.getElementById('father').value, this.value);" onclick="this.value=''">
     <button onclick="findFamily(document.getElementById('father').value, document.getElementById('selfName').value);">찾기</button><br>
@@ -26,7 +26,7 @@
 </body>
 </html>
 <script>
-
+  // 아버지를 모르면 입력란 감추기
   function hide(hide) {
     const element = document.getElementById(hide);
     if (element.style.visibility != "hidden") {
@@ -40,8 +40,9 @@
     }
   }
 
+  // 아버지 이름과 자신의 이름으로 찾기
   function findFamily (fatheName="", selfName="") {
-    let count = 0;
+    let count = 0;  // 찾은 사람 수
     const element = document.getElementById('fatherSelector');
 
     if (element.value === "true" && fatheName === "") {
@@ -91,14 +92,16 @@
       }//end outter for
     } // end else-if
 
-    if (count > 0) {
+    if (count >= 1) {
       alert(`모두 ${count} 명의 족친을 찾았습니다.`);
       return;
+    } else {
+      return  alert(`아버지 [${fatheName}], 이름 [${selfName}]의 족친은 계시지 않습니다!`);
     }
 
-    return  alert(`아버지 [${fatheName}], 이름 [${selfName}]의 족친은 계시지 않습니다!`);
   }// end findFamily()
 
+  // 입력 헤더 고정
   const section = document.querySelector('section');
   const sectionTopOffset = section.offsetTop;
 

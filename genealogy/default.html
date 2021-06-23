@@ -11,15 +11,20 @@
     body{font-size: 18px;}
     span{font-family: '한양해서'; color: grey;}
   </style>
+  <script>
+    function changeOpacity(id){
+      document.getElementById(id).style.opacity = "1";
+    }
+    function resetOpacity(id){
+      document.getElementById(id).style.opacity = "0.3";
+    }
+  </script>
 </head>
 <body>
   
   <div style="width: 1200px; margin: auto;">
-    <div>
-      <img src="./image/genogram_0.jpg " width="90%" onclick="window.open('/epitaph/genogram_0.jpg ')">
-      <img src="./image/genogram_1.jpg " width="30%" onclick="window.open('/epitaph/genogram_1.jpg ')">
-      <img src="./image/genogram_2.jpg " width="30%" onclick="window.open('/epitaph/genogram_2.jpg ')">
-      <img src="./image/genogram_3.jpg " width="30%" onclick="window.open('/epitaph/genogram_3.jpg ')">
+    <div style="text-align: center;">
+      <img id="sijo" src="./image/genogram_0.jpg " onclick="window.open('/epitaph/genogram_0.jpg ')" style="width: 800px; opacity: 0.5;" onmouseover="changeOpacity('sijo')" onmouseout="resetOpacity('sijo')">
     </div>
     <h1 style="font: size 36px; text-align: center;">
       시조 곡강부원군 묘비명
@@ -63,6 +68,11 @@
       통정대부 승정원 우부승지 참의형조사겸 경연참찬관 춘추관 수찬관 연안 이정하 씀<br>
       <div style="text-align: center;">숭정기원후4 을축(1842년) 5월 일에 세움</div>
     </p>
+    <div>
+      <img src="./image/genogram_1.jpg " width="30%" onclick="window.open('/epitaph/genogram_1.jpg ')">
+      <img src="./image/genogram_2.jpg " width="30%" onclick="window.open('/epitaph/genogram_2.jpg ')">
+      <img src="./image/genogram_3.jpg " width="30%" onclick="window.open('/epitaph/genogram_3.jpg ')">
+    </div>
   </div>
 
 </body>
