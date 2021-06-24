@@ -2115,3 +2115,28 @@ const Family = [];
     {father: "동섭",    self: "재호",    url: "page061_1.html"},
     {father: "재호",    self: "정석",    url: "page061_1.html"},
   ];
+
+  Family[62] = [
+    {father: "필순",    self: "병훈",    url: "page062.html"},
+    {father: "병훈",    self: "종섭",    url: "page062.html"},
+    {father: "종섭",    self: "원일",    url: "page062.html"},
+    {father: "원일",    self: "은석",    url: "page062.html"},
+    {father: "은석",    self: "정환",    url: "page062.html"},
+    {father: "종섭",    self: "원오",    url: "page062.html"},
+    {father: "원오",    self: "제혁",    url: "page062.html"},
+    {father: "종섭",    self: "원칠",    url: "page062.html"},
+    {father: "원칠",    self: "성환",    url: "page062.html"},
+    {father: "원칠",    self: "은규",    url: "page062.html"},
+    {father: "종섭",    self: "원팔",    url: "page062.html"},
+    {father: "원팔",    self: "승용",    url: "page062.html"},
+    {father: "원팔",    self: "은근",    url: "page062.html"},
+    {father: "종섭",    self: "원구",    url: "page062.html"},
+    {father: "원구",    self: "은하",    url: "page062.html"},
+    {father: "원구",    self: "은철",    url: "page062.html"},
+    {father: "종섭",    self: "원백",    url: "page062.html"},
+    {father: "원백",    self: "문석",    url: "page062.html"},
+    {father: "종섭",    self: "원만",    url: "page062.html"},
+    {father: "원만",    self: "은택",    url: "page062.html"},
+    {father: "종섭",    self: "원갑",    url: "page062.html"},
+    {father: "원갑",    self: "석",    url: "page062.html"},
+  ];
