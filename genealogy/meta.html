@@ -78,10 +78,14 @@
           if (Family[i][j].self === selfName) {
             // window.open(Family[i][j].url);
             count++;
-            if (count  === 1) {
+            /*  if (count  === 1) {
               document.getElementById("mainframe").src = Family[i][j].url;
               break;
             } else if (count > 1) {
+              window.open(Family[i][j].url);
+              break;
+            } */
+            if (count > 0) {
               window.open(Family[i][j].url);
               break;
             }
@@ -92,7 +96,7 @@
       }//end outter for
     } // end else-if
 
-    if (count >= 1) {
+    if (count > 0) {
       alert(`모두 ${count} 명의 족친을 찾았습니다.`);
       return;
     } else {
