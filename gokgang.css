@@ -4,12 +4,11 @@
     margin-bottom: 20px;
     text-align:justify;
     text-indent: 0px;
-    font-family: "바탕", Times, serif;
-    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
     font-weight: normal;
     font-style: normal;
     background-color: rgb(224, 229, 235);
-    color: black;
 }
 
 table {
