@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML, html">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>이모티콘</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>이모티콘</h1>
+  <p>이모티콘은 UTF-8 글자 모임의 글자이다. 😄 😍 💗</p>
+  <p>이모티콘은 그림이나 아이콘처럼 보이지만 Unicode UTF-8 글자 모임의 글자이다.</p>
+  <p>UTF-8은 세계의 거의 모든 글자와 기호를 정해두고 있다.</p>
+  <hr>
+
+  <h2><em>charset</em> 속성</h2>
+  <p>
+    HTML 페이지를 올바르게 표시하려면 웹 브라우저가 페이지에 사용된 글자 모임을 알고 있어야 한다.
+  </p>
+  <p>글자 모임은 &#60;<em>meta</em>> 요소로 지정한다.</p>
+  <div class="grey">
+<pre>
+  &#60;<dark>meta</dark> <red>charset</red>="<blue>UTF-8</blue>">
+</pre>
+  </div>
+  <p class="yellow">글자 모임을 지정하지 않으면 기본값인 <dark>UTF-8</dark> 을 적용한다</p>
+
+  <h2>UTF-8 글자</h2>
+  <p>
+    많은 UTF-8 글자는 키보드로 입력할 수 없지만 항상 숫자 (글자 번호, entity numbers)를 사용하여 나타낼 수 있다.
+  </p>
+  <ul>
+    <li>A : 65</li>
+    <li>B : 66</li>
+    <li>C : 67</li>
+  </ul>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>!DOCTYPE</dark> <red>html</red>>
+  &lt;<dark>html</dark>>
+  &lt;<dark>head</dark>>
+    &lt;<dark>meta</dark> <red>charset</red>="<blue>UTF-8</blue>">
+  &lt;<dark>/head</dark>>
+  &lt;<dark>body</dark>>
+
+  &#60;<dark>p</dark>>&#38;#65; &#38;#66; &#38;#67;&#60;<dark>/p</dark>>
+
+  &lt;<dark>/body</dark>>
+  &lt;<dark>/html</dark>>
+</pre>
+<p class="pre">&#65; &#66; &#67;</p>
+  </div>
+
+  <h3>예제 설명</h3>
+  <p>
+    &lt;<dark>meta</dark> <red>charset</red>="<blue>UTF-8</blue>"> 요소는 유니코드 글자 모임을 지정한다.
+  </p>
+  <p>
+    &#60;<dark>p</dark>>&#38;#65; &#38;#66; &#38;#67;&#60;<dark>/p</dark>>는 영문 대문자 A B C 를 나타낸다. <br>
+    글자 번호 앞에 Ampersand(<b>&</b>) 와 Hash (<b>#</b>) 를, 글자 번호 뒤에는 Semicolon( <b>;</b> ) 을 붙여서 Unicode 글자임을 Web browser 에게 알려준다.
+  </p>
+
+  <h2>이모티콘 글자</h2>
+  <p>이모티콘은 UTF-8 Alphabet 글자이다.</p>
+  <ul>
+    <li>💗글자 번호 128151</li>
+    <li>😄 글자 번호 128516</li>
+    <li>😅 글자 번호 128517</li>
+    <li>😆 글자 번호 128518</li>
+    <li>😇 글자 번호 128519</li>
+    <li>😈 글자 번호 128520</li>
+    <li>😉 글자 번호 128521</li>
+    <li>😊 글자 번호 128522</li>
+    <li>😋 글자 번호 128523</li>
+    <li>😌  글자 번호 128524</li>
+    <li>😍 글자 번호 128525</li>
+  </ul>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>!DOCTYPE</dark> <red>html</red>>
+  &lt;<dark>html</dark>>
+  &lt;<dark>head</dark>>
+    &lt;<dark>meta</dark> <red>charset</red>="<blue>UTF-8</blue>">
+  &lt;<dark>/head</dark>>
+  &lt;<dark>body</dark>>
+
+  &lt;<dark>h1</dark>>이모티콘&lt;<dark>/h1</dark>>
+
+  &#60;<dark>p</dark>>&#38;#128512;&#60;<dark>/p</dark>>
+
+  &lt;<dark>/body</dark>>
+  &lt;<dark>/html</dark>>
+</pre>
+<div class="pre">
+  <h1>이모티콘</h1>
+  <p>&#128512;</p>
+</div>
+  </div>
+
+  <p>이모티콘은 글자이므로 HTML의 다른 글자처럼 복사, 표시 및 크기를 바꿀 수 있다.</p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>!DOCTYPE</dark> <red>html</red>>
+  &lt;<dark>html</dark>>
+  &lt;<dark>head</dark>>
+    &lt;<dark>meta</dark> <red>charset</red>="<blue>UTF-8</blue>">
+  &lt;<dark>/head</dark>>
+  &lt;<dark>body</dark>>
+
+  &lt;<dark>h1</dark>>이모티콘 크기 바꾸기&lt;<dark>/h1</dark>>
+
+  &#60;<dark>p</dark> <red>style</red>="<blue>font-size: 48px</blue>">
+    &#38;#128512; &#38;#128516; &#38;#128525; &#38;#128151; 
+  &#60;<dark>/p</dark>>
+
+  &lt;<dark>/body</dark>>
+  &lt;<dark>/html</dark>>
+</pre>
+<div class="pre">
+  <h1>이모티콘</h1>
+  <p style="font-size:48px;">
+    &#128512; &#128516; &#128525; &#128151;
+  </p>
+</div>
+  </div>
+
+  <p>
+    <button onclick="inner_symbol('hanja', 12800, 12991)">원문자</button>
+    <button onclick="inner_symbol('hanja', 13171, 13310)">단위</button>
+    <button onclick="inner_symbol('hanja', 128512, 128590)">얼굴</button>
+    <button onclick="inner_symbol('hanja', 128336, 128359)">시계</button>
+    <button onclick="inner_symbol('hanja', 129293, 129520)">여러가지 1</button>
+    <button onclick="inner_symbol('hanja', 127744, 128336)">여러가지 2</button>
+    <button onclick="inner_symbol('hanja', 128369, 128511)">여러가지 3</button>
+    <button onclick="inner_symbol('hanja', 128581, 129195)">여러가지 4</button>
+    <button onclick="inner_symbol('hanja', 127344, 127386)">여러가지 5</button>
+    <button onclick="inner_symbol('hanja', 10496, 11218)">여러가지 6</button>
+    <button onclick="inner_symbol('hanja', 8215, 10240)">여러가지 7</button>
+    <button onclick="inner_symbol('hanja', 5758, 5872)">여러가지 8</button>
+    <button onclick="inner_symbol('hanja', 4352, 4608)">여러가지 9</button>
+  </p>
+  <div id="hanja">
+    <script src="./createsymbol.js"></script>
+    <script>
+      inner_symbol("hanja", 0, 1427);
+    </script>
+  </div>
+
+  <p style="text-align: right;">
+    <img src="./img_flower.png" style="width: 50%;opacity: 0.3;">
+  </p>
+</body>
+</html>

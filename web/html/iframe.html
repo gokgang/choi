@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML, html">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML iframe</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>HTML Iframe</h1>
+  <p>
+    HTML <em>iframe</em> 은 웹 문서 안에 웹 페이지를 표시한다.
+  </p>
+  <hr>
+  <h2>Iframe  구문</h2>
+  <p>
+    HTML &lt;<dark>iframe</dark>> 요소는 <em>Inline Frame</em> 을 지정한다. <br>
+    <em>Inline Frame</em>은 현재 HTML 문서 안에 다른 문서를 포함한다.
+  </p>
+
+  <div class="border">
+    &lt;<dark>iframe</dark> <red>src</red>="<blue><i>url</i></blue>" <red>title</red>="<blue><i>description</i></blue>">&lt;<dark>/iframe</dark>>
+  </div>
+
+  <p>
+    &lt;<dark>iframe</dark>> 의 <em>title</em> 속성은 <navy>Screen Reader</navy> 에서 &lt;<dark>iframe</dark>> 의 내용을 읽는 데 사용한다.
+  </p>
+
+  <h2>높이와 너비 설정</h2>
+  <p>
+    높이와 너비는 height 및 width 를 사용하여 픽셀 단위를 기본으로 iframe 의 크기를 지정한다.
+  </p>
+
+  <div class="border">
+    &lt;<dark>iframe</dark> <red>src</red>="<blue>iframe_example.htm</blue>" <red>height</red>="<blue>200</blue>" <red>width</red>="<blue>300</blue>" <red>title</red>="<blue>Iframe 예제</blue>">&lt;<dark>/iframe</dark>>
+  </div>
+
+  <iframe src="./exam/iframe_example.html" height="200" width="300" title="Iframe 예제"></iframe>
+
+  <div class="border">
+    &lt;<dark>iframe</dark> <red>src</red>="<blue>iframe_example.htm</blue>"
+    <red>style</red>="<blue>height:200px;width:300px</blue>" <red>title</red>="<blue>Iframe 예제</blue>">&lt;<dark>/iframe</dark>>
+  </div>
+
+  <iframe src="./exam/iframe_example.html" style="height:200px;width:300px"  title="Iframe 예제"></iframe>
+
+  <h2>테두리 없애기</h2>
+  <p>
+    <em>iframe</em> 은 기본적으로 테두리가 있다. 테두리를 제거하려면 style 속성에서 border 속성값을 지정하면 된다.
+  </p>
+
+  <div class="border">
+    &lt;<dark>iframe</dark> <red>src</red>="<blue>iframe_example.htm</blue>"
+    <red>style</red>="<blue>border:none;height:200px;width:300px;</blue>" <red>title</red>="<blue>Iframe 예제</blue>">&lt;<dark>/iframe</dark>>
+  </div>
+
+  <iframe src="./exam/iframe_example.html" style="border:none;height:200px;width:300px;"  title="Iframe 예제"></iframe>
+
+  <h2>링크 대상</h2>
+  <p>
+    <em>iframe</em> 의 <em>name</em> 속성을 지정하면 <em>name</em> 을 링크의 대상 프레임으로 사용할 수 있다.
+  </p>
+
+  <div class="grey">
+<pre>
+    &lt;<dark>p</dark>>&lt;<dark>a</dark> <red>href</red>="<blue>/</blue>" <red>target</red>="<blue>mainframe</blue>">Home&lt;<dark>/a</dark>>&lt;<dark>/p</dark>>
+    &lt;<dark>iframe</dark> <red>src</red>="<blue>iframe_example.htm</blue>" <red>style</red>="<blue>border:none;height:300px;width:100%;</blue>" <red>title</red>="<blue>Iframe 예제</blue>" <red>name</red>="<blue>mainframe</blue>">
+    &lt;<dark>/iframe</dark>>
+</pre>
+  </div>
+
+  <p><a href="/" target="mainframe" style="background-color: green; color:yellow;">Home</a> 원래대로 돌아가려면 새로고침 하세요</p>
+  <iframe src="./exam/iframe_example.html" style="border:none;height:300px;width:100%;"  title="Iframe 예제" name="mainframe" ></iframe>
+
+  <h2>속성</h2>
+  <table class="even">
+    <colgroup><col><col style="width: 220px;"><col></colgroup>
+    <tr>
+      <th>속성</th><th>속성값</th><th>설 명</th>
+    </tr>
+    <tr>
+      <td>allow</td><td>&nbsp;</td><td>iframe에 대한 기능 정책을 허용 지정</td>
+    </tr>
+    <tr>
+      <td>allowfullscreen</td><td>true <br>false</td>
+      <td>requestFullscreen() 메서드를 호출하여 iframe이 전체 화면 모드를 활성화할 수 있는 경우 true로 설정</td>
+    </tr>
+    <tr>
+      <td>height</td><td><i>pixels</i></td>
+      <td>iframe의 높이 지정. 기본 높이 150픽셀</td>
+    </tr>
+    <tr>
+      <td>loading</td><td>eager <br>lazy</td>
+      <td>브라우저에서 iframe을 즉시 로드할지, 아니면 일부 조건이 충족될 때까지 iframe 로드를 연기할 지 여부를 지정</td>
+    </tr>
+    <tr>
+      <td>name</td><td><i>text</i></td>
+      <td>iframe의 이름 지정</td>
+    </tr>
+    <tr>
+      <td>referrerpolicy</td>
+      <td>
+        no-referrer<br>
+        no-referrer-when-downgrade<br>
+        origin<br>
+        origin-when-cross-origin<br>
+        same-origin<br>
+        strict-origin-when-cross-origin<br>
+        unsafe-url<br>
+      </td>
+      <td>iframe을 가져올 때 전송할 <em>referrer</em> 정보 지정</td>
+    </tr>
+    <tr>
+      <td>sandbox</td>
+      <td>
+        allow-forms<br>
+        allow-pointer-lock<br>
+        allow-popups<br>
+        allow-same-origin<br>
+        allow-scripts<br>
+        allow-top-navigation<br>
+      </td>
+      <td>
+        iframe의 내용에 대한 추가 제한 집합을 활성화
+      </td>
+    </tr>
+    <tr>
+      <td>src</td><td><i>url</i></td>
+      <td>iframe에 포함할 문서의 주소 지정</td>
+    </tr>
+    <tr>
+      <td>srcdoc</td><td><i>HTML_code</i></td>
+      <td>iframe에 표시할 문서의 HTML 내용 지정</td>
+    </tr>
+    <tr>
+      <td>width</td><td><i>	pixels</i></td>
+      <td>iframe의 너비 지정. 기본 너비 300px</td>
+    </tr>
+  </table>
+
+  <hr>
+  <h2>기본 CSS 설정값</h2>
+  <div class="grey">
+<pre>
+  <dark>iframe:focus</dark> {
+    <red>outline</red>: <blue>none</blue>;
+  }
+
+  <dark>iframe</dark>[<dark>seamless</dark>] {
+    <red>display</red>: <blue>block</blue>;
+  }
+</pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="footer.js"></script>
+</body>
+</html>

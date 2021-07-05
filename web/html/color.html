@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML, html">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML 색상 설정</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>색상 설정</h1>
+  <div class="border">
+    <a href="#bgcolor">바탕색</a>
+    <a href="#fontcolor">글자색</a>
+    <a href="#border">테두리색</a>
+    <a href="#value">색상 값</a>
+    <a href="#alpha">투명도</a>
+    <a href="#colorname">색상이름</a>
+  </div>
+  <p>
+    색상은 미리 정해진 색상 이름 또는 RGB, HEX, HSL, RGBA, HSLA 값으로 지정한다.
+  </p>
+
+  <hr>
+  <h2>색상 이름으로 설정</h2>
+  <p>
+    색상 이름으로 색상을 지정할 수 있다.
+  </p>
+  <div>
+    <div style="display: inline-block; background-color: tomato; color: white;width: 45%; padding: 30px 10px;; margin: 3px; text-align: center;">Tomato</div>
+    <div style="display: inline-block; background-color: Orange; color: white;width: 45%; padding: 30px 10px;; margin: 3px; text-align: center;">Orange</div>
+    <div style="display: inline-block; background-color: DodgerBlue; color: white;width: 45%; padding: 30px 10px;; margin: 3px; text-align: center;">DodgerBlue</div>
+    <div style="display: inline-block; background-color: MediumSeaGreen; color: white;width: 45%; padding: 30px 10px;; margin: 3px; text-align: center;">MediumSeaGreen</div>
+    <div style="display: inline-block; background-color: Gray; color: white;width: 45%; padding: 30px 10px;; margin: 3px; text-align: center;">Gray</div>
+    <div style="display: inline-block; background-color: SlateBlue; color: white;width: 45%; padding: 30px 10px;; margin: 3px; text-align: center;">SlateBlue</div>
+    <div style="display: inline-block; background-color: Violet; color: white;width: 45%; padding: 30px 10px;; margin: 3px; text-align: center;">Violet</div>
+    <div style="display: inline-block; background-color: LightGray; color: white;width: 45%; padding: 30px 10px;; margin: 3px; text-align: center;">LightGray</div>
+  </div>
+
+  <h2 id="bgcolor">바탕색 설정</h2>
+  <h1 style="background-color: skyblue;">Hello World</h1>
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>h1</dark> <red>style</red>="<red>background-color</red>: <blue>skyblue</blue>;"> Hello World&lt;<dark>/h1</dark>>
+    </div>
+  </div>
+
+  <p style="background-color:MediumSeaGreen;">Lorem ipsum...</p>
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>p</dark> <red>style</red>="<blue>background-color:MediumSeaGreen;</blue>">Lorem ipsum...&lt;<dark>/p</dark>>
+    </div>
+  </div>
+
+  <h2 id="fontcolor">글자색 설정</h2>
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>h3</dark> <red>style</red>="<blue>color: tomato;</blue>">Hello World&lt;<dark>/h3</dark>>
+    </div>
+  </div>
+  <h3 style="color: tomato;">Hello World</h3>
+
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>p</dark> <red>style</red>="<blue>color: DodgerBlue;</blue>">청춘의 자신과...&lt;<dark>/p</dark>>
+    </div>
+  </div>
+  <p style="color:DodgerBlue;">청춘의 자신과 풀밭에 청춘의 칼이다. 넣는 피어나는 창공에 이상은 있다. 위하여, 원질이 못할 천지는 눈이 이것이다. 청춘 사라지지 소담스러운 풀밭에 것은 것이다. 같이, 수 웅대한 듣는다.</p>
+
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>p</dark> <red>style</red>="<blue>color: color:MediumSeaGreen;</blue>">오아이스도 같으며...&lt;<dark>/p</dark>>
+    </div>
+  </div>
+  <p style="color:MediumSeaGreen;">오아이스도 같으며, 그들의 약동하다. 이상의 인간은 그들의 꾸며 무엇이 장식하는 너의 속잎나고, 말이다. 사랑의 평화스러운 영락과 것이다.보라, 이상의 힘차게 작고 모래뿐일 이 황금시대다. 피가 군영과 피어나는 생명을 운다. 원질이 그들은 품었기 못하다 칼이다.</p>
+
+  <hr>
+  <h2 id="border">테두리 색상 설정</h2>
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>h1</dark> <red>style</red>="<blue>border:2px solid Tomato;</blue>">Hello World&lt;<dark>/h1</dark>>
+    </div>
+  </div>
+  <h1 style="border:2px solid Tomato;">Hello World</h1>
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>h1</dark> <red>style</red>="<blue>border:2px solid DodgerBlue;</blue>">Hello World&lt;<dark>/h1</dark>>
+    </div>
+  </div>
+  <h1 style="border:2px solid DodgerBlue;">Hello World</h1>
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>h1</dark> <red>style</red>="<blue>border:2px solid Violet;</blue>">Hello World&lt;<dark>/h1</dark>>
+    </div>
+  </div>
+  <h1 style="border:2px solid Violet;">Hello World</h1>
+
+  <h2 id="value">색상 값</h2>
+  <p>
+    HTML에서는 RGB , HEX , HSL , RGBA , HSLA 값을 사용하여 색상을 지정할 수 있다.
+  </p>
+
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>div</dark> <red>style</red>="<blue>background-color: RGB(255, 99, 71);</blue>">RGB (255, 99, 71)&lt;<dark>/div</dark>>
+    </div>
+  </div>
+  <div style="background-color: rgb(255, 99, 71);text-align: center;padding: 10px;margin: 6px;color: white;">RGB (255, 99, 71)</div>
+
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>div</dark> <red>style</red>="<blue>background-color: #FF6347;</blue>">#FF6347&lt;<dark>/div</dark>>
+    </div>
+  </div>
+  <div style="background-color: #FF6347;text-align: center;padding: 10px;margin: 6px;color: white;">#FF6347</div>
+
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>div</dark> <red>style</red>="<blue>background-color: HSL(9, 100%, 64%);</blue>">HSL(9, 100%, 64%)&lt;<dark>/div</dark>>
+    </div>
+  </div>
+  <div style="background-color: HSL(9, 100%, 64%);text-align: center;padding: 10px;margin: 6px;color: white;">HSL(9, 100%, 64%)</div>
+
+  <h3 id="alpha">투명도 설정 (0.5)</h3>
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>div</dark> <red>style</red>="<blue>background-color: RGBA(255, 99, 71, 0.5);</blue>">RGBA (255, 99, 71, 0.5)&lt;<dark>/div</dark>>
+    </div>
+  </div>
+  <div style="background-color: rgba(255, 99, 71, 0.5);text-align: center;padding: 10px;margin: 6px;color: white;">RGBA (255, 99, 71, 0.5)</div>
+
+  <div class="grey">
+    <div class="pre">
+      &lt;<dark>div</dark> <red>style</red>="<blue>background-color: HSLA(9, 100%, 64%, 0.5);</blue>">HSLA(9, 100%, 64%, 0.5)&lt;<dark>/div</dark>>
+    </div>
+  </div>
+  <div style="background-color: HSLA(9, 100%, 64%, 0.5);text-align: center;padding: 10px;margin: 6px;color: white;">HSLA(9, 100%, 64%, 0.5)</div>
+
+  
+  <h3 id="colorname">브라우저에 사용 가능한 색상이름</h3>
+  <div>
+    <div style=" display: inline-block; background-color: Red;width: 24%;text-align: center;">Red</div>
+    <div style=" display: inline-block; background-color: Yellow;width: 24%;text-align: center;">Yellow</div>
+    <div style=" display: inline-block; background-color: Green;width: 24%;text-align: center;">Green</div>
+    <div style=" display: inline-block; background-color: Blue;width: 24%; color: yellow; text-align: center;">Blue</div>
+    <div style=" display: inline-block; background-color: DarkRed;width: 24%;text-align: center;">DarkRed</div>
+    <div style=" display: inline-block; background-color: Gold;width: 24%;text-align: center;">Gold</div>
+    <div style=" display: inline-block; background-color: DarkGreen;width: 24%;text-align: center;">DarkGreen</div>
+    <div style=" display: inline-block; background-color: DarkBlue;width: 24%; color: yellow;text-align: center;">DarkBlue</div>
+    <div style=" display: inline-block; background-color: Maroon;width: 24%;text-align: center;">Maroon</div>
+    <div style=" display: inline-block; background-color: GoldenRod;width: 24%;text-align: center;">GoldenRod</div>
+    <div style=" display: inline-block; background-color: Lime;width: 24%;text-align: center;">Lime</div>
+    <div style=" display: inline-block; background-color: MediumBlue;width: 24%; color: yellow;text-align: center;">MediumBlue</div>
+    <div style=" display: inline-block; background-color: Magenta;width: 24%;text-align: center;">Magenta</div>
+    <div style=" display: inline-block; background-color: Peru;width: 24%;text-align: center;">Peru</div>
+    <div style=" display: inline-block; background-color: LimeGreen;width: 24%;text-align: center;">LimeGreen</div>
+    <div style=" display: inline-block; background-color: MidnightBlue;width: 24%; color: yellow;text-align: center;">MidnightBlue</div>
+    <div style=" display: inline-block; background-color: MediumVioletRed;width: 24%;text-align: center;">MediumVioletRed</div>
+    <div style=" display: inline-block; background-color: Orange;width: 24%;text-align: center;">Orange</div>
+    <div style=" display: inline-block; background-color: YellowGreen;width: 24%;text-align: center;">YellowGreen</div>
+    <div style=" display: inline-block; background-color: Navy;width: 24%; color: yellow;text-align: center;">Navy</div>
+    <div style=" display: inline-block; background-color: Crimson;width: 24%;text-align: center;">Crimson</div>
+    <div style=" display: inline-block; background-color: DarkOrange;width: 24%;text-align: center;">DarkOrange</div>
+    <div style=" display: inline-block; background-color: Olive;width: 24%;text-align: center;">Olive</div>
+    <div style=" display: inline-block; background-color: DarkTurquoise;width: 24%;text-align: center;">DarkTurquoise</div>
+    <div style=" display: inline-block; background-color: Violet;width: 24%;text-align: center;">Violet</div>
+    <div style=" display: inline-block; background-color: Chocolate;width: 24%;text-align: center;">Chocolate</div>
+    <div style=" display: inline-block; background-color: ForestGreen;width: 24%;text-align: center;">ForestGreen</div>
+    <div style=" display: inline-block; background-color: DodgerBlue;width: 24%;text-align: center;">DodgerBlue</div>
+    <div style=" display: inline-block; background-color: Purple;width: 24%;text-align: center;">Purple</div>
+    <div style=" display: inline-block; background-color: Coral;width: 24%;text-align: center;">Coral</div>
+    <div style=" display: inline-block; background-color: Chartreuse;width: 24%;text-align: center;">Chartreuse</div>
+    <div style=" display: inline-block; background-color: MediumTurquoise;width: 24%;text-align: center;">MediumTurquoise</div>
+    <div style=" display: inline-block; background-color: RebeccaPurple;width: 24%;text-align: center;">RebeccaPurple</div>
+    <div style=" display: inline-block; background-color: BurlyWood;width: 24%;text-align: center;">BurlyWood</div>
+    <div style=" display: inline-block; background-color: LawnGreen;width: 24%;text-align: center;">LawnGreen</div>
+    <div style=" display: inline-block; background-color: Aqua;width: 24%;text-align: center;">Aqua</div>
+    <div style=" display: inline-block; background-color: PaleVioletRed;width: 24%;text-align: center;">PaleVioletRed</div>
+    <div style=" display: inline-block; background-color: OrangeRed;width: 24%;text-align: center;">OrangeRed</div>
+    <div style=" display: inline-block; background-color: OliveDrab;width: 24%;text-align: center;">OliveDrab</div>
+    <div style=" display: inline-block; background-color: Cyan;width: 24%;text-align: center;">Cyan</div>
+    <div style=" display: inline-block; background-color: Orchid;width: 24%;text-align: center;">Orchid</div>
+    <div style=" display: inline-block; background-color: SandyBrown;width: 24%;text-align: center;">SandyBrown</div>
+    <div style=" display: inline-block; background-color: SpringGreen;width: 24%;text-align: center;">SpringGreen</div>
+    <div style=" display: inline-block; background-color: DeepSkyBlue;width: 24%;text-align: center;">DeepSkyBlue</div>
+    <div style=" display: inline-block; background-color: MediumOrchid;width: 24%;text-align: center;">MediumOrchid</div>
+    <div style=" display: inline-block; background-color: DarkGoldenRod;width: 24%;text-align: center;">DarkGoldenRod</div>
+    <div style=" display: inline-block; background-color: OliveDrab;width: 24%;text-align: center;">OliveDrab</div>
+    <div style=" display: inline-block; background-color: DarkCyan;width: 24%;text-align: center;">DarkCyan</div>
+    <div style=" display: inline-block; background-color: HotPink;width: 24%;text-align: center;">HotPink</div>
+    <div style=" display: inline-block; background-color: DarkKhaki;width: 24%;text-align: center;">DarkKhaki</div>
+    <div style=" display: inline-block; background-color: OliveDrab;width: 24%;text-align: center;">OliveDrab</div>
+    <div style=" display: inline-block; background-color: CornflowerBlue;width: 24%;text-align: center;">CornflowerBlue</div>
+    <div style=" display: inline-block; background-color: IndianRed;width: 24%;text-align: center;">IndianRed</div>
+    <div style=" display: inline-block; background-color: SaddleBrown;width: 24%;text-align: center;">SaddleBrown</div>
+    <div style=" display: inline-block; background-color: DarkOliveGreen;width: 24%;text-align: center;">DarkOliveGreen</div>
+    <div style=" display: inline-block; background-color: LightSeaGreen;width: 24%;text-align: center;">LightSeaGreen</div>
+    <div style=" display: inline-block; background-color: Fuchsia;width: 24%;text-align: center;">Fuchsia</div>
+    <div style=" display: inline-block; background-color: PaleGoldenRod;width: 24%;text-align: center;">PaleGoldenRod</div>
+    <div style=" display: inline-block; background-color: GreenYellow;width: 24%;text-align: center;">GreenYellow</div>
+    <div style=" display: inline-block; background-color: RoyalBlue;width: 24%;text-align: center;">RoyalBlue</div>
+
+    <div style=" display: inline-block; background-color: Indigo;width: 24%;text-align: center;">Indigo</div>
+    <div style=" display: inline-block; background-color: Tan;width: 24%;text-align: center;">Tan</div>
+    <div style=" display: inline-block; background-color: MediumSeaGreen;width: 24%;text-align: center;">MediumSeaGreen</div>
+    <div style=" display: inline-block; background-color: Teal;width: 24%;text-align: center;">Teal</div>
+    <div style=" display: inline-block; background-color: BlueViolet;width: 24%;text-align: center;">BlueViolet</div>
+    <div style=" display: inline-block; background-color: Sienna;width: 24%;text-align: center;">Sienna</div>
+    <div style=" display: inline-block; background-color: SeaGreen;width: 24%;text-align: center;">SeaGreen</div>
+    <div style=" display: inline-block; background-color: Aquamarine;width: 24%;text-align: center;">Aquamarine</div>
+    <div style=" display: inline-block; background-color: DarkOrchid;width: 24%;text-align: center;">DarkOrchid</div>
+    <div style=" display: inline-block; background-color: LemonChiffon;width: 24%;text-align: center;">LemonChiffon</div>
+    <div style=" display: inline-block; background-color: MediumSpringGreen;width: 24%;text-align: center;">MediumSpringGreen</div>
+    <div style=" display: inline-block; background-color: LightSkyBlue;width: 24%;text-align: center;">LightSkyBlue</div>
+    <div style=" display: inline-block; background-color: DarkViolet;width: 24%;text-align: center;">DarkViolet</div>
+    <div style=" display: inline-block; background-color: FireBrick;width: 24%;text-align: center;">FireBrick</div>
+    <div style=" display: inline-block; background-color: PaleGreen;width: 24%;text-align: center;">PaleGreen</div>
+    <div style=" display: inline-block; background-color: CadetBlue;width: 24%;text-align: center;">CadetBlue</div>
+    <div style=" display: inline-block; background-color: DarkMagenta;width: 24%;text-align: center;">DarkMagenta</div>
+    <div style=" display: inline-block; background-color: Brown;width: 24%;text-align: center;">Brown</div>
+    <div style=" display: inline-block; background-color: MediumAquaMarine;width: 24%;text-align: center;">MediumAquaMarine</div>
+    <div style=" display: inline-block; background-color: SkyBlue;width: 24%;text-align: center;">SkyBlue</div>
+    <div style=" display: inline-block; background-color: DeepPink;width: 24%;text-align: center;">DeepPink</div>
+    <div style=" display: inline-block; background-color: Bisque;width: 24%;text-align: center;">Bisque</div>
+    <div style=" display: inline-block; background-color: DarkSlateGray;width: 24%; color: yellow;text-align: center;">DarkSlateGray</div>
+    <div style=" display: inline-block; background-color: Turquoise;width: 24%;text-align: center;">Turquoise</div>
+    <div style=" display: inline-block; background-color: LightCoral;width: 24%;text-align: center;">LightCoral</div>
+    <div style=" display: inline-block; background-color: LightGoldenRodYellow;width: 24%;text-align: center;">LightGoldenRodYellow</div>
+    <div style=" display: inline-block; background-color: DarkSeaGreen;width: 24%;text-align: center;">DarkSeaGreen</div>
+    <div style=" display: inline-block; background-color: Pink;width: 24%;text-align: center;">Pink</div>
+    <div style=" display: inline-block; background-color: Khaki;width: 24%;text-align: center;">Khaki</div>
+    <div style=" display: inline-block; background-color: DarkSlateGrey;width: 24%; color: yellow;text-align: center;">DarkSlateGrey</div>
+    <div style=" display: inline-block; background-color: LightBlue;width: 24%;text-align: center;">LightBlue</div>
+    <div style=" display: inline-block; background-color: Plum;width: 24%;text-align: center;">Plum</div>
+    <div style=" display: inline-block; background-color: SeaShell;width: 24%;text-align: center;">SeaShell</div>
+    <div style=" display: inline-block; background-color: PowderBlue;width: 24%;text-align: center;">PowderBlue</div>
+    <div style=" display: inline-block; background-color: SteelBlue;width: 24%;text-align: center;">SteelBlue</div>
+    <div style=" display: inline-block; background-color: Salmon;width: 24%;text-align: center;">Salmon</div>
+    <div style=" display: inline-block; background-color: AliceBlue;width: 24%;text-align: center;">AliceBlue</div>
+    <div style=" display: inline-block; background-color: Azure;width: 24%;text-align: center;">Azure</div>
+    <div style=" display: inline-block; background-color: AntiqueWhite;width: 24%;text-align: center;">AntiqueWhite</div>
+    <div style=" display: inline-block; background-color: Tomato;width: 24%;text-align: center;">Tomato</div>
+    <div style=" display: inline-block; background-color: BlanchedAlmond;width: 24%;text-align: center;">BlanchedAlmond</div>
+    <div style=" display: inline-block; background-color: Beige;width: 24%;text-align: center;">Beige</div>
+    <div style=" display: inline-block; background-color: Cornsilk;width: 24%;text-align: center;">Cornsilk</div>
+    <div style=" display: inline-block; background-color: DarkSalmon;width: 24%;text-align: center;">DarkSalmon</div>
+    <div style=" display: inline-block; background-color: FloralWhite;width: 24%;text-align: center;">FloralWhite</div>
+    <div style=" display: inline-block; background-color: Gainsboro;width: 24%;text-align: center;">Gainsboro</div>
+    <div style=" display: inline-block; background-color: GhostWhite;width: 24%;text-align: center;">GhostWhite</div>
+    <div style=" display: inline-block; background-color: HoneyDew;width: 24%;text-align: center;">HoneyDew</div>
+    <div style=" display: inline-block; background-color: Lavender;width: 24%;text-align: center;">Lavender</div>
+    <div style=" display: inline-block; background-color: LavenderBlush;width: 24%;text-align: center;">LavenderBlush</div>
+    <div style=" display: inline-block; background-color: LightCyan;width: 24%;text-align: center;">LightCyan</div>
+    <div style=" display: inline-block; background-color: LightGray;width: 24%;text-align: center;">LightGray</div>
+    <div style=" display: inline-block; background-color: LightGray;width: 24%;text-align: center;">LightGrey</div>
+    <div style=" display: inline-block; background-color: LightGray;width: 24%;text-align: center;">LightGreen</div>
+    <div style=" display: inline-block; background-color: LightGray;width: 24%;text-align: center;">LightPink</div>
+    <div style=" display: inline-block; background-color: DarkGray;width: 24%;text-align: center;">DarkGray</div>
+    <div style=" display: inline-block; background-color: DarkGrey;width: 24%;text-align: center;">DarkGrey</div>
+    <div style=" display: inline-block; background-color: LightSlateGray;width: 24%;text-align: center;">LightSlateGray</div>
+    <div style=" display: inline-block; background-color: LightSlateGrey;width: 24%;text-align: center;">LightSlateGrey</div>
+    <div style=" display: inline-block; background-color: SlateGray;width: 24%;text-align: center;">SlateGray</div>
+    <div style=" display: inline-block; background-color: SlateGrey;width: 24%;text-align: center;">SlateGrey</div>
+    <div style=" display: inline-block; background-color: Gray;width: 24%;text-align: center;">Gray</div>
+    <div style=" display: inline-block; background-color: Grey;width: 24%;text-align: center;">Grey</div>
+    <div style=" display: inline-block; background-color: DimGray;width: 24%;text-align: center;">DimGray</div>
+    <div style=" display: inline-block; background-color: DimGrey;width: 24%;text-align: center;">DimGrey</div>
+    <div style=" display: inline-block; background-color: LightSalmon;width: 24%;text-align: center;">LightSalmon</div>
+    <div style=" display: inline-block; background-color: LightSteelBlue;width: 24%;text-align: center;">LightSteelBlue</div>
+    <div style=" display: inline-block; background-color: PaleTurquoise;width: 24%;text-align: center;">PaleTurquoise</div>
+    <div style=" display: inline-block; background-color: DarkSlateBlue;width: 24%; color: yellow;text-align: center;">DarkSlateBlue</div>
+    <div style=" display: inline-block; background-color: MediumPurple;width: 24%;text-align: center;">MediumPurple</div>
+    <div style=" display: inline-block; background-color: MediumSlateBlue;width: 24%;text-align: center;">MediumSlateBlue</div>
+    <div style=" display: inline-block; background-color: SlateBlue;width: 24%; text-align: center;">SlateBlue</div>
+    <div style=" display: inline-block; background-color: RosyBrown;width: 24%;text-align: center;">RosyBrown</div>
+    <div style=" display: inline-block; background-color: Moccasin;width: 24%;text-align: center;">Moccasin</div>
+    <div style=" display: inline-block; background-color: NavajoWhite;width: 24%;text-align: center;">NavajoWhite</div>
+    <div style=" display: inline-block; background-color: Silver;width: 24%;text-align: center;">Silver</div>
+    <div style=" display: inline-block; background-color: Thistle;width: 24%;text-align: center;">Thistle</div>
+    <div style=" display: inline-block; background-color: PeachPuff;width: 24%;text-align: center;">PeachPuff</div>
+    <div style=" display: inline-block; background-color: Wheat;width: 24%;text-align: center;">Wheat</div>
+    <div style=" display: inline-block; background-color: OldLace;width: 24%;text-align: center;">OldLace</div>
+    <div style=" display: inline-block; background-color: PapayaWhip;width: 24%;text-align: center;">PapayaWhip</div>
+    <div style=" display: inline-block; background-color: MistyRose;width: 24%;text-align: center;">MistyRose</div>
+    <div style=" display: inline-block; background-color: Snow;width: 24%;text-align: center;">Snow</div>
+    <div style=" display: inline-block; background-color: Linen;width: 24%;text-align: center;">Linen</div>
+    <div style=" display: inline-block; background-color: LightYellow;width: 24%;text-align: center;">LightYellow</div>
+    <div style=" display: inline-block; background-color: MintCream;width: 24%;text-align: center;">MintCream</div>
+    <div style=" display: inline-block; background-color: White;width: 24%;text-align: center;">White</div>
+    <div style=" display: inline-block; background-color: WhiteSmoke;width: 24%;text-align: center;">WhiteSmoke</div>
+    <div style=" display: inline-block; background-color: Ivory;width: 24%;text-align: center;">Ivory</div>
+    <div style=" display: inline-block; background-color: Black;width: 24%;color: yellow; text-align: center;">Black</div>
+  </div>
+  <script src="footer.js"></script>
+</body>
+</html>

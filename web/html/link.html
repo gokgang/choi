@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML, html">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML 배우기</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1 id="heading">HTML Links</h1>
+  <div class="pre">
+    <a href="#syntax">구문</a>
+    <a href="#target">열림창(target)</a>
+    <a href="#img">그림 연결</a>
+    <a href="#email">메일 연결</a>
+    <a href="#title">풍선도움말</a>
+    <a href="#color">색상</a>
+    <a href="#btn">연결 단추</a>
+    <a href="#bookmark">책갈피 </a>
+  </div>
+  <p>HTML <em>Links</em> 는 <em>Hyperlink</em> 이다.</p>
+  <hr>
+  <p>
+    링크 위로 마우스를 이동하면 마우스 화살표가 작은 손 모양으로 바뀐다. <br>
+    링크를 클릭하면 다른 문서로 이동할 수 있으며, 
+    글자 뿐만 아니라 그림, 기타 HTML 요소에도 링크를 지정할 수 있다.
+  </p>
+
+  <h2 id="syntax">구문(Sntax)</h2>
+  <p>
+    &lt;<dark>a</dark>> 요소( <b>Anchor</b> )는 <em>href</em> 속성을 사용하여 다른 문서나 같은 문서 안의 어느 위치, 파일, 이메일 주소와 그 외 다른 URL로 연결할 수 있는 하이퍼링크를 지정한다. &lt;<dark>a</dark>>  매듭 안의 내용은 링크된 목적지의 설명을 나타낸다.
+  </p>
+  <div class="border">
+    &lt;<dark>a</dark> <red>href</red>="<blue><i>url</i></blue>" <red>target</red>="<blue><i>_self | _blank | _parent | _top</i></blue>"> <i>link text</i> &lt;<dark>/a</dark>>
+  </div>
+
+  <h2 id="target"><em>target</em> 속성</h2>
+  <p>
+    기본적으로 링크된 문서는 현재 브라우저 창에 표시된다.
+  </p>
+  <p>
+    <em>target</em> 속성은 다음 중 하나를 지정할 수 있다.
+  </p>
+  <ul>
+    <li><em>_self</em> - 현재 창. 기본값</li>
+    <li><em>_blank</em> - 브라우저 설정에 따라 새탭 또는 새창</li>
+    <li><em>_parent</em> - 상위 프레임. 상위 창이 없으면 <em>_self</em> 와 동일</li>
+    <li><em>_top</em> - 최상위 창. 자신이 최상위이면 <em>_self</em> 와 동일</li>
+  </ul>
+  <p>
+    <b>참고:</b> <em>target</em> 을 사용할 때, <red>rel</red>="<blue>noreferrer</blue>"를 추가해 <em>window.opener</em> API 의 악의적인 사용을 방지할 수 있다. <br>
+    최근의 브라우저(Firefox 79+ 등)에서는 <red>target</red>="<blue>_blank</blue>"를 지정하면 <red>rel</red>="<blue>noopener</blue>"를 적용한 것과 같은 동작을 한다.
+  </p>
+
+  <h3>절대 URL과 상대 URL</h3>
+  <p>
+    <em>href</em> 속성의 <i>url</i> 은 하이퍼링크가 가리키는 URL. 링크는 HTTP 기반 URL일 필요는 없고, 브라우저가 지원하는 모든 URL 을 사용할 수 있다. 
+    절대 URL(전체 웹 주소)과 상대 URL(동일한 웹 사이트 내의 페이지에 대한 링크)을 모두 사용할 수 있다.
+  </p>
+
+  <h2 id="img">그림에 연결 설정</h2>
+  <p>
+    그림을 연결에 사용하려면 &lt;<dark>a</dark>> 요소 안에 &lt;<dark>img</dark>> 요소를 넣으면 된다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>a</dark> <red>href</red>="<blue>default.html</blue>">
+    &lt;<dark>img</dark> <red>src</red>="<blue>img_flwr.gif</blue>>" <red>width</red>="<blue>80</blue>">
+  &lt;<dark>/a</dark>>
+</pre>
+<div class="pre">
+  <a href="./default.html">
+    Go <img src="../image/img_flwr.gif" width="80"> Home
+  </a>
+</div>
+  </div>
+
+  <h2 id="email">전자 메일 연결</h2>
+  <p>
+    <em>href</em> 속성에 <blue>mailto:</blue> 속성값을 설정하면 사용자의 전자메일 프로그램을 작동하게 할 수 있다.
+  </p>
+  <div class="border">
+    &lt;<dark>a</dark> <red>href</red>="<blue>mailto:someone@example.com</blue>">전자 메일 보내기&lt;<dark>/a</dark>>
+  </div>
+
+  <h2>연결 단추(Link button)</h2>
+  <p>
+    JavaScript를 사용하여 버튼 클릭과 같은 특정 사건에서 발생하는 작업을 지정할 수 있다.
+  </p>
+<pre class="border">
+  &lt;<dark>button</dark> <red>onclick</red>="<blue>document.location='default.html'</blue>">Go Home&lt;<dark>button</dark>>  <button onclick="document.location='default.html'" title="홈으로">Go Home</button>
+</pre>
+<pre class="border">
+  &lt;<dark>button</dark> <red>onclick</red>="<blue>window.location='default.html'</blue>">Go Home&lt;<dark>button</dark>>  <button onclick="window.location='default.html'" title="홈으로">Go Home</button>
+</pre>
+<pre class="border">
+  &lt;<dark>button</dark> <red>onclick</red>="<blue>location='default.html'</blue>">Go Home&lt;<dark>button</dark>>   <button onclick="location='default.html'" title="홈으로">Go Home</button>
+</pre>
+
+  <h2 id="title"><em>title</em> 속성</h2>
+  <p>
+    &lt;<dark>a</dark>> 요소에 <em>title</em> 속성을 지정하면 마우스가 올려졌을 때 풍선 도움말이 보여진다. 
+  </p>
+<pre class="border">
+  &lt;<dark>a</dark> <red>href</red>="<blue>default.html</blue>" <red>title</red>="<blue>홈으로</blue>" <red>style</red>="<blue>border: 1px solid grey;</blue>">Go Home&lt;<dark>/a</dark>>  <a href="default.html" title="홈으로" style="border: 1px solid grey;padding: 3px 8px;">Go Home</a>
+</pre>
+
+  <h2 id="color">Links 색상</h2>
+  <p>
+    기본적으로 링크는 모든 브라우저에서 다음과 같이 나타난다.
+  </p>
+  <ul>
+    <li>방문하지 않은 링크( <navy>unvisited link</navy> )는 밑줄과 파란색( <navy>blue</navy> )이다.</li>
+    <li>방문한 링크( <navy>visited link</navy> )는 밑줄과 자주색( <navy>purple</navy> )으로 표시된다.</li>
+    <li>활성 링크( <navy>active link</navy> )는 밑줄과 빨간색( <navy>red</navy> )으로 표시된다.</li>
+  </ul>
+  <p>
+    링크는 CSS로 다른 양식을 지정할 수 있다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>a:link</dark> {  <green>/* 방문하지 않은 링크 */</green>
+      <red>color</red>: <blue>blue</blue>;
+      <red>background-color</red>: <blue>transparent</blue>;
+      <red>text-decoration</red>: <blue>none</blue>;
+    }
+    <dark>a:visited</dark> { <green>/* 방문한 링크 */</green>
+      <red>color</red>: <blue>magenta</blue>;
+      <red>background-color</red>: <blue>transparent</blue>;
+      <red>text-decoration</red>: <blue>none</blue>;
+    }
+    <dark>a:hover</dark> {<green> /* 링크 위에 마우스가 놓일 때 */</green>
+      <red>color</red>: <blue>red</blue>;
+      <red>background-color</red>: <blue>transparent</blue>;
+      <red>text-decoration</red>: <blue>underline</blue>;
+    }
+    <dark>a:active</dark> {  <green>/* 활성 링크 */</green>
+      <red>color</red>: <blue>yellow</blue>;
+      <red>background-color</red>: <blue>transparent</blue>;
+      <red>text-decoration</red>: <blue>underline</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<style>
+  a:link {  /* 방문하지 않은 링크 */
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited { /* 방문한 링크 */
+    color: magenta;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover { /* 링크 위에 마우스가 놓일 때 */
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {  /* 링크를 마우스가 누르고 있는 활성 링크 */
+    color: yellow;
+    border-left-color: transparent;
+    text-decoration: underline;
+  }
+</style>
+<div class="pre">
+  <a href="/" target="_blank">Hypher link Test</a>
+</div>
+  </div>
+
+  <h3 id="btn">연결 단추</h3>
+  <p>
+    CSS를 사용하여 링크 양식을 단추로 지정할 수도 있다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>a:link, a:visited</dark> {
+      <red>background-color</red>: <blue>grey</blue>;
+      <red>color</red>: <blue>white</blue>;
+      <red>padding</red>: <blue>6px 16px</blue>;
+      <red>text-align</red>: <blue>center</blue>;
+      <red>text-decoration</red>: <blue>none</blue>;
+      <red>border</red>: <blue>1px solid grey</blue>;
+      <red>border-radius</red>: <blue>2px</blue>;
+      <red>display</red>: <blue>inline-block</blue>;
+    }
+    <dark>a:hover, a:active</dark> {
+      <red>background-color</red>: <blue>lightgrey</blue>;
+      <red>color</red>: <blue>blue</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<style>
+  a.btn:link, a.btn:visited {
+    background-color: grey;
+    color: white;
+    padding: 6px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid grey;
+    border-radius: 2px;
+  }
+  a.btn:hover, a.btn:active {
+    background-color: lightgrey;
+    color: blue;
+  }
+  </style>
+    <div class="pre">
+      <a href="default.html" target="_blank" class="btn">Go Home</a>
+    </div>
+  </div>
+
+  <h2 id="bookmark">책갈피 만들기</h2>
+  <p>
+    HTML 링크를 사용하여 사용자가 웹 문서의 특정 부분으로 이동할 수 있도록 할 수 있다. <br>
+    웹 문서가 매우 긴 경우 먼저 <em>id</em>를 설정하여 책갈피를 만든 다음 링크를 추가해 두면, 링크를 클릭했을 때 문서의 채갈피가 있는 위치로 이동한다
+  </p>
+  <h3>책갈피 만들기</h3>
+  <div class="border">
+    &lt;<dark>h2</dark> <red>id</red>="<blue>heading</blue>">문서의 처음으로&lt;<dark>/h2</dark>>
+  </div>
+  <h3>책갈피에 대한 링크</h3>
+  <div class="border">
+    &lt;<dark>a</dark> <red>href</red>="<blue>#heading</blue>">문서의 처음으로&lt;<dark>/a</dark>><a href="#heading">문서의 처음으로</a>
+  </div>
+
+  <script src="footer.js"></script>
+</body>
+</html>

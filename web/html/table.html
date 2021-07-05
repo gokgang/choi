@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML, html">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML 표</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>표 양식</h1>
+  <table style="border: 1px solid lightgrey; width: 100%;">
+    <tr>
+      <td><a href="#border">표 테두리</a></td>
+      <td><a href="#pad">안 띄우기</a></td>
+      <td><a href="#align">표제 왼쪽 맞춤</a></td>
+      <td><a href="#space">테두리 틈 지정</a></td>
+    </tr>
+    <tr>
+      <td><a href="#colspan">가로 행 칸 합치기</a></td>
+      <td><a href="#rowspan">세로 열 칸 합치기</a></td>
+      <td><a href="#caption">표제 넣기</a></td>
+      <td><a href="#special">독특한 표</a></td>
+    </tr>
+  </table>
+  <hr>
+  <p>
+    표 만들기는 &lt;<em>table</em>> 요소를 사용하여 설정한다. <br>
+    표의 가로 행은 &lt;<em>tr</em>> 매듭으로 지정하고, 표의 표제 줄은 &lt;<em>th</em>> 매듭으로 지정하며, 표의 칸은 &lt;<em>td</em>> 매듭으로 지정한다. <br>
+    &lt;<em>th</em>> 요소는 기본적으로 굵은 글자에 가운데 맞춤이 되며, &lt;<em>td</em>> 요소는 기본적으로 왼쪽 맞춤이 된다.
+  </p>
+
+  <div class="grey">
+<pre><green>&lt;!-- 표 만들기 지정 --></green>
+  &lt;<dark>table</dark> <red>style</red>="<blue>width: 100%;</blue>">
+    &lt;<dark>tr</dark>>  <green>&lt;!-- 가로 행 지정 --></green>
+      &lt;<dark>th</dark>>성&lt;<dark>/th</dark>>&lt;<dark>th</dark>>이름&lt;<dark>/th</dark>>&lt;<dark>th</dark>>나이&lt;<dark>/th</dark>>  <green>&lt;!-- 표제 지정 --></green>
+    &lt;<dark>/tr</dark>>
+    &lt;<dark>tr</dark>>  <green>&lt;!-- 가로 행 지정 --></green>
+      &lt;<dark>td</dark>>반&lt;<dark>/td</dark>>&lt;<dark>td</dark>>기문&lt;<dark>/td</dark>>&lt;<dark>td</dark>>70&lt;<dark>/td</dark>>   <green>&lt;!-- 각 칸에 내용 입력 --></green>
+    &lt;<dark>/tr</dark>>
+    &lt;<dark>tr</dark>>  <green>&lt;!-- 가로 행 지정 --></green>
+      &lt;<dark>td</dark>>문&lt;<dark>/td</dark>>&lt;<dark>td</dark>>재인&lt;<dark>/td</dark>>&lt;<dark>td</dark>>69&lt;<dark>/td</dark>>   <green>&lt;!-- 각 칸에 내용 입력 --></green>
+    &lt;<dark>/tr</dark>>
+  &lt;<dark>/table</dark>>
+</pre>
+<div class="pre">
+  <!-- 표 만들기 지정 -->
+  <table style="width: 100%;">
+    <!-- 가로 행 지정 -->
+    <tr>
+      <!-- 표제 지정 -->
+      <th>성</th><th>이름</th><th>나이</th>
+    </tr>
+    <tr>
+      <!-- 각 칸에 내용 입력 -->
+      <td>반</td><td>기문</td><td>70</td>
+    </tr>
+    <tr>
+      <td>문</td><td>재인</td><td>69</td>
+    </tr>
+  </table>
+</div>
+  </div>
+
+  <p>
+    &lt;<em>td</em>> 요소는 표의 칸으로 글과 그림, 목록 등 다른 모든 자료를 담을 수 있는 그릇과 같다.
+  </p>
+
+  <h2 id="border">표 테두리 <em>border</em></h2>
+  <p>
+    표의 테두리는 CSS <em>border</em> 속성을 사용하여 지정한다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>table, th, td</dark> {
+      <red>border</red>: <blue>1px solid skyblue</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<div class="pre">
+  <!-- 표 만들기 지정 -->
+  <table style="width: 100%;" class="b">
+    <!-- 가로 행 지정 -->
+    <tr>
+      <!-- 표제 지정 -->
+      <th>성</th><th>이름</th><th>나이</th>
+    </tr>
+    <tr>
+      <!-- 각 칸에 내용 입력 -->
+      <td>반</td><td>기문</td><td>70</td>
+    </tr>
+    <tr>
+      <td>문</td><td>재인</td><td>69</td>
+    </tr>
+  </table>
+  <style>
+    table.b, table.b th, table.b td {
+      border: 1px solid grey;
+    }
+  </style>
+</div>
+
+<p>
+  테두리는 표의 바깥 테두리와 각 칸의 테두리를 모두 설정해야 한다. 각각의 테두리 사이에는 틈이 있다. 틈을 없애려면 별도의 설정이 필요하다. 
+</p>
+  </div>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>table, th, td</dark> {
+      <red>border</red>: <blue>1px solid skyblue</blue>;
+      <red>border-collapse</red>: <blue>collapse</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<div class="pre">
+  <!-- 표 만들기 지정 -->
+  <table style="width: 100%;" class="collapse">
+    <!-- 가로 행 지정 -->
+    <tr>
+      <!-- 표제 지정 -->
+      <th>성</th><th>이름</th><th>나이</th>
+    </tr>
+    <tr>
+      <!-- 각 칸에 내용 입력 -->
+      <td>반</td><td>기문</td><td>70</td>
+    </tr>
+    <tr>
+      <td>문</td><td>재인</td><td>69</td>
+    </tr>
+  </table>
+  <style>
+    table.collapse, table.collapse th, table.collapse td {
+      border: 1px solid grey;
+      border-collapse: collapse;
+    }
+  </style>
+</div>
+  </div>
+
+  <h3 id="pad">안 띄우기</h3>
+<p>
+  테두리와 내용 사이에 띄우기를 <em>padding</em> 속성으로 지정할 수 있다.
+</p>
+  </div>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>table, th, td</dark> {
+      <red>border</red>: <blue>1px solid skyblue</blue>;
+      <red>border-collapse</red>: <blue>collapse</blue>;
+      <red>padding</red>: <blue>16px</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<div class="pre">
+  <!-- 표 만들기 지정 -->
+  <table style="width: 100%;" class="pad">
+    <!-- 가로 행 지정 -->
+    <tr>
+      <!-- 표제 지정 -->
+      <th>성</th><th>이름</th><th>나이</th>
+    </tr>
+    <tr>
+      <!-- 각 칸에 내용 입력 -->
+      <td>반</td><td>기문</td><td>70</td>
+    </tr>
+    <tr>
+      <td>문</td><td>재인</td><td>69</td>
+    </tr>
+  </table>
+  <style>
+    table.pad, table.pad th, table.pad td {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      padding: 16px;
+    }
+  </style>
+</div>
+  </div>
+
+  <h3 id="align">표제 왼쪽 맞춤</h3>
+<p>
+  가운데 맞춤으로된 표제를 <em>text-align</em> 속성을 지정하여 왼쪽으로 맞출 수 있다. 
+</p>
+  </div>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>table, th, td</dark> {
+      <red>border</red>: <blue>1px solid skyblue</blue>;
+      <red>border-collapse</red>: <blue>collapse</blue>;
+      <red>padding</red>: <blue>16px</blue>;
+      <red>text-align</red>: <blue>left</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<div class="pre">
+  <!-- 표 만들기 지정 -->
+  <table style="width: 100%;" class="left">
+    <!-- 가로 행 지정 -->
+    <tr>
+      <!-- 표제 지정 -->
+      <th>성</th><th>이름</th><th>나이</th>
+    </tr>
+    <tr>
+      <!-- 각 칸에 내용 입력 -->
+      <td>반</td><td>기문</td><td>70</td>
+    </tr>
+    <tr>
+      <td>문</td><td>재인</td><td>69</td>
+    </tr>
+  </table>
+  <style>
+    table.left, table.left th, table.left td {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      padding: 16px;
+      text-align: left;
+    }
+  </style>
+</div>
+  </div>
+
+  <h3 id="space">테두리 틈 지정</h3>
+<p>
+  테두리 사이의 틈을 <em>border-spacing</em> 속정으로 설정할 수 있다. 
+</p>
+  </div>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>table, th, td</dark> {
+      <red>border</red>: <blue>1px solid skyblue</blue>;
+      <red>padding</red>: <blue>6px</blue>;
+      <red>text-align</red>: <blue>left</blue>;
+      <red>border-spacing</red>: <blue>16px</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<div class="pre">
+  <!-- 표 만들기 지정 -->
+  <table style="width: 100%;" class="space">
+    <!-- 가로 행 지정 -->
+    <tr>
+      <!-- 표제 지정 -->
+      <th>성</th><th>이름</th><th>나이</th>
+    </tr>
+    <tr>
+      <!-- 각 칸에 내용 입력 -->
+      <td>반</td><td>기문</td><td>70</td>
+    </tr>
+    <tr>
+      <td>문</td><td>재인</td><td>69</td>
+    </tr>
+  </table>
+  <style>
+    table.space, table.space th, table.space td {
+      border: 1px solid grey;
+      padding: 6px;
+      text-align: left;
+      border-spacing: 16px;
+    }
+  </style>
+</div>
+  </div>
+  <p class="yellow">
+    테두리 사이의 틈을 없애는 <em>border-collapse</em> 속성이 <i>collapse</i> 로 지정되지 않아야 한다. 
+  </p>
+
+  <h2 id="colspan">가로 행 칸 합치기 <em>colspan</em></h2>
+  <div class="grey">
+<pre>
+  &lt;<dark>table</dark> <red>style</red>="<blue>width: 100%;</blue>">
+    &lt;<dark>tr</dark>>
+      &lt;<dark>th</dark>>이름&lt;<dark>/th</dark>>&lt;<dark>th</dark> <red>colspan</red>="<blue>2</blue>">전화&lt;<dark>/th</dark>>
+    &lt;<dark>/tr</dark>>
+    &lt;<dark>tr</dark>>
+      &lt;<dark>td</dark>>반기문&lt;<dark>/td</dark>>&lt;<dark>td</dark>>010&lt;<dark>/td</dark>>&lt;<dark>td</dark>>36250770&lt;<dark>/td</dark>> 
+    &lt;<dark>/tr</dark>>
+    &lt;<dark>tr</dark>>
+      &lt;<dark>td</dark>>문재인&lt;<dark>/td</dark>>&lt;<dark>td</dark>>010&lt;<dark>/td</dark>>&lt;<dark>td</dark>>60321890&lt;<dark>/td</dark>>
+    &lt;<dark>/tr</dark>>
+  &lt;<dark>/table</dark>>
+</pre>
+  <style>
+    table.col, table.col th, table.col td {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      padding: 6px;
+      text-align: left;
+    }
+  </style>
+<div class="pre">
+  <table style="width: 100%;" class="col">
+    <tr>
+      <th>이름</th><th colspan="2">전화</th>
+    </tr>
+    <tr>
+      <td>반기문</td><td>010</td><td>36250770</td>
+    </tr>
+    <tr>
+      <td>문재인</td><td>010</td><td>60321890</td>
+    </tr>
+  </table>
+</div>
+  </div>
+
+  <h2 id="rowspan">세로 열 칸 합치기 <em>rowspan</em></h2>
+  <div class="grey">
+<pre>
+  &lt;<dark>table</dark> <red>style</red>="<blue>width: 100%;</blue>">
+    &lt;<dark>tr</dark>>
+      &lt;<dark>th</dark>>이름&lt;<dark>/th</dark>> &lt;<dark>td</dark>>반기문&lt;<dark>/td</dark>>&lt;<dark>td</dark>>문재인&lt;<dark>/td</dark>>
+    &lt;<dark>/tr</dark>>
+    &lt;<dark>tr</dark>>
+      &lt;<dark>th</dark> <red>rowspan</red>="<blue>2</blue>">전화&lt;<dark>/th</dark>>&lt;<dark>td</dark>>01036250770&lt;<dark>/td</dark>>&lt;<dark>td</dark>>01060321890&lt;<dark>/td</dark>> 
+    &lt;<dark>/tr</dark>>
+    &lt;<dark>tr</dark>>
+      &lt;<dark>td</dark>>01060250770&lt;<dark>/td</dark>>&lt;<dark>td</dark>>01003216890&lt;<dark>/td</dark>>
+    &lt;<dark>/tr</dark>>
+  &lt;<dark>/table</dark>>
+</pre>
+  <style>
+    table.col, table.col th, table.col td {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      padding: 6px;
+      text-align: left;
+    }
+  </style>
+<div class="pre">
+  <table style="width: 100%;" class="col">
+    <tr>
+      <th>이름</th><td>반기문</td><td>문재인</td>
+    </tr>
+    <tr>
+      <th rowspan="2">전화</th><td>01036250770</td><td>01060321890</td>
+    </tr>
+    <tr>
+      <td>01060250770</td><td>01003216890</td>
+    </tr>
+  </table>
+</div>
+  </div>
+
+  <h2 id="caption">표제 넣기<em>caption</em></h2>
+  <p><em>&lt;caption></em> 요소는 <em>&lt;table></em> 매듭 바로 다음에 있어야 한다.</p>
+  <div class="grey">
+<pre>
+  &lt;<dark>table</dark> <red>style</red>="<blue>width: 100%;</blue>">
+  &lt;<dark>caption</dark>>연락처&lt;<dark>/caption</dark>>
+    &lt;<dark>tr</dark>>
+      &lt;<dark>th</dark>>이름&lt;<dark>/th</dark>> &lt;<dark>td</dark>>반기문&lt;<dark>/td</dark>>&lt;<dark>td</dark>>문재인&lt;<dark>/td</dark>>
+    &lt;<dark>/tr</dark>>
+    &lt;<dark>tr</dark>>
+      &lt;<dark>th</dark> <red>rowspan</red>="<blue>2</blue>">전화&lt;<dark>/th</dark>>&lt;<dark>td</dark>>01036250770&lt;<dark>/td</dark>>&lt;<dark>td</dark>>01060321890&lt;<dark>/td</dark>> 
+    &lt;<dark>/tr</dark>>
+    &lt;<dark>tr</dark>>
+      &lt;<dark>td</dark>>01060250770&lt;<dark>/td</dark>>&lt;<dark>td</dark>>01003216890&lt;<dark>/td</dark>>
+    &lt;<dark>/tr</dark>>
+  &lt;<dark>/table</dark>>
+</pre>
+  <style>
+    table.col, table.col th, table.col td {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      padding: 6px;
+      text-align: left;
+    }
+  </style>
+<div class="pre">
+  <table style="width: 100%;" class="col">
+    <caption style="color: darkblue;">연 락 처</caption>
+    <tr>
+      <th>이름</th><td>반기문</td><td>문재인</td>
+    </tr>
+    <tr>
+      <th rowspan="2">전화</th><td>01036250770</td><td>01060321890</td>
+    </tr>
+    <tr>
+      <td>01060250770</td><td>01003216890</td>
+    </tr>
+  </table>
+</div>
+  </div>
+
+  <h2 id="special">독특한 표 양식</h2>
+  <p>
+    자기 만의 독특한 표 양식을 지정하려면 <em>id</em> 속성을 설정한다. 
+  </p>
+
+  <div class="grey">
+    <pre>
+      &lt;<dark>style</dark>>
+        <dark>#special</dark> {
+          <red>width</red>: <blue>100%</blue>;
+          <red>background-color</red>: <blue>#f1f1c1</blue>;
+          <red>border</red>: <blue>1px solid skyblue</blue>;
+          <red>border-collapse</red>: <blue>collapse</blue>;
+        }
+        <dark>#special th</dark>, <dark>#special td</dark> {
+          <red>border</red>: <blue>1px solid skyblue</blue>;
+          <red>padding</red>: <blue>6px</blue>;
+          <red>text-align</red>: <blue>left</blue>;
+        }
+        <dark>#special tr:nth-child(even)</dark> {
+          <red>background-color</red>: <blue>#def</blue>;
+        }
+        <green>/* #special tr:nth-child(odd) {
+          background-color: #fff;
+        } */</green>
+        <dark>#special th</dark> {
+          <red>color</red>: <blue>yellow</blue>;
+          <red>background-color</red>: <blue>navy</blue>;
+        }
+      &lt;<dark>/style</dark>>
+    </pre>
+    <div class="pre">
+      <table id="special">
+        <tr>
+          <th>성</th><th>이름</th><th>나이</th>
+        </tr>
+        <tr>
+          <td>반</td><td>기문</td><td>70</td>
+        </tr>
+        <tr>
+          <td>문</td><td>재인</td><td>69</td>
+        </tr>
+      </table>
+      <style>
+        table#special {
+          width: 100%;
+          background-color: #f1f1c1;
+          border: 1px solid grey;
+          border-collapse: collapse;
+        }
+        table#special th, table#special td {
+          border: 1px solid grey;
+          padding: 6px;
+          text-align: left;
+        }
+        table#special tr:nth-child(even) {
+          background-color: #def;
+        }
+        /* table#special tr:nth-child(odd) {
+          background-color: #fff;
+        } */
+        table#special th {
+          color: yellow;
+          background-color: navy;
+        }
+      </style>
+    </div>
+      </div>
+
+  <script src="footer.js"></script>
+</body>
+</html>

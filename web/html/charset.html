@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML, html">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML Encoding</title>
+</head>
+<body>
+  <a href="/choi/">곡강최가</a>
+  <h1>HTML Encoding (Character Sets)</h1>
+  <p>
+    HTML 페이지를 올바르게 표시하려면 웹 브라우저가 사용할 문자 모음(Character Sets)을 알아야 한다.
+  </p>
+
+  <hr>
+  <h2>ASCII에서 UTF-8로</h2>
+  <p>
+    ASCII는 최초의 문자 인코딩 표준이었습니다. ASCII는 인터넷에서 사용할 수 있는 128 개의 다른 문자를 정의했다. <br>
+    숫자 (0-9), 영문자(A-Z a-z) , !  $  + - ()  @  &#60; > .
+  </p>
+  <p>
+    ISO-8859-1은 HTML 4의 기본 문자 모음이었다.이 문자 모음은 256개의 서로 다른 문자 코드를 지원했으며, HTML 4는 UTF-8도 지원했다.
+  </p>
+  <p>
+    ANSI (Windows-1252)는 원래 Windows 문자 집합이었다. ANSI는 32개의 추가한 문자가 있다는 점을 제외하면 ISO-8859-1과 같다.
+  </p>
+  <p>
+    HTML5 사양은 웹 개발자가 세계의 거의 모든 문자와 기호를 포함하는 UTF-8 문자 모음을 사용하도록 권장한다!
+  </p>
+
+  <h2>HTML <em>charset</em> 속성</h2>
+  <p>
+    웹 브라우저가 HTML 문서를 올바르게 표시하려면 문서에 사용된 문자 모음을 알고 있어야 한다.
+  </p>
+
+  <div class="border">
+    &#60;<dark>meta</dark> <red>charset</red>="<blue>UTF-8</blue>">
+  </div>
+
+  <h2>문자 모음(charset)의 차이점</h2>
+  <script>
+    let num_symbol = 0;
+    let text = ``;
+    while (num_symbol < 31) {
+      text += `<tr>`;
+        text += `
+        <td>${num_symbol}</td>
+        <td>&#${num_symbol};</td>
+        <td>&#${num_symbol};</td>
+        <td>&#${num_symbol};</td>
+        <td>&#${num_symbol};</td>
+        `;
+      text += `<td></td></tr>`;
+      num_symbol++;
+    }
+  </script>
+  <div id="utf"></div>
+  <table class="even">
+    <tr>
+      <th>번호</th><th>ASCII</th><th>ANSI</th><th>8859</th><th>UTF-8</th><th>설명</th>
+    </tr>
+    <script>
+      document.write(text);
+    </script>
+    <tr>
+      <td>32</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>빈 글자</td>
+    </tr>
+    <tr>
+      <td>33</td><td>!</td><td>!</td><td>!</td><td>!</td><td>느낌표</td>
+    </tr>
+    <tr>
+      <td>34</td><td>"</td><td>"</td><td>"</td><td>"</td><td>큰 따옴표</td>
+    </tr>
+    <tr>
+      <td>35</td><td>#</td><td>#</td><td>#</td><td>#</td><td>숫자 기호</td>
+    </tr>
+    <tr>
+      <td>36</td><td>$</td><td>$</td><td>$</td><td>$</td><td>달러 기호</td>
+    </tr>
+    <tr>
+      <td>37</td><td>%</td><td>%</td><td>%</td><td>%</td><td>배분율 기호</td>
+    </tr>
+    <tr>
+      <td>38</td><td>&</td><td>&</td><td>&</td><td>&</td><td>ampersand</td>
+    </tr>
+    <tr>
+      <td>39</td><td>'</td><td>'</td><td>'</td><td>'</td><td>작은 따옴표</td>
+    </tr>
+    <tr>
+      <td>40</td><td>(</td><td>(</td><td>(</td><td>(</td><td>왼쪽 괄호</td>
+    </tr>
+    <tr>
+      <td>41</td><td>)</td><td>)</td><td>)</td><td>)</td><td>오른쪽 괄호</td>
+    </tr>
+    <tr>
+      <td>42</td><td>*</td><td>*</td><td>*</td><td>*</td><td>별표</td>
+    </tr>
+    <tr>
+      <td>43</td><td>+</td><td>+</td><td>+</td><td>+</td><td>더하기 기호</td>
+    </tr>
+    <tr>
+      <td>44</td><td>,</td><td>,</td><td>,</td><td>,</td><td>쉼표</td>
+    </tr>
+    <tr>
+      <td>45</td><td>-</td><td>-</td><td>-</td><td>-</td><td>빼기 기호</td>
+    </tr>
+    <tr>
+      <td>46</td><td>.</td><td>.</td><td>.</td><td>.</td><td>마침표</td>
+    </tr>
+    <tr>
+      <td>47</td><td>/</td><td>/</td><td>/</td><td>/</td><td>빗금</td>
+    </tr>
+    <tr>
+      <td>48</td><td>0</td><td>0</td><td>0</td><td>0</td><td>숫자 0</td>
+    </tr>
+    <tr>
+      <td>49</td><td>1</td><td>1</td><td>1</td><td>1</td><td>숫자 1</td>
+    </tr>
+    <tr>
+      <td>50</td><td>2</td><td>2</td><td>2</td><td>2</td><td>숫자 2</td>
+    </tr>
+    <tr>
+      <td>51</td><td>3</td><td>3</td><td>3</td><td>3</td><td>숫자 3</td>
+    </tr>
+    <tr>
+      <td>52</td><td>4</td><td>4</td><td>4</td><td>4</td><td>숫자 4</td>
+    </tr>
+    <tr>
+      <td>53</td><td>5</td><td>5</td><td>5</td><td>5</td><td>숫자 5</td>
+    </tr>
+    <tr>
+      <td>54</td><td>6</td><td>6</td><td>6</td><td>6</td><td>숫자 6</td>
+    </tr>
+    <tr>
+      <td>55</td><td>7</td><td>7</td><td>7</td><td>7</td><td>숫자 7</td>
+    </tr>
+    <tr>
+      <td>56</td><td>8</td><td>8</td><td>8</td><td>8</td><td>숫자 8</td>
+    </tr>
+    <tr>
+      <td>57</td><td>9</td><td>9</td><td>9</td><td>9</td><td>숫자 9</td>
+    </tr>
+    <tr>
+      <td>58</td><td>:</td><td>:</td><td>:</td><td>:</td><td>colon</td>
+    </tr>
+    <tr>
+      <td>59</td><td>;</td><td>;</td><td>;</td><td>;</td><td>semicolon</td>
+    </tr>
+    <tr>
+      <td>60</td><td>&#60;</td><td>&#60;</td><td>&#60;</td><td>&#60;</td><td>less-than sign</td>
+    </tr>
+    <tr>
+      <td>61</td><td>&#61;</td><td>&#61;</td><td>&#61;</td><td>&#61;</td><td>equals sign</td>
+    </tr>
+    <tr>
+      <td>62</td><td>&#62;</td><td>&#62;</td><td>&#62;</td><td>&#62;</td><td>greater-than sign</td>
+    </tr>
+    <tr>
+      <td>63</td><td>?</td><td>?</td><td>?</td><td>?</td><td>물음표</td>
+    </tr>
+    <tr>
+      <td>64</td><td>@</td><td>@</td><td>@</td><td>@</td><td>commercial at</td>
+    </tr>
+    <tr>
+      <td>65</td><td>A</td><td>A</td><td>A</td><td>A</td><td>영문 대문자 A</td>
+    </tr>
+    <tr>
+      <td>66</td><td>B</td><td>B</td><td>B</td><td>B</td><td>영문 대문자 B</td>
+    </tr>
+    <tr>
+      <td>67</td><td>C</td><td>C</td><td>C</td><td>C</td><td>영문 대문자 C</td>
+    </tr>
+    <tr>
+      <td>68</td><td>D</td><td>D</td><td>D</td><td>D</td><td>영문 대문자 D</td>
+    </tr>
+    <tr>
+      <td>69</td><td>E</td><td>E</td><td>E</td><td>E</td><td>영문 대문자 E</td>
+    </tr>
+    <tr>
+      <td>70</td><td>F</td><td>F</td><td>F</td><td>F</td><td>영문 대문자 F</td>
+    </tr>
+    <tr>
+      <td>71</td><td>G</td><td>G</td><td>G</td><td>G</td><td>영문 대문자 G</td>
+    </tr>
+    <tr>
+    <tr>
+      <td>72</td><td>H</td><td>H</td><td>H</td><td>H</td><td>영문 대문자 H</td>
+    </tr>
+    <tr>
+      <td>73</td><td>I</td><td>I</td><td>I</td><td>I</td><td>영문 대문자 I</td>
+    </tr>
+    <tr>
+      <td>74</td><td>J</td><td>J</td><td>J</td><td>J</td><td>영문 대문자 J</td>
+    </tr>
+    <tr>
+      <td>75</td><td>K</td><td>K</td><td>K</td><td>K</td><td>영문 대문자 K</td>
+    </tr>
+    <tr>
+      <td>76</td><td>L</td><td>L</td><td>L</td><td>L</td><td>영문 대문자 L</td>
+    </tr>
+    <tr>
+      <td>77</td><td>M</td><td>M</td><td>M</td><td>M</td><td>영문 대문자 M</td>
+    </tr>
+    <tr>
+      <td>78</td><td>N</td><td>N</td><td>N</td><td>N</td><td>영문 대문자 N</td>
+    </tr>
+    <tr>
+      <td>79</td><td>O</td><td>O</td><td>O</td><td>O</td><td>영문 대문자 O</td>
+    </tr>
+    <tr>
+      <td>80</td><td>P</td><td>P</td><td>P</td><td>P</td><td>영문 대문자 P</td>
+    </tr>
+    <tr>
+      <td>81</td><td>Q</td><td>Q</td><td>Q</td><td>Q</td><td>영문 대문자 Q</td>
+    </tr>
+    <tr>
+      <td>82</td><td>R</td><td>R</td><td>R</td><td>R</td><td>영문 대문자 R</td>
+    </tr>
+    <tr>
+      <td>83</td><td>S</td><td>S</td><td>S</td><td>S</td><td>영문 대문자 S</td>
+    </tr>
+    <tr>
+      <td>84</td><td>T</td><td>T</td><td>T</td><td>T</td><td>영문 대문자 T</td>
+    </tr>
+    <tr>
+      <td>85</td><td>U</td><td>U</td><td>U</td><td>U</td><td>영문 대문자 U</td>
+    </tr>
+    <tr>
+      <td>86</td><td>W</td><td>W</td><td>W</td><td>W</td><td>영문 대문자 W</td>
+    </tr>
+    <tr>
+      <td>87</td><td>X</td><td>X</td><td>X</td><td>X</td><td>영문 대문자 X</td>
+    </tr>
+    <tr>
+      <td>88</td><td>Y</td><td>Y</td><td>Y</td><td>Y</td><td>영문 대문자 Y</td>
+    </tr>
+    <tr>
+      <td>89</td><td>P</td><td>P</td><td>P</td><td>P</td><td>영문 대문자 P</td>
+    </tr>
+    <tr>
+      <td>90</td><td>Z</td><td>Z</td><td>Z</td><td>Z</td><td>영문 대문자 Z</td>
+    </tr>
+    <tr>
+      <td>91</td><td>[</td><td>[</td><td>[</td><td>[</td><td>왼쪽 대괄호</td>
+    </tr>
+    <tr>
+      <td>92</td><td>\</td><td>\</td><td>\</td><td>\</td><td>역 빗금</td>
+    </tr>
+    <tr>
+      <td>93</td><td>]</td><td>]</td><td>]</td><td>]</td><td>오른쪽 대괄호</td>
+    </tr>
+    <tr>
+      <td>94</td><td>^</td><td>^</td><td>^</td><td>^</td><td>꺽쇠</td>
+    </tr>
+    <tr>
+      <td>95</td><td>_</td><td>_</td><td>_</td><td>_</td><td>밑줄</td>
+    </tr>
+    <tr>
+      <td>96</td><td>`</td><td>`</td><td>`</td><td>`</td><td>억음 기호</td>
+    </tr>
+    <tr>
+      <td>97</td><td>a</td><td>a</td><td>a</td><td>a</td><td>영문 소문자 a</td>
+    </tr>
+    <tr>
+      <td>98</td><td>b</td><td>b</td><td>b</td><td>b</td><td>영문 소문자 b</td>
+    </tr>
+    <tr>
+      <td>99</td><td>c</td><td>c</td><td>c</td><td>c</td><td>영문 소문자 c</td>
+    </tr>
+    <tr>
+      <td>100</td><td>d</td><td>d</td><td>d</td><td>d</td><td>영문 소문자 d</td>
+    </tr>
+    <tr>
+      <td>101</td><td>e</td><td>e</td><td>e</td><td>e</td><td>영문 소문자 e</td>
+    </tr>
+    <tr>
+      <td>102</td><td>f</td><td>f</td><td>f</td><td>f</td><td>영문 소문자 f</td>
+    </tr>
+    <tr>
+      <td>103</td><td>g</td><td>g</td><td>g</td><td>g</td><td>영문 소문자 g</td>
+    </tr>
+    <tr>
+      <td>104</td><td>h</td><td>h</td><td>h</td><td>h</td><td>영문 소문자 h</td>
+    </tr>
+    <tr>
+      <td>105</td><td>i</td><td>i</td><td>i</td><td>i</td><td>영문 소문자 i</td>
+    </tr>
+    <tr>
+      <td>106</td><td>j</td><td>j</td><td>j</td><td>j</td><td>영문 소문자 j</td>
+    </tr>
+    <tr>
+      <td>107</td><td>k</td><td>k</td><td>k</td><td>k</td><td>영문 소문자 k</td>
+    </tr>
+    <tr>
+      <td>108</td><td>l</td><td>l</td><td>l</td><td>l</td><td>영문 소문자 l</td>
+    </tr>
+    <tr>
+      <td>109</td><td>m</td><td>m</td><td>m</td><td>m</td><td>영문 소문자 m</td>
+    </tr>
+    <tr>
+      <td>110</td><td>n</td><td>n</td><td>n</td><td>n</td><td>영문 소문자 n</td>
+    </tr>
+    <tr>
+      <td>111</td><td>o</td><td>o</td><td>o</td><td>o</td><td>영문 소문자 o</td>
+    </tr>
+    <tr>
+      <td>112</td><td>p</td><td>p</td><td>p</td><td>p</td><td>영문 소문자 p</td>
+    </tr>
+    <tr>
+      <td>113</td><td>q</td><td>q</td><td>q</td><td>q</td><td>영문 소문자 q</td>
+    </tr>
+    <tr>
+      <td>114</td><td>r</td><td>r</td><td>r</td><td>r</td><td>영문 소문자 r</td>
+    </tr>
+    <tr>
+      <td>115</td><td>s</td><td>s</td><td>s</td><td>s</td><td>영문 소문자 s</td>
+    </tr>
+    <tr>
+      <td>116</td><td>t</td><td>t</td><td>t</td><td>t</td><td>영문 소문자 t</td>
+    </tr>
+    <tr>
+      <td>117</td><td>u</td><td>u</td><td>u</td><td>u</td><td>영문 소문자 u</td>
+    </tr>
+    <tr>
+      <td>118</td><td>v</td><td>v</td><td>v</td><td>v</td><td>영문 소문자 v</td>
+    </tr>
+    <tr>
+      <td>119</td><td>w</td><td>w</td><td>w</td><td>w</td><td>영문 소문자 w</td>
+    </tr>
+    <tr>
+      <td>120</td><td>x</td><td>x</td><td>x</td><td>x</td><td>영문 소문자 x</td>
+    </tr>
+    <tr>
+      <td>121</td><td>y</td><td>y</td><td>y</td><td>y</td><td>영문 소문자 y</td>
+    </tr>
+    <tr>
+      <td>122</td><td>z</td><td>z</td><td>z</td><td>z</td><td>영문 소문자 z</td>
+    </tr>
+    <tr>
+      <td>123</td><td>{</td><td>{</td><td>{</td><td>{</td><td>왼쪽 중괄호</td>
+    </tr>
+    <tr>
+      <td>124</td><td>|</td><td>|</td><td>|</td><td>|</td><td>수직선</td>
+    </tr>
+    <tr>
+      <td>125</td><td>}</td><td>}</td><td>}</td><td>}</td><td>오른쪽 중괄호</td>
+    </tr>
+    <tr>
+      <td>126</td><td>~</td><td>~</td><td>~</td><td>~</td><td>물결 기호</td>
+    </tr>
+    <tr>
+      <td>127</td><td>DEL</td><td>&#32;</td><td>&#32;</td><td>&#32;</td><td>&#32;</td>
+    </tr>
+    <tr>
+      <td>128</td><td>&#32;</td><td>&#128;</td><td>&#32;</td><td>&#32;</td><td>euro sign</td>
+    </tr>
+    <tr>
+      <td>129</td><td>&#32;</td><td>&#129;</td><td>&#129;</td><td>&#129;</td><td>사용 안함</td>
+    </tr>
+    <tr>
+      <td>130</td><td>&#32;</td><td>&#130;</td><td>&#32;</td><td>&#32;</td><td>낮은 작은 따옴표</td>
+    </tr>
+    <tr>
+      <td>131</td><td>&#32;</td><td>&#131;</td><td>&#32;</td><td>&#32;</td><td>고리달린 기울인  f</td>
+    </tr>
+    <tr>
+      <td>132</td><td>&#32;</td><td>&#132;</td><td>&#32;</td><td>&#32;</td><td>낮은 큰 따옴표</td>
+    </tr>
+    <tr>
+      <td>133</td><td>&#32;</td><td>&#133;</td><td>&#32;</td><td>&#32;</td><td>생략 부호</td>
+    </tr>
+    <tr>
+      <td>134</td><td>&#32;</td><td>&#134;</td><td>&#32;</td><td>&#32;</td><td>단검 기호</td>
+    </tr>
+    <tr>
+      <td>135</td><td>&#32;</td><td>&#135;</td><td>&#32;</td><td>&#32;</td><td>이중 단검 기호</td>
+    </tr>
+    <tr>
+      <td>136</td><td>&#32;</td><td>&#136;</td><td>&#32;</td><td>&#32;</td><td>꺾음 부호</td>
+    </tr>
+    <tr>
+      <td>137</td><td>&#32;</td><td>&#137;</td><td>&#32;</td><td>&#32;</td><td>천분율</td>
+    </tr>
+    <tr>
+      <td>138</td><td>&#32;</td><td>&#138;</td><td>&#32;</td><td>&#32;</td><td>역 꺽쇠 부호 S</td>
+    </tr>
+    <tr>
+      <td>139</td><td>&#32;</td><td>&#139;</td><td>&#32;</td><td>&#32;</td><td>왼쪽 각괄호</td>
+    </tr>
+    <tr>
+      <td>140</td><td>&#32;</td><td>&#140;</td><td>&#32;</td><td>&#32;</td><td>결합 OE</td>
+    </tr>
+    <tr>
+      <td>141</td><td>&#141;</td><td>&#141;</td><td>&#141;</td><td>&#141;</td><td>사용 안함</td>
+    </tr>
+    <tr>
+      <td>142</td><td>&#32;</td><td>&#142;</td><td>&#32;</td><td>&#32;</td><td>역 꺽쇠 부호 Z</td>
+    </tr>
+    <tr>
+      <td>143</td><td>&#143;</td><td>&#143;</td><td>&#143;</td><td>&#143;</td><td>사용 안함</td>
+    </tr>
+    <tr>
+      <td>144</td><td>&#144;</td><td>&#144;</td><td>&#144;</td><td>&#144;</td><td>사용 안함</td>
+    </tr>
+    <tr>
+      <td>145</td><td>&#32;</td><td>&#145;</td><td>&#32;</td><td>&#32;</td><td>왼쪽 작은 따옴표</td>
+    </tr>
+    <tr>
+      <td>146</td><td>&#32;</td><td>&#146;</td><td>&#32;</td><td>&#32;</td><td>오른쪽 작은 따옴표</td>
+    </tr>
+    <tr>
+      <td>147</td><td>&#32;</td><td>&#147;</td><td>&#32;</td><td>&#32;</td><td>왼쪽 큰 따옴표</td>
+    </tr>
+    <tr>
+      <td>148</td><td>&#32;</td><td>&#148;</td><td>&#32;</td><td>&#32;</td><td>오른쪽 큰 따옴표</td>
+    </tr>
+    <tr>
+      <td>149</td><td>&#32;</td><td>&#149;</td><td>&#32;</td><td>&#32;</td><td>bullet</td>
+    </tr>
+    <tr>
+      <td>150</td><td>&#32;</td><td>&#150;</td><td>&#32;</td><td>&#32;</td><td>en dash</td>
+    </tr>
+    <tr>
+      <td>151</td><td>&#32;</td><td>&#151;</td><td>&#32;</td><td>&#32;</td><td>em dash</td>
+    </tr>
+    <tr>
+      <td>152</td><td>&#32;</td><td>&#152;</td><td>&#32;</td><td>&#32;</td><td>작은 물결 기호</td>
+    </tr>
+    <tr>
+      <td>153</td><td>&#32;</td><td>&#153;</td><td>&#32;</td><td>&#32;</td><td>상표 기호</td>
+    </tr>
+    <tr>
+      <td>154</td><td>&#32;</td><td>&#154;</td><td>&#32;</td><td>&#32;</td><td>꺽쇠 기호 s</td>
+    </tr>
+    <tr>
+      <td>155</td><td>&#32;</td><td>&#155;</td><td>&#32;</td><td>&#32;</td><td>오른쪽 작은 각괄호</td>
+    </tr>
+    <tr>
+      <td>156</td><td>&#32;</td><td>&#156;</td><td>&#32;</td><td>&#32;</td><td>작은 합자 oe</td>
+    </tr>
+    <tr>
+      <td>157</td><td>&#32;</td><td>&#157;</td><td>&#157;</td><td>&#157;</td><td>사용 안함</td>
+    </tr>
+    <tr>
+      <td>158</td><td>&#32;</td><td>&#158;</td><td>&#32;</td><td>&#32;</td><td>꺽쇠 기호 z</td>
+    </tr>
+    <tr>
+      <td>159</td><td>&#32;</td><td>&#159;</td><td>&#32;</td><td>&#32;</td><td>분음 기호 Y</td>
+    </tr>
+    <tr>
+      <td>160</td><td>&#32;</td><td>&#160;</td><td>&#32;</td><td>&#32;</td><td>빈곳 기호</td>
+    </tr>
+    <tr>
+      <td>161</td><td>&#161;</td><td>&#161;</td><td>&#161;</td><td>&#161;</td><td>뒤집은 느낌표</td>
+    </tr>
+    <tr>
+      <td>162</td><td>&#162;</td><td>&#162;</td><td>&#162;</td><td>&#162;</td><td>센트 기호</td>
+    </tr>
+    <tr>
+      <td>163</td><td>&#163;</td><td>&#163;</td><td>&#163;</td><td>&#163;</td><td>파운드 기호</td>
+    </tr>
+    <tr>
+      <td>164</td><td>&#164;</td><td>&#164;</td><td>&#164;</td><td>&#164;</td><td>통화 기호</td>
+    </tr>
+    <tr>
+      <td>165</td><td>&#165;</td><td>&#165;</td><td>&#165;</td><td>&#165;</td><td>엔 기호</td>
+    </tr>
+    <tr>
+      <td>166</td><td>&#166;</td><td>&#166;</td><td>&#166;</td><td>&#166;</td><td>잘린 수직선 기호</td>
+    </tr>
+    <tr>
+      <td>167</td><td>&#167;</td><td>&#167;</td><td>&#167;</td><td>&#167;</td><td>섹션 기호</td>
+    </tr>
+    <tr>
+      <td>168</td><td>&#168;</td><td>&#168;</td><td>&#168;</td><td>&#168;</td><td>분음 기호</td>
+    </tr>
+    <tr>
+      <td>169</td><td>&#169;</td><td>&#169;</td><td>&#169;</td><td>&#169;</td><td>저작권 기호</td>
+    </tr>
+    <tr>
+      <td>170</td><td>&#170;</td><td>&#170;</td><td>&#170;</td><td>&#170;</td><td>여성 지시기호</td>
+    </tr>
+    <tr>
+      <td>171</td><td>&#171;</td><td>&#171;</td><td>&#171;</td><td>&#171;</td><td>왼쪽 이중 각괄호</td>
+    </tr>
+    <tr>
+      <td>172</td><td>&#172;</td><td>&#172;</td><td>&#172;</td><td>&#172;</td><td>오른쪽 아래 꺽임 기호</td>
+    </tr>
+    <tr>
+      <td>173</td><td>&#173;</td><td>&#173;</td><td>&#173;</td><td>&#173;</td><td>부드러운 하이픈 기호</td>
+    </tr>
+    <tr>
+      <td>174</td><td>&#174;</td><td>&#174;</td><td>&#174;</td><td>&#174;</td><td>등록된 기호</td>
+    </tr>
+    <tr>
+      <td>175</td><td>&#175;</td><td>&#175;</td><td>&#175;</td><td>&#175;</td><td>윗줄 기호</td>
+    </tr>
+    <tr>
+      <td>176</td><td>&#176;</td><td>&#176;</td><td>&#176;</td><td>&#176;</td><td>온도 기호</td>
+    </tr>
+    <tr>
+      <td>177</td><td>&#177;</td><td>&#177;</td><td>&#177;</td><td>&#177;</td><td>더하기 빼기 기호</td>
+    </tr>
+    <tr>
+      <td>178</td><td>&#178;</td><td>&#178;</td><td>&#178;</td><td>&#178;</td><td>위 첨자 2</td>
+    </tr>
+    <tr>
+      <td>179</td><td>&#179;</td><td>&#179;</td><td>&#179;</td><td>&#179;</td><td>위 첨자 3</td>
+    </tr>
+    <tr>
+      <td>180</td><td>&#180;</td><td>&#180;</td><td>&#180;</td><td>&#180;</td><td>강 억양 기호</td>
+    </tr>
+    <tr>
+      <td>181</td><td>&#181;</td><td>&#181;</td><td>&#181;</td><td>&#181;</td><td>micro 기호</td>
+    </tr>
+    <tr>
+      <td>182</td><td>&#182;</td><td>&#182;</td><td>&#182;</td><td>&#182;</td><td>pilcrow 기호</td>
+    </tr>
+    <tr>
+      <td>183</td><td>&#183;</td><td>&#183;</td><td>&#183;</td><td>&#183;</td><td>중앙점 기호</td>
+    </tr>
+    <tr>
+      <td>184</td><td>&#184;</td><td>&#184;</td><td>&#184;</td><td>&#184;</td><td>cedilla 기호</td>
+    </tr>
+    <tr>
+      <td>185</td><td>&#185;</td><td>&#185;</td><td>&#185;</td><td>&#185;</td><td>위첨자 1</td>
+    </tr>
+    <tr>
+      <td>186</td><td>&#186;</td><td>&#186;</td><td>&#186;</td><td>&#186;</td><td>남성 서수 기호</td>
+    </tr>
+    <tr>
+      <td>187</td><td>&#187;</td><td>&#187;</td><td>&#187;</td><td>&#187;</td><td>오른쪽 이중 각괄호</td>
+    </tr>
+    <tr>
+      <td>188</td><td>&#188;</td><td>&#188;</td><td>&#188;</td><td>&#188;</td><td>작은 분수 기호 1/4</td>
+    </tr>
+    <tr>
+      <td>189</td><td>&#189;</td><td>&#189;</td><td>&#189;</td><td>&#189;</td><td>작은 분수 기호 1/2</td>
+    </tr>
+    <tr>
+      <td>190</td><td>&#190;</td><td>&#190;</td><td>&#190;</td><td>&#190;</td><td>작은 분수 기호 3/4</td>
+    </tr>
+    <tr>
+      <td>191</td><td>&#191;</td><td>&#191;</td><td>&#191;</td><td>&#191;</td><td>뒤집은 물음표</td>
+    </tr>
+    <tr>
+      <td>192</td><td>&#192;</td><td>&#192;</td><td>&#192;</td><td>&#192;</td><td>억음 강조 A</td>
+    </tr>
+    <tr>
+      <td>193</td><td>&#193;</td><td>&#193;</td><td>&#193;</td><td>&#193;</td><td>예음 표시 A</td>
+    </tr>
+    <tr>
+      <td>194</td><td>&#194;</td><td>&#194;</td><td>&#194;</td><td>&#194;</td><td>곡절 강조 A</td>
+    </tr>
+    <tr>
+      <td>195</td><td>&#195;</td><td>&#195;</td><td>&#195;</td><td>&#195;</td><td>물결표 A</td>
+    </tr>
+    <tr>
+      <td>196</td><td>&#196;</td><td>&#196;</td><td>&#196;</td><td>&#196;</td><td>분음 A</td>
+    </tr>
+    <tr>
+      <td>197</td><td>&#197;</td><td>&#197;</td><td>&#197;</td><td>&#197;</td><td>위 고리 A</td>
+    </tr>
+    <tr>
+      <td>198</td><td>&#198;</td><td>&#198;</td><td>&#198;</td><td>&#198;</td><td>결합 AE</td>
+    </tr>
+    <tr>
+      <td>199</td><td>&#199;</td><td>&#199;</td><td>&#199;</td><td>&#199;</td><td>꼬리달린 C</td>
+    </tr>
+    <tr>
+      <td>200</td><td>&#200;</td><td>&#200;</td><td>&#200;</td><td>&#200;</td><td>억음 강조 E</td>
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="footer.js"></script>
+</body>
+</html>

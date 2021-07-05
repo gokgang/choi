@@ -1,0 +1,52 @@
+* {
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 90%;
+  min-width: 800px;
+  max-width: 1200px;
+  margin: auto;
+  line-height: 1.6rem;
+}
+
+.yellow {background: #ff9; padding: 10px;color: navy;}
+.grey {background-color: #def; border: 1px solid grey; border-radius: 3px;margin: 6px;padding: 8px;}
+.border {background-color: white; border: 1px solid grey; border-radius: 3px; margin: 6px; padding: 16px; font-size: 1.2rem; color: navy;}
+.pre {background-color: white; border: 1px solid #def; border-radius: 3px; margin: 3px;padding: 8px;}
+pre {background-color: white; border: 1px solid #def; border-radius: 3px; margin: 3px;padding: 8px;}
+
+red {color: red;}
+dark {color: darkred;}
+blue {color: blue;}
+navy {color: navy; font-style: italic;}
+green {color: green; font-size: 0.9rem;}
+em {color: red;}
+q {color: darkslateblue;}
+b {color: darkblue;font-size: 1.1rem;}
+
+table.even {
+  width: 100%;
+  border: 1px solid #def;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  margin: 8px;
+}
+table.even tr:nth-child(even) {
+  background-color: #eee;
+}
+table.even th, table.even td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #def;
+}
+
+a {
+  text-decoration: none;
+  color: navy;
+  padding: 3px 16px;
+}
+a:hover {background-color: #def;}
+
+h1, h2, h3, h4 {color: darkblue;}

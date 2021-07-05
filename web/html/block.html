@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML, html">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML Block & Inline</title>
+  <style>
+    a {padding: 0 3px; }
+  </style>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>Block 요소와 Inline 요소</h1>
+  <table style="width: 100%; border: 1px solid skyblue;">
+    <tr>
+      <td><a href="#block">Block level 요소</a></td>
+      <td><a href="#inline">Inline 요소</a></td>
+      <td><a href="#division">&lt;div> 요소</a></td>
+      <td><a href="#span">&lt;span> 요소</a></td>
+    </tr>
+  </table>
+  <hr>
+  <p>
+    모든 HTML 요소는 요소 유형에 따라 <b>Block</b> 과 <b>Inline</b> 의 두 가지 기본 표시값이 있다
+  </p>
+
+  <h2 id="block">Block level 요소</h2>
+  <p>
+    <b>Block level</b> 요소는 항상 새 줄에서 시작한다. <br>
+    <b>Block level</b> 요소는 왼쪽과 오른쪽으로 가능한 확장하여 항상 사용 가능한 전체 너비를 차지한다. <br>
+    <b>Block level</b> 요소에는 위쪽과 아래쪽 여백이 있지만 <b>Inline</b> 요소에는 여백이 없다.
+  </p>
+  <p style="border: 1px solid skyblue">
+    &lt;<dark>div</dark>> 요소는 <b>Block level</b> 요소이다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>div</dark> <red>style</red>="<blue>border: 1px solid skyblue</blue>">Hello HypherText!&lt;<dark>/div</dark>>
+</pre>
+  </div>
+  <div style="border: 1px solid skyblue">Hello HypherText!</div>
+
+  <h3>HTML의 <b>Block level</b> 요소</h3>
+  <table style="width: 100%;">
+    <tr>
+      <td>&lt;<dark><a href="./quotation_element.html">address</a></dark>></td>
+      <td>&lt;<dark>article</dark>></td>
+      <td>&lt;<dark>aside</dark>></td>
+      <td>&lt;<dark><a href="./quotation_element.html">blockquote</a></dark>></td>
+      <td>&lt;<dark>canvas</dark>></td>
+      <td>&lt;<dark><a href="./list.html">dd</a></dark>></td>
+    </tr>
+    <tr>
+      <td>&lt;<dark><a href="./tag/div.html">div</a></dark>></td>
+      <td>&lt;<dark><a href="./list.html">dl</a></dark>></td>
+      <td>&lt;<dark><a href="./list.html">dt</a></dark>></td>
+      <td>&lt;<dark>fieldset</dark>></td>
+      <td>&lt;<dark>figcaption</dark>></td>
+      <td>&lt;<dark>figure</dark>></td>
+    </tr>
+    <tr>
+      <td>&lt;<dark>footer</dark>></td>
+      <td>&lt;<dark>form</dark>></td>
+      <td>&lt;<dark><a href="./heading.html">h1</a></dark>>~&lt;<dark><a href="heading.html">h6</a></dark>></td>
+      <td>&lt;<dark>header</dark>></td>
+      <td>&lt;<dark><a href="./paragraph.html">hr</a></dark>></td>
+      <td>&lt;<dark><a href="./list.html">li</a></dark>></td>
+    </tr>
+    <tr>
+      <td>&lt;<dark>main</dark>></td>
+      <td>&lt;<dark>nav</dark>></td>
+      <td>&lt;<dark>noscript</dark>></td>
+      <td>&lt;<dark><a href="./list.html">ol</a></dark>></td>
+      <td>&lt;<dark><a href="./paragraph.html">p</a></dark>></td>
+      <td>&lt;<dark><a href="./paragraph.html">pre</a></dark>></td>
+    </tr>
+    <tr>
+      <td>&lt;<dark>section</dark>></td>
+      <td>&lt;<dark><a href="./table.html">table</a></dark>></td>
+      <td>&lt;<dark>tfoot</dark>></td>
+      <td>&lt;<dark><a href="./list.html">ul</a></dark>></td>
+      <td>&lt;<dark>video</dark>></td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+
+  <h2 id="inline">Inline 요소</h2>
+  <p>
+    <b>Inline</b> 요소는 필요한 만큼만 너비를 차지하고 새 줄에서 시작하지 않는다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>p</dark>>다음의 &lt;<dark>span</dark> <red>style</red>="<blue>border: 1px solid skyblue;</blue>">Hello HypherText&lt;<dark>/span</dark>>는 문단 안의 요소이다.&lt;<dark>/p</dark>>
+</pre>
+  </div>
+  <p>다음의 <span style="border: 1px solid skyblue;">Hello HypherText</span>는 문단 안의 요소이다.</p>
+
+  <h3>Inline 요소</h3>
+  <table style="width: 100%;">
+    <tr>
+      <td>&lt;<a href="./link.html">a</a>></td>
+      <td>&lt;<a href="./quotation_element.html">abbr</a>></td>
+      <td>&lt;<a href="">acronym</a>></td>
+      <td>&lt;<a href="./formatting.html">b</a>></td>
+      <td>&lt;<a href="./quotation_element.html">bdo</a>></td>
+      <td>&lt;<a href="">big</a>></td>
+    </tr>
+    <tr>
+      <td>&lt;<a href="./paragraph.html">br</a>></td>
+      <td>&lt;<a href="">button</a>></td>
+      <td>&lt;<a href="./quotation_element.html">cite</a>></td>
+      <td>&lt;<a href="">code</a>></td>
+      <td>&lt;<a href="">dfn</a>></td>
+      <td>&lt;<a href="./formatting.html">em</a>></td>
+    </tr>
+    <tr>
+      <td>&lt;<a href="./formatting.html">i</a>></td>
+      <td>&lt;<a href="./image.html">img</a>></td>
+      <td>&lt;<a href="">input</a>></td>
+      <td>&lt;<a href="">kbd</a>></td>
+      <td>&lt;<a href="">label</a>></td>
+      <td>&lt;<a href="./image.html">map</a>></td>
+    </tr>
+    <tr>
+      <td>&lt;<a href="">object</a>></td>
+      <td>&lt;<a href="">output</a>></td>
+      <td>&lt;<a href="./quotation_element.html">q</a>></td>
+      <td>&lt;<a href="">samp</a>></td>
+      <td>&lt;<a href="">script</a>></td>
+      <td>&lt;<a href="">select</a>></td>
+    </tr>
+    <tr>
+      <td>&lt;<a href="./formatting.html">small</a>></td>
+      <td>&lt;<a href="./tag/span.html">span</a>></td>
+      <td>&lt;<a href="./formatting.html">strong</a>></td>
+      <td>&lt;<a href="./formatting.html">sub</a>></td>
+      <td>&lt;<a href="./formatting.html">sup</a>></td>
+      <td>&lt;<a href="">textarea</a>></td>
+    </tr>
+    <tr>
+      <td>&lt;<a href="">time</a>></td>
+      <td>&lt;<a href="">tt</a>></td>
+      <td>&lt;<a href="">var</a>></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </table>
+
+  <p class="yellow">
+    <b>참고 :</b> <b>Inline</b> 요소는 <b>Block Level</b> 요소를 포함할 수 없다!
+  </p>
+
+  <h2 id="division">&lt;<dark>div</dark>> 요소</h2>
+  <p>
+    &lt;<dark>div</dark>> 요소는 다른 HTML 요소를 담을 수 있는 그릇이다. <br>
+    &lt;<dark>div</dark>>요소는 속성이 없어도 되지만, 포함된 요소들을 묶음으로 만들어 <em>style</em>, <em>class</em>, <em>id</em> 등을 지정하여 같은 양식으로 만들 수 있다. 
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>div</dark>  <red>style</red>="<blue>background-color:blue; color:white; padding:20px;</blue>">
+    &lt;<dark>h2</dark> <red>style</red>="<blue>color: yellow;</blue>">서울&lt;<dark>/h2</dark>>
+    &lt;<dark>p</dark>>
+      대한민국의 수도인 서울을 지방자치단체인 특별시로 부르는 명칭이다. 한반도 중앙에 있으며, 한강을 사이에 
+      두고 남북으로 펼쳐져 있다. 북쪽 끝은 도봉구 도봉동, 동쪽 끝은 강동구 상일동, 남쪽 끝은 서초구 원지동, 서쪽 
+      끝은 강서구 오곡동이다. 시청은 중구 을지로1가(태평로1가 31)에 있다.
+    &lt;<dark>/p</dark>>
+  &lt;<dark>/div</dark>>
+</pre>
+  </div>
+  <div  style="background-color:blue;color:white;padding:20px;">
+    <h2 style="color: yellow;">서울</h2>
+    <p>
+      대한민국의 수도인 서울을 지방자치단체인 특별시로 부르는 명칭이다. 한반도 중앙에 있으며, 한강을 사이에 
+      두고 남북으로 펼쳐져 있다. 북쪽 끝은 도봉구 도봉동, 동쪽 끝은 강동구 상일동, 남쪽 끝은 서초구 원지동, 서쪽 
+      끝은 강서구 오곡동이다. 시청은 중구 태평로1가에 있다.
+    </p>
+  </div>
+
+  <h2 id="span">&lt;<dark>span</dark>> 요소</h2>
+  <p>
+    &lt;<dark>span</dark>>요소는 글자, 또는 문서 일부를 다르게 표시하는 데 사용되는 <em>Inline</em> 그릇이다. <br>
+    다른 요소에 포함된 &lt;<dark>span</dark>> 요소는 속성이 없지만, <em>style</em>, <em>class</em>, <em>id</em> 등을 지정하여 포함한 요소와는 다른 모양으로 만들 수 있다. 
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>p</dark>>
+    어머니는 &lt;<dark>span</dark> <red>style</red>="<blue>color:blue;font-weight:bold;</blue>">파란&lt;<dark>/span</dark>> 눈이고, 아버지는 
+    &lt;<dark>span</dark> <red>style</red>="<blue>color:darkgreen;font-weight:bold;</blue>">옅은 녹색&lt;<dark>/span</dark>> 눈을 가졌습니다.
+  &lt;<dark>/p</dark>>
+</pre>
+<div class="pre">
+  <p>어머니는 <span style="color:blue;font-weight:bold">파란</span> 눈이고, 아버지는 <span style="color:darkgreen;font-weight:bold">짙은 녹색</span> 눈을 가졌습니다.</p>
+</div>
+  </div>
+
+  <script src="footer.js"></script>
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML, html">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML 만응형 웹 문서</title>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .left, .right {
+      background-color: skyblue;
+      padding: 16px;
+      float: left;
+      width: 20%; /* 좌우 구역의기본 너비 */
+    }
+    .main {
+      background-color: #def;
+      padding: 16px;
+      float: left;
+      width: 60%; /* 본문 기본 너비 */
+    }
+    section::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    /* 화면 너비 800px 보다 작으면 각 부분의 너비를 100%로 바꾸기 */
+    @media screen and (max-width: 800px) {
+      .left, .main, .right {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>반응형 웹 문서</h1>
+  <p>
+    반응형 웹 문서는 HTML 및 CSS를 사용하여 웹 문서의 크기를 자동으로 조정하고, 숨기거나, 늘이고 줄여서 데스크톱, 태블릿 및 휴대폰 등 모든 장치에서 보기 좋게 만드는 것이다.
+  </p>
+  <h2>화면 크기 설정</h2>
+  <p>
+    반응형 웹 문서를 만들려면 모든 웹 문서에 다음과 같은 &lt;<dark>meta</dark>> 요소를 추가해야 한다. <br>
+    <em>viewport</em> 설정은 브라우저에게 문서의 크기 조정을 위한 지침을 알려준다.
+  </p>
+
+  <div class="border">
+    &lt;<dark>meta</dark> <red>name</red>="<blue>viewport</blue>" <red>content</red>="<blue>width=device-width, initial-scale=1.0</blue>">
+  </div>
+
+  <h2>반응형 그림</h2>
+  <p>
+    CSS width 속성을 100 %로 설정하면 그림이 브라우저 창의 크기에 맞도록 조정된다.
+  </p>
+  <div class="grey">
+<pre>
+    &lt;<dark>img</dark> <red>src</red>="<blue>image/img_firstlove.jpg</blue>" <red>style</red>="<blue>width: 100%;</blue>">
+</pre>
+  </div>
+  <div class="border">
+    <img src="image/img_firstlove.jpg" alt="꽃말 첫사랑" style="width: 100%;">
+  </div>
+
+  <h3>최대 너비 지정</h3>
+  <p>
+    <em>max-width</em> 속성을 지정하면 원래 크기 보다 늘어나지 못하도록 할 수 있다.
+  </p>
+  <div class="grey">
+<pre>
+    &lt;<dark>img</dark> <red>src</red>="<blue>image/img_firstlove.jpg</blue>" <red>style</red>="<blue>max-width: 100%; height: auto;</blue>">
+</pre>
+  </div>
+  <div class="border">
+    <img src="image/img_firstlove.jpg" alt="꽃말 첫사랑" style="max-width: 100%; height: auto;">
+  </div>
+
+  <h3>브라우저 너비에 따라 다른 그림 표시</h3>
+  <div class="grey">
+<pre>
+  &lt;<dark>picture</dark>>
+    &lt;<dark>source</dark> <red>srcset</red>="<blue>./image/img_flower.gif</blue>" <red>media</red>="<blue>(max-width: 600px)</blue>">
+    &lt;<dark>source</dark> <red>srcset</red>="<blue>./image/img_flower.jpg</blue>" <red>media</red>="<blue>(max-width: 1500px)</blue>">
+    &lt;<dark>source</dark> <red>srcset</red>="<blue>./image/img_firstlove.jpg</blue>">
+    &lt;<dark>img</dark> <red>src</red>="<blue>./image/img_firstlove.jpg</blue>" <red>alt</red>="<blue>첫사랑</blue>">
+  &lt;<dark>/picture</dark>>
+</pre>
+  </div>
+  <div class="border">
+    <picture>
+      <source srcset="./image/img_flower.gif" media="(max-width: 600px)">
+      <source srcset="./image/img_firstlove.jpg" media="(max-width: 1500px)">
+      <source srcset="./image/img_flower.jpg">
+      <img src="./image/img_firstlove.jpg" alt="첫사랑">
+    </picture>
+  </div>
+
+  <h3>반응형 글자 크기</h3>
+  <p>
+    글자 크기는 “화면 너비” 를 의미하는 “<em>vw</em>” 단위로 설정할 수 있다. <br>
+    글자 크기를 “<em>vw</em>” 단위로 설정하면 글자 크기가 브라우저 창의 크기를 따라 조정된다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>h1</dark> <red>style</red>="<blue>font-size: 10vw;</blue>">Hello World!&lt;<dark>/h1</dark>>
+</pre>
+<div class="pre">
+  <h1 style="font-size: 10vw;">Hello World!</h1>
+</div>
+  <p>브라우저 창의 크기를 조정하면 글자 크기가 바뀐다.</p>
+  </div>
+
+  <p class="yellow">
+    Viewport는 브라우저 창의 크기이다. 1vw = Viewport 너비의 1 %. Viewport 너비가 50cm이면 1vw는 0.5cm이다.
+  </p>
+
+  <h2>Media Query</h2>
+  <p>
+    글과 그림의 크기를 조정하는 것 외에도 Media Query를 사용하여 브라우저 크기에 따라 완전히 다른 모양의 문서를 만들 수 있다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>*</dark> {
+      <red>box-sizing</red>: <blue>border-box</blue>;
+    }
+    <dark>.left, .right</dark> {
+      <red>float</red>: <blue>left</blue>;
+      <red>width</red>: <blue>20%</blue>; <green>/* 구역의 기본 너비 */</green>
+    }
+    <dark>.main</dark> {
+      <red>float</red>: <blue>left</blue>;
+      <red>width</red>: <blue>60%</blue>; <green>/* 본문 기본 너비 */</green>
+    }
+    <green>/* 화면 너비 800px 보다 작으면 각 부분의 너비를 100%로 바꾸기 */</green>
+    <dark>@media</dark> <blue>screen</blue> <dark>and</dark> <blue>(max-width: 800px</blue>) {
+      <dark>.left, .main, .right</dark> {
+        <red>width</red>: <blue>100%</blue>;
+      }
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<pre>
+  &lt;<dark>header</dark> <red>style</red>="<blue>background-color: aquamarine;</blue> ">
+    Header
+  &lt;<dark>/header</dark>>
+  &lt;<dark>section</dark>>
+    &lt;<dark>div</dark> <red>class</red>="<blue>left</blue>">
+      &lt;<dark>p</dark>>Left menu&lt;<dark>/p</dark>>
+    &lt;<dark>/div</dark>
+    &lt;<dark>article</dark> <red>class</red>="<blue>main</blue>">
+      &lt;<dark>p</dark>>Main contents&lt;<dark>/p</dark>>
+    &lt;<dark>/article</dark>
+    &lt;<dark>div</dark> <red>class</red>="<blue>right</blue>">
+      &lt;<dark>p</dark>>Right contents&lt;<dark>/p</dark>>
+    &lt;<dark>/div</dark>
+  &lt;<dark>/section</dark>>
+  &lt;<dark>footer</dark> <red>style</red>="<blue>background-color: lightslategray;</blue> ">
+    Footer
+  &lt;<dark>/footer</dark>>
+</pre>
+  </div>
+
+  <header style="background-color: aquamarine; text-align: center;font-size: 3rem;padding: 16px;letter-spacing: 1.2rem;color: navy;">Header</header>
+  <section>
+    <div class="left">
+        <p><a href="#">menu</a></p>
+    </div>
+    <article class="main">
+      <p>Main contents</p>
+    </article>
+    <div class="right">
+      <p>Right contents</p>
+    </div>
+  </section>
+  <footer style="background-color: lightslategray; text-align: center;font-size: 2rem;padding: 16px;letter-spacing: 1.2rem;color: navy;">
+    Footer
+  </footer>
+
+  <h2>반응형 웹 문서 설계</h2>
+  <p>
+    반응형 웹 문서는 큰 데스크톱 화면과 작은 휴대폰에서도 보기 좋게 표시되어야 한다. <br>
+    W3.CSS는 기본적으로 데스크톱, 태블릿 및 모바일을 지원하는 최신 <em>CSS Framework</em> 로 무료이며 사용하기도 쉽다. <br>
+    W3.CSS는 고품질 <em>Bootstrap</em> 의 대안으로 만들어 졌으며, <em>jQuery</em> 또는 <em>JavaScript library</em> 와도 독립적으로 만들어 졌다.
+  </p>
+
+
+  <div class="grey">
+<pre>
+  &lt;<dark>!DOCTYPE</dark> <red>html</red>>
+  &lt;<dark>html</dark> <red>lang</red>="<blue>ko</blue>">
+  &lt;<dark>head</dark>>
+    &lt;<dark>meta</dark> <red>charset</red>="<blue>UTF-8</blue>">
+    &lt;<dark>meta</dark> <red>name</red>="<blue>viewport</blue>" <red>content</red>="<blue>width=device-width, initial-scale=1.0</blue>">
+    &lt;<dark>link</dark> <red>rel</red>="<blue>stylesheet</blue>" <red>href</red>="<blue>https://www.w3schools.com/w3css/4/w3.css</blue>">
+    &lt;<dark>title</dark>>CSS Layout&lt;<dark>/title</dark>>
+  &lt;<dark>/head</dark>>
+  &lt;<dark>body</dark>>
+
+  &lt;<dark>header</dark>  <red>class</red>="<blue>w3-container w3-green</blue>">
+    &lt;<dark>h1</dark>>대한민국 주요 도시&lt;<dark>/h1</dark>>
+  &lt;<dark>/header</dark>>
+
+  &lt;<dark>section</dark> <red>class</red>="<blue>w3-row-padding</blue>">
+    &lt;<dark>article</dark> <red>class</red>="<blue>w3-third</blue>">
+      &lt;<dark>h1</dark>>서울&lt;<dark>/h1</dark>>
+      &lt;<dark>p</dark>>
+        대한민국의 수도인 서울을 지방자치단체인 특별시로 부르는 명칭이다.
+        한반도 중앙에 있으며, 한강을 사이에 두고 남북으로 펼쳐져 있다.
+        북쪽 끝은 도봉구 도봉동, 동쪽 끝은 강동구 상일동, 남쪽 끝은 서초구 
+        원지동, 서쪽 끝은 강서구 오곡동이다.
+        시청은 중구 을지로1가(태평로1가 31)에 있다.
+      &lt;<dark>p</dark>>
+    &lt;<dark>/article</dark>>
+    &lt;<dark>article</dark> <red>class</red>="<blue>w3-third</blue>">
+      &lt;<dark>h1</dark>>대구&lt;<dark>/h1</dark>>
+      &lt;<dark>p</dark>>
+      북쪽으로 경상북도 칠곡군·군위군, 동쪽으로 경상북도 경산시·청도군, 남쪽으로 
+      경상남도 창녕군, 서쪽으로 경상북도 고령군·성주군과 접한다. 영남지방의 중앙에서 
+      서쪽으로 치우친 대구분지의 중앙부, 낙동강(洛東江)과 금호강(琴湖江)의 합류지점 
+      동쪽 금호강 연안에 있다.
+      &lt;<dark>p</dark>>
+    &lt;<dark>/article</dark>>
+    &lt;<dark>article</dark> <red>class</red>="<blue>w3-third</blue>">
+      &lt;<dark>h1</dark>>부산&lt;<dark>/h1</dark>>
+      &lt;<dark>p</dark>>
+      대한민국 제2의 도시이자, 제1의 무역항이다. 동쪽과 남쪽은 바다에 면하고, 서쪽은
+      김해시 장유동과 창원시 진해구, 북쪽은 양산시 물금읍과 김해시 대동면, 동쪽은 
+      울산광역시 서생면·온양읍에 접한다. 대한민국 남동단의 관문으로 서울특별시에서 
+      남동쪽으로 약 450km, 대한해협을 끼고 일본 시모노세키[下關]와 약 250km 떨어져 
+      있다. 1군 15구로 이루어져 있으며, 면적은 765.94㎢이다.
+      &lt;<dark>p</dark>>
+    &lt;<dark>/article</dark>>
+  &lt;<dark>/section</dark>>
+
+  &lt;<dark>/body</dark>>
+  &lt;<dark>/html</dark>>
+</pre>
+  </div>
+
+  <header  class="w3-container w3-green">
+    <h1>대한민국 주요 도시</h1>
+  </header>
+
+  <section class="w3-row-padding">
+    <article class="w3-third">
+      <h2>서울</h2>
+      <p>
+        대한민국의 수도인 서울을 지방자치단체인 특별시로 부르는 명칭이다.
+        한반도 중앙에 있으며, 한강을 사이에 두고 남북으로 펼쳐져 있다.
+        북쪽 끝은 도봉구 도봉동, 동쪽 끝은 강동구 상일동, 남쪽 끝은 서초구 
+        원지동, 서쪽 끝은 강서구 오곡동이다.
+        시청은 중구 을지로1가(태평로1가 31)에 있다.
+      <p>
+    </article>
+
+    <article class="w3-third">
+      <h1>대구</h1>
+      <p>
+        북쪽으로 경상북도 칠곡군·군위군, 동쪽으로 경상북도 경산시·청도군, 남쪽으로 경상남도 창녕군, 서쪽으로 경상북도 고령군·성주군과 접한다. 영남지방의 중앙에서 서쪽으로 치우친 대구분지의 중앙부, 낙동강(洛東江)과 금호강(琴湖江)의 합류지점 동쪽 금호강 연안에 있다.
+      </p>
+    </article>
+
+    <article class="w3-third">
+      <h2>부산</h2>
+      <p>
+        대한민국 제2의 도시이자, 제1의 무역항이다. 동쪽과 남쪽은 바다에 면하고, 서쪽은 김해시 장유동과 창원시 진해구, 북쪽은 양산시 물금읍과 김해시 대동면, 동쪽은 울산광역시 서생면·온양읍에 접한다. 대한민국 남동단의 관문으로 서울특별시에서 남동쪽으로 약 450km, 대한해협을 끼고 일본 시모노세키[下關]와 약 250km 떨어져 있다. 1군 15구로 이루어져 있으며, 면적은 765.94㎢이다.
+      </p>
+    </article>
+  </section>
+
+  <h2>Bootstrap</h2>
+  <p>
+    <em>Bootstrap</em> 은 HTML, CSS 및 jQuery를 사용하여 반응형 웹 문서를 만든다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>!DOCTYPE</dark> <red>html</red>>
+  &lt;<dark>html</dark> <red>lang</red>="<blue>ko</blue>">
+  &lt;<dark>head</dark>>
+    &lt;<dark>meta</dark> <red>charset</red>="<blue>UTF-8</blue>">
+    &lt;<dark>meta</dark> <red>name</red>="<blue>viewport</blue>" <red>content</red>="<blue>width=device-width, initial-scale=1.0</blue>">
+    &lt;<dark>link</dark> <red>rel</red>="<blue>stylesheet</blue>" <red>href</red>="<blue>https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css</blue>">
+    &lt;<dark>script</dark> <red>src</red>="<blue>https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js</blue>">&lt;<dark>/script</dark>>
+    &lt;<dark>script</dark> <red>src</red>="<blue>https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js</blue>">&lt;<dark>/script</dark>>
+    &lt;<dark>title</dark>>CSS Layout&lt;<dark>/title</dark>>
+  &lt;<dark>/head</dark>>
+  &lt;<dark>body</dark>>
+    &lt;<dark>div</dark> <red>class</red>="<blue>container</blue>">
+      &lt;<dark>header</dark> <red>class</red>="<blue>jumbotron</blue>">
+        &lt;<dark>h1</dark>>대한민국 주요 도시&lt;<dark>/h1</dark>>
+      &lt;<dark>/header</dark>>
+      &lt;<dark>section</dark> <red>class</red>="<blue>row</blue>">
+        &lt;<dark>article</dark> <red>class</red>="<blue>col-sm-4</blue>">
+          &lt;<dark>h1</dark>>서울&lt;<dark>/h1</dark>>
+          &lt;<dark>p</dark>>
+            대한민국의 수도인 서울을 지방자치단체인 특별시로 부르는 명칭이다.
+            한반도 중앙에 있으며, 한강을 사이에 두고 남북으로 펼쳐져 있다.
+            북쪽 끝은 도봉구 도봉동, 동쪽 끝은 강동구 상일동, 남쪽 끝은 서초구 
+            원지동, 서쪽 끝은 강서구 오곡동이다.
+            시청은 중구 을지로1가(태평로1가 31)에 있다.
+          &lt;<dark>p</dark>>
+        &lt;<dark>/article</dark>>
+        &lt;<dark>article</dark> <red>class</red>="<blue>col-sm-4</blue>">
+          &lt;<dark>h1</dark>>대구&lt;<dark>/h1</dark>>
+          &lt;<dark>p</dark>>
+          북쪽으로 경상북도 칠곡군·군위군, 동쪽으로 경상북도 경산시·청도군, 남쪽으로 
+          경상남도 창녕군, 서쪽으로 경상북도 고령군·성주군과 접한다. 영남지방의 중앙에서 
+          서쪽으로 치우친 대구분지의 중앙부, 낙동강(洛東江)과 금호강(琴湖江)의 합류지점 
+          동쪽 금호강 연안에 있다.
+          &lt;<dark>p</dark>>
+        &lt;<dark>/article</dark>>
+        &lt;<dark>article</dark> <red>class</red>="<blue>col-sm-4</blue>">
+          &lt;<dark>h1</dark>>부산&lt;<dark>/h1</dark>>
+          &lt;<dark>p</dark>>
+          대한민국 제2의 도시이자, 제1의 무역항이다. 동쪽과 남쪽은 바다에 면하고, 서쪽은
+          김해시 장유동과 창원시 진해구, 북쪽은 양산시 물금읍과 김해시 대동면, 동쪽은 
+          울산광역시 서생면·온양읍에 접한다. 대한민국 남동단의 관문으로 서울특별시에서 
+          남동쪽으로 약 450km, 대한해협을 끼고 일본 시모노세키[下關]와 약 250km 떨어져 
+          있다. 1군 15구로 이루어져 있으며, 면적은 765.94㎢이다.
+          &lt;<dark>p</dark>>
+        &lt;<dark>/article</dark>>
+      &lt;<dark>/section</dark>>
+    &lt;<dark>/div</dark>>
+  &lt;<dark>/body</dark>>
+  &lt;<dark>/html</dark>>
+</pre>
+    <button onclick="window.open('exam/bootstrap.html')">예제 보기</button>
+  </div>
+
+  <script src="footer.js"></script>
+</body>
+</html>

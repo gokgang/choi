@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML 인용문</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>인용(<em>quote</em>) 요소</h1>
+  <p>
+    <a href="#blockquote">&lt;<em>blockquote</em>></a> <a href="#q"> &lt;<em>q</em>></a> <a href="#abbr">&lt;<em>abbr</em>></a> <a href="#address">&lt;<em>address</em>></a> <a href="#cite">&lt;<em>cite</em>></a> <a href="#bdo">&lt;<em>bdo</em>></a>
+  </p>
+  <hr>
+
+  <h3 id="blockquote">인용문 지정 &lt;<em>blockquote</em>></h3>
+  <p>
+    &lt;<em>blockquote</em>> 요소는 다른 곳에서 인용한 글을 지정한다.
+    브라우저는 일반적으로 &lt;<em>blockquote</em>> 요소를 들여쓰기 한다 .
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>p</dark>>다음은 WWF 웹사이트의 인용문이다:&lt;<dark>/p</dark>>
+  &lt;<dark>blockquote</dark> <red>cite</red>="<blue>http://www.worldwildlife.org/who/index.html</blue>">
+  50년 동안 세계자연보전연맹은 자연의 미래를 지켜왔다.
+세계 최고의 환경보호단체, WWF는 100개 국가에서 작동하며 에 의해 지원된다.
+미국에서 120만 명의 회원과 전 세계적으로 5백만 명에 육박한다.
+  &lt;<dark>/blockquote</dark>>
+</pre>
+<div class="pre">
+  <p>다음은 WWF 웹사이트의 인용문이다:</p>
+  <blockquote cite="http://www.worldwildlife.org/who/index.html">
+    50년 동안 세계자연보전연맹은 자연의 미래를 지켜왔다.<br>
+    세계 최고의 환경보호단체, WWF는 100개 국가에서 작동하며 에 의해 지원된다.<br>
+    미국에서 120만 명의 회원과 전 세계적으로 5백만 명에 육박한다.<br>
+  </blockquote>
+</div>
+  </div>
+
+  <h3 id="q">짧은 인용문 &lt;<em>q</em>> 요소</h3>
+  <p>
+    HTML &lt;<em>q</em>> 요소는 일반적으로 인용문 주위에 인용 부호 따옴표를 삽입한다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>p</dark>>WWF의 목표는: &lt;<dark>q</dark>>사람들이 자연과 조화롭게 사는 미래를 만드는 것이다.&lt;<dark>/q</dark>>&lt;<dark>/p</dark>>
+</pre>
+<div class="pre">
+  WWF의 목표는: <q>사람들이 자연과 조화롭게 사는 미래를 만드는 것이다.</q>
+</div>
+  </div>
+
+  <h2 id="abbr">약어 &lt;<em>abbr</em>> 요소</h2>
+  <p>
+    HTML &lt;<dark>abbr</dark>> 요소는 "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM"과 같은 약어(abbreviation) 또는 두문자어(acronym) 를 정의한다. <br>
+    표시한 약어는 브라우저, 번역 시스템 및 검색 엔진에 유용한 정보를 제공할 수 있다. <br>
+    참고 : 요소 위에 마우스를 놓을 때 약어에 대한 설명을 표시하려면 <em>title</em> 속성을 사용한다. <br>
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>p</dark>>&lt;<dark>abbr</dark> <red>title</red>="<blue>World Health Organization</blue>">WHO&lt;<dark>/abbr</dark> 는 1948년에 창설되었다.&lt;<dark>/p</dark>>
+</pre>
+<div class="pre">
+  <abbr title="World Health Organization">WHO</abbr> 는 1948년에 창설되었다.
+</div>
+  </div>
+
+  <h3 id="address">연락처 정보 &lt;<em>address</em>> 요소</h3>
+  <p>
+    &lt;<dark>address</dark>> 요소는 문서 또는 기사의 <b>작성자 / 소유자에 대한 연락처 정보</b>를 지정한다.<br>
+    연락처 정보는 이메일 주소, URL, 실제 주소, 전화 번호, 소셜 미디어 핸들 등이 될 수 있다.<br>
+    일반적으로 <b>기울임 꼴</b>로 표시되며 브라우저는 항상 &lt;<dark>address</dark>> 요소 <b>앞뒤에 줄 바꿈</b>을 추가한다.<br>
+  </p>
+  
+  <div class="grey">
+<pre>
+  &lt;<dark>address</dark>>
+    Written by John Doe.&lt;<dark>br</dark>>
+    Visit us at:&lt;<dark>br</dark>>
+    Example.com&lt;<dark>br</dark>>
+    Box 564, Disneyland&lt;<dark>br</dark>>
+    USA
+  &lt;<dark>/address</dark>>
+</pre>
+<div class="pre">
+  <address>
+    Written by John Doe.<br>
+    Visit us at:<br>
+    Example.com<br>
+    Box 564, Disneyland<br>
+    USA
+    </address>
+</div>
+  </div>
+
+  <h3 id="cite">작품 제목 &lt;<em>cite</em>> 요소</h3>
+  <p>
+    &lt;<em>cite</em>> 요소는 창의적인 작품 (예 : 책, 시, 노래, 영화, 그림, 조각 등)의 제목을 지정한다.<br>
+    참고 : 사람의 이름은 저작물의 제목이 아니다.<br>
+    &lt;<em>cite</em>> 요소의 글은 일반적으로 기울임 꼴로 표시된다.<br>
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>p</dark>>에드바르 뭉크의 &lt;<em>cite</em>>절규&lt;<em>/cite</em>>  는 1893년에 그려졌다.&lt;<dark>/p</dark>>
+</pre>
+<div class="pre">
+  에드바르 뭉크의 <cite>절규</cite> 는 1893년에 그려졌다.
+</div>
+  </div>
+
+  <h3 id="bdo">양방향 재정의 &lt;<em>bdo</em>> 요소</h3>
+  <p>
+    BDO는 Bi-Directional Override의 약자이다.<br>
+    HTML &lt;<em>bdo</em>> 요소는 현재 글의 방향(text direction)을 재정의하는 데 사용된다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>bdo</dark> <red>dir</red>="<blue>rtl</blue>">이 글은 오른쪽에서 왼쪽으로 보여진다.t&lt;<dark>bdo</dark>>
+</pre>
+<div class="pre">
+  <bdo dir="rtl">이 글은 오른쪽에서 왼쪽으로 보여진다.</bdo>
+</div>
+  </div>
+
+  <script src="footer.js"></script>
+</body>
+</html>

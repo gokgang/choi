@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML, html">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML Semantic 요소</title>
+  <style>
+    .all-browsers {
+      margin: 0;
+      padding: 5px;
+      background-color: lightgray;
+    }
+    .all-browsers > h1, .browser {
+      margin: 10px;
+      padding: 5px;
+    }
+    .browser {
+      background: white;
+    }
+    .browser > h2, p {
+      margin: 4px;
+      font-size: 90%;
+    }
+
+    .aside {
+      width: 30%;
+      padding-left: 15px;
+      margin-left: 15px;
+      float: right;
+      font-style: italic;
+      background-color: lightgray;
+    }
+  </style>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <header>
+    <h1>뜻있는 요소(Semantic Elements)</h1>
+  </header>
+  <hr>
+
+  <section>
+    <main>
+      <h2>뜻있는 매듭(Semantic Tags)</h2>
+      <p>
+        뜻있는 요소(<navy>semantic elements</navy>)는 브라우저와 개발자 모두에게 그 뜻을 알기 쉽다. <br>
+        뜻없는 요소(<navy>non-semantic Elements</navy>) : &lt;<dark>div</dark>> 와 &lt;<dark>span</dark>> 요소는 아무런 뜻이 없다. <br>
+        뜻있는 요소(<navy>semantic elements</navy>) : &lt;<dark>form</dark>>, &lt;<dark>table</dark>>, &lt;<dark>article</dark>> 등은 그 내용의 뜻을 알기 쉽다.
+      </p>
+      <p>
+        많은 웹 사이트는 탐색(&lt;<dark>div</dark> <red>id</red> = "<blue>nav</blue>">), 머리글(&lt;<dark>div</dark> <red>class</red> = "<blue>header</blue>">) 및 바닥글(&lt;<dark>div</dark> <red>id</red> = "<blue>footer</blue>">) 을 나타내는 HTML 코드가 포함되어 있다.
+      </p>
+      <p>
+        HTML은 웹 페이지의 다른 부분을 정의할 수 있는 몇 가지 뜻있는 요소가 있다.
+      </p>
+
+      <div style="clear: both; display: flex;">
+        <ul style="float: left;width: 40%;">
+          <li>&lt;<dark>article</dark>></li>
+          <li>&lt;<dark>aside</dark>></li>
+          <li>&lt;<dark>details</dark>></li>
+          <li>&lt;<dark>figcaption</dark>></li>
+          <li>&lt;<dark>figure</dark>></li>
+          <li>&lt;<dark>footer</dark>></li>
+          <li>&lt;<dark>header</dark>></li>
+          <li>&lt;<dark>main </dark>></li>
+          <li>&lt;<dark>mark </dark>></li>
+          <li>&lt;<dark>nav</dark>></li>
+          <li>&lt;<dark>section</dark>></li>
+          <li>&lt;<dark>summary </dark>></li>
+          <li>&lt;<dark>time</dark>></li>
+        </ul>
+
+        <div style="border: 1px solid grey; background-color: #ddd; padding: 8px;float: left; width: 50%;height: 100%;margin-top: 8%; font-size: 1.6rem;">
+          <div style="border: 1px solid grey;padding: 6px;text-align: center;background-color: #ffe;">&lt;<a href="#header">header</a>></div>
+          <div style="border: 1px solid grey;padding: 6px;text-align: center;background-color: #ffe; margin-top: 8px;">&lt;<a href="#nav">nav</a>></div>
+          <div style="width: 70%;float: left; margin-bottom: 8px;">
+            <div style="border: 1px solid grey;padding: 6px;text-align: center;background-color: #ffe; margin-top: 8px;">&lt;<a href="#section">section</a>></div>
+            <div style="border: 1px solid grey;padding: 6px;text-align: center;background-color: #ffe; margin-top: 8px;">&lt;<a href="#article">article</a>></div>
+          </div>
+          <div style="border: 1px solid grey;padding-top: 26px;text-align: center;background-color: #ffe; margin-top: 8px; height: 86px;width: 29%;float: left; margin-left: 1%;">&lt;<a href="#aside">aside</a>></div>
+          <div style="border: 1px solid grey;padding: 6px;text-align: center;background-color: #ffe; margin-top: 8px;clear: both;width: 100%;">&lt;<a href="#footer">footer</a>></div>
+        </div>
+      </div>
+
+      <h2 id="section">구역 요소 &lt;<dark>section</dark>></h2>
+      <p>
+        <em>section</em> 요소는 문서의 구역을 지정한다. 구역은 제목이 있는 주제별 내용의 모음이다.
+      </p>
+      <div class="grey">
+<pre>
+  &lt;<dark>section</dark>>
+    &lt;<dark>h1</dark>>WWF&lt;<dark>/h1</dark>>
+    &lt;<dark>p</dark>>
+      세계 자연보호 기금(WWF)은 이전에 세계 야생생물 기금(World Wildlife Fund)이라고 
+      불렸던 환경의 보존, 연구, 복원과 관련된 문제에 관한 국제기구이다. WWF는 1961년에 
+      설립되었다.
+    &lt;<dark>/p</dark>>
+  &lt;<dark>/section</dark>>
+  &lt;<dark>section</dark>>
+    &lt;<dark>h1</dark>>WWF's 팬더 기호&lt;<dark>/h1</dark>>
+    &lt;<dark>p</dark>>
+      팬더는 WWF의 상징이 되었다. WWF의 유명한 팬더 기호는 WWF가 설립된 같은 해에 
+      베이징 동물원에서 런던 동물원으로 옮겨진 치치라는 팬더에서 유래되었다.
+    &lt;<dark>/p</dark>>
+  &lt;<dark>/section</dark>>
+</pre>
+<div class="pre">
+  <section>
+    <h1>WWF</h1>
+    <p>
+      세계 자연보호 기금(WWF)은 이전에 세계 야생생물 기금(World Wildlife Fund)이라고 
+      불렸던 환경의 보존, 연구, 복원과 관련된 문제에 관한 국제기구이다. WWF는 1961년에 
+      설립되었다.
+    </p>
+  </section>
+  <section>
+    <h1>WWF's 팬더 기호</h1>
+    <p>
+      팬더는 WWF의 상징이 되었다. WWF의 유명한 팬더 기호는 WWF가 설립된 같은 해에 
+      베이징 동물원에서 런던 동물원으로 옮겨진 치치라는 팬더에서 유래되었다.
+    </p>
+  </section>
+</div>
+      </div>
+
+      <h2 id="article">이야기 요소 &lt;<dark>article</dark>></h2>
+      <p>
+        &lt;<dark>article</dark>> 요소는 독립적인 글을 지정한다. 이야기는 그 자체로 뜻이 있고 다른 웹 문서와 별도의 글이다.
+      </p>
+      <p>
+        &lt;<dark>article</dark>> 요소의 사용 예:
+      </p>
+      <ul>
+        <li>토론(Forum) 게시물</li>
+        <li>사랑방(Blog) 게시물</li>
+        <li>신문(Newspaper) 기사</li>
+      </ul>
+
+      <div class="grey">
+        <span>3 개의 독립적인 글</span>
+<pre>
+  &lt;<dark>article</dark>>
+    &lt;<dark>h2</dark>>Google Chrome&lt;<dark>/h2</dark>>
+      &lt;<dark>p</dark>>
+        Google Chrome은 구글이 2008년에 출시한 웹 브라우저이다. 
+        크롬은 오늘날 세계에서 가장 인기 있는 웹 브라우저이다!
+      &lt;<dark>/p</dark>>
+  &lt;<dark>/article</dark>>
+  &lt;<dark>article</dark>>
+    &lt;<dark>h2</dark>>Mozilla Firefox&lt;<dark>/h2</dark>>
+    &lt;<dark>p</dark>>
+      Mozilla Firefox는 Mozilla에서 개발한 소스 개방형 웹 브라우저이다. 
+      Firefox는 2018년 1월 이후 두 번째로 가장 인기 있는 웹 브라우저이다.
+    &lt;<dark>/p</dark>>
+  &lt;<dark>/article</dark>>
+  &lt;<dark>article</dark>>
+    &lt;<dark>h2</dark>>Microsoft Edge&lt;<dark>/h2</dark>>
+    &lt;<dark>p</dark>>
+      Microsoft Edge는 Microsoft가 2015년에 출시한 웹 브라우저이다. 
+      Microsoft Edge는 Internet Explorer를 대체했다.
+    &lt;<dark>/p</dark>>
+  &lt;<dark>/article</dark>>
+</pre>
+<div class="pre">
+  <article>
+    <h2>Google Chrome</h2>
+      <p>
+        Google Chrome은 구글이 2008년에 출시한 웹 브라우저이다. 
+        크롬은 오늘날 세계에서 가장 인기 있는 웹 브라우저이다!
+      </p>
+  </article>
+  <article>
+    <h2>Mozilla Firefox</h2>
+    <p>
+      Mozilla Firefox는 Mozilla에서 개발한 소스 개방형 웹 브라우저이다. 
+      Firefox는 2018년 1월 이후 두 번째로 가장 인기 있는 웹 브라우저이다.
+    </p>
+  </article>
+  <article>
+    <h2>Microsoft Edge</h2>
+    <p>
+      Microsoft Edge는 Microsoft가 2015년에 출시한 웹 브라우저이다. 
+      Microsoft Edge는 Internet Explorer를 대체했다.
+    </p>
+  </article>
+</div>
+      </div>
+
+      <div class="grey">
+        <span>&lt;<dark>article</dark>> 요소의 양식 지정</span>
+<pre>
+  &lt;<dark>html</dark>>
+  &lt;<dark>head</dark>>
+    &lt;<dark>style</dark>>
+      <dark>.all-browsers</dark> {
+        <red>margin</red>: <blue>0</blue>;
+        <red>padding</red>: <blue>5px</blue>;
+        <red>background-color</red>: <blue>lightgray</blue>;
+      }
+      <dark>.all-browsers > h1, .browser</dark> {
+        <red>margin</red>: <blue>10px</blue>;
+        <red>padding</red>: <blue>5px</blue>;
+      }
+      <dark>.browser</dark> {
+        <red>background</red>: <blue>white</blue>;
+      }
+      <dark>.browser > h2, p</dark> {
+        <red>margin</red>: <blue>4px</blue>;
+        <red>font-size</red>: <blue>90%</blue>;
+      }
+    &lt;<dark>/style</dark>>
+  &lt;<dark>/head</dark>>
+  &lt;<dark>body</dark>>
+  
+  &lt;<dark>article</dark> <red>class</red>="<blue>all-browsers</blue>">
+    &lt;<dark>h1</dark>>가장 인기있는 브라우저&lt;<dark>/h1</dark>>
+    &lt;<dark>article</dark> <red>class</red>="<blue>browser</blue>">
+      &lt;<dark>h2</dark>>Google Chrome&lt;<dark>/h2</dark>>
+        &lt;<dark>p</dark>>
+          Google Chrome은 구글이 2008년에 출시한 웹 브라우저이다. 
+          크롬은 오늘날 세계에서 가장 인기 있는 웹 브라우저이다!
+        &lt;<dark>/p</dark>>
+    &lt;<dark>/article</dark>>
+    &lt;<dark>article</dark> <red>class</red>="<blue>browser</blue>">
+      &lt;<dark>h2</dark>>Mozilla Firefox&lt;<dark>/h2</dark>>
+      &lt;<dark>p</dark>>
+        Mozilla Firefox는 Mozilla에서 개발한 소스 개방형 웹 브라우저이다. 
+        Firefox는 2018년 1월 이후 두 번째로 가장 인기 있는 웹 브라우저이다.
+      &lt;<dark>/p</dark>>
+    &lt;<dark>/article</dark>>
+    &lt;<dark>article</dark> <red>class</red>="<blue>browser</blue>">
+      &lt;<dark>h2</dark>>Microsoft Edge&lt;<dark>/h2</dark>>
+      &lt;<dark>p</dark>>
+        Microsoft Edge는 Microsoft가 2015년에 출시한 웹 브라우저이다. 
+        Microsoft Edge는 Internet Explorer를 대체했다.
+      &lt;<dark>/p</dark>>
+    &lt;<dark>/article</dark>>
+  &lt;<dark>/article</dark>>
+
+  &lt;<dark>/body</dark>>
+  &lt;<dark>/html</dark>>
+</pre>
+<div class="pre">
+  <article class="all-browsers">
+    <h1>가장 인기있는 브라우저</h1>
+    <article class="browser">
+      <h2>Google Chrome</h2>
+        <p>
+          Google Chrome은 구글이 2008년에 출시한 웹 브라우저이다. 
+          크롬은 오늘날 세계에서 가장 인기 있는 웹 브라우저이다!
+        </p>
+    </article>
+    <article class="browser">
+      <h2>Mozilla Firefox</h2>
+      <p>
+        Mozilla Firefox는 Mozilla에서 개발한 소스 개방형 웹 브라우저이다. 
+        Firefox는 2018년 1월 이후 두 번째로 가장 인기 있는 웹 브라우저이다.
+      </p>
+    </article>
+    <article class="browser">
+      <h2>Microsoft Edge</h2>
+      <p>
+        Microsoft Edge는 Microsoft가 2015년에 출시한 웹 브라우저이다. 
+        Microsoft Edge는 Internet Explorer를 대체했다.
+      </p>
+    </article>
+  </article>
+</div>
+      </div>
+      <p>
+        &lt;<dark>article</dark>> 요소는 독립적인 내용을 지정하며, 
+        &lt;<dark>section</dark>> 요소는 문서의 구역을 지정한다. <br>
+        이 두 개의 요소는 서로 다른 뜻의 요소이므로 서로의 요소를 포함할 수 없다.
+      </p>
+
+      <h2 id="header">&lt;<dark>header</dark>> 요소</h2>
+      <p>
+        &lt;<dark>header</dark>> 요소는 소개글이나 탐색 링크들을 싣는 수레(<em>container</em>)이다.
+      </p>
+      <p>
+        &lt;<dark>header</dark>> 요소에 포함하는 내용
+      </p>
+      <ul>
+        <li>하나 이상의 제목 요소(&lt;<dark>h1</dark>> ~ &lt;<dark>h6</dark>>)</li>
+        <li>상징 로고 또는 상징 아이콘</li>
+        <li>개발자 정보</li>
+      </ul>
+      <p class="yellow">
+        <b>참고 : </b> &lt;<dark>header</dark>> 요소 안에 여러가지 요소가 있을 수 있지만 &lt;<dark>footer</dark>>, &lt;<dark>address</dark>> 그리고 또 다시 &lt;<dark>header</dark>> 요소를 배치할 수 없다.
+      </p>
+
+      <div class="grey">
+<pre>
+  &lt;<dark>article</dark>>
+    &lt;<dark>header</dark>>
+      &lt;<dark>h1</dark>>WWF&lt;<dark>/h1</dark>>
+      &lt;<dark>p</dark>>
+        WWF의 임무
+      &lt;<dark>/p</dark>>
+    &lt;<dark>/header</dark>>
+    &lt;<dark>p</dark>>
+      세계 야생생물 기금의 임무는 지구의 자연환경 악화를 막는 것이다.
+      그리고 인간이 자연과 조화롭게 사는 미래를 건설한다.
+    &lt;<dark>/p</dark>>
+  &lt;<dark>/article</dark>>
+</pre>
+<div class="pre">
+  <article>
+    <header>
+      <h1>WWF</h1>
+      <p>
+        WWF의 임무
+      </p>
+    </header>
+    <p>
+      세계 야생생물 기금의 임무는 지구의 자연환경 악화를 막는 것이다.
+      그리고 인간이 자연과 조화롭게 사는 미래를 건설한다.
+    </p>
+  </article>
+</div>
+      </div>
+
+      <h2 id="footer">&lt;<dark>footer</dark>> 요소</h2>
+      <p>
+        &lt;<dark>footer</dark>> 요소는 문서나 구역의 바닥글을 정의한다.
+      </p>
+      <p>
+        &lt;<dark>footer</dark>> 요소에 포함하는 내용
+      </p>
+      <ul>
+        <li>저자 정보</li>
+        <li>저작권 정보</li>
+        <li>연락 정보</li>
+        <li>사이트 구성</li>
+        <li>맨 위로 바로가기</li>
+        <li>참고 문헌</li>
+      </ul>
+      <p>
+        &lt;<dark>footer</dark>> 요소에도 여러가지 요소가 있을 수 있다.
+      </p>
+
+      <div class="grey">
+<pre>
+  &lt;<dark>footer</dark>>
+    &lt;<dark>p</dark>>개발자 : 박문수&lt;<dark>/p</dark>>
+    &lt;<dark>p</dark>>&lt;<dark>a</dark> <red>href</red>="<blue>mailto:park@example.com</blue>">park@example.com&lt;<dark>/a</dark>>&lt;<dark>/p</dark>>
+  &lt;<dark>/footer</dark>>
+</pre>
+      </div>
+
+      <h2 id="nav">&lt;<dark>nav</dark>> 요소</h2>
+      <p>
+        &lt;<dark>nav</dark>> 요소는 탐색 링크를 지정한다. <br>
+        문서의 모든 링크가 &lt;<dark>nav</dark>>요소 안에 있어야 하는 것은 아니다 . 이 &lt;<dark>nav</dark>> 요소는 주요 탐색 링크만 지정한다. <br>
+        화면 판독기 사용자를 위하여 브라우저는 이 요소를 사용하여 초기 설명을 결정할 수 있다.
+      </p>
+
+      <div class="grey">
+        <h4>탐색 링크 설정</h4>
+<pre>
+  &lt;<dark>nav</dark>>
+    &lt;<dark>a</dark> href="/html/default.html">HTML&lt;<dark>/a</dark>> |
+    &lt;<dark>a</dark> href="/css/default.html">CSS&lt;<dark>/a</dark>> |
+    &lt;<dark>a</dark> href="/script/default.html">JavaScript&lt;<dark>/a</dark>>
+  &lt;<dark>/nav</dark>>
+</pre>
+<div class="pre">
+  <nav>
+    <a href="../html/default.html">HTML</a> |
+    <a href="../css/default.html">CSS</a> |
+    <a href="../script/default.html">JavaScript</a>
+  </nav>
+</div>
+      </div>
+
+      <h2 id="aside">&lt;<dark>aside</dark>> 요소</h2>
+      <p>
+        &lt;<dark>aside</dark>> 요소는 &lt;<dark>nav</dark>> 요소에 있는 글을 뻬고 문서와 관련된 글을 지정한다.
+      </p>
+
+      <div class="grey">
+        <h4>본문 밖의 글</h4>
+<pre>
+  &lt;<dark>p</dark>>
+    우리 가족과 나는 이번 여름에 Epcot 을 방문했다. 날씨도 좋았고, Epcot은 놀라웠다! 
+    나는 가족과 함께 멋진 여름을 보냈다!
+  &lt;<dark>/p</dark>>
+
+  &lt;<dark>aside</dark>> 
+    &lt;<dark>h3</dark>>Epcot Center &lt;<dark>h3</dark>>
+    &lt;<dark>p</dark>>
+      Epcot은 Walt Disney World Resort의 테마 공원으로, 신나는 볼거리, 국제관, 수상 
+      경력에 빛나는 불꽃놀이 및 계절 특별 이벤트가 특징이다.
+    &lt;<dark>/p</dark>>
+  &lt;<dark>/aside</dark>>
+</pre>
+<div class="pre">
+  <p>
+    우리 가족과 나는 이번 여름에 Epcot 을 방문했다. 날씨도 좋았고, Epcot은 놀라웠다! 
+    나는 가족과 함께 멋진 여름을 보냈다!
+  </p>
+
+  <aside> 
+    <h3 style="color: unset;">Epcot Center <h3>
+    <p style="color: black;">
+      Epcot은 Walt Disney World Resort의 테마 공원으로, 신나는 볼거리, 국제관, 수상 
+      경력에 빛나는 불꽃놀이 및 계절 특별 이벤트가 특징이다.
+    </p>
+  </aside> 
+</div>
+      </div>
+
+      <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>aside</dark> {
+      <red>width</red>: <blue>30%</blue>;
+      <red>padding-left</red>: <blue>15px</blue>;
+      <red>margin-left</red>: <blue>15px</blue>;
+      <red>float</red>: <blue>right</blue>;
+      <red>font-style</red>: <blue>italic</blue>;
+      <red>background-color</red>: <blue>lightgray</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<div class="pre" style="display:flex; clear: both;">
+  <section style="width: 70%;">
+    <p>
+      우리 가족과 나는 이번 여름에 Epcot 을 방문했다. 날씨도 좋았고, Epcot은 놀라웠다! 
+      나는 가족과 함께 멋진 여름을 보냈다!
+    </p>
+    <p>
+      우리 가족과 나는 이번 여름에 Epcot 을 방문했다. 날씨도 좋았고, Epcot은 놀라웠다! 
+      나는 가족과 함께 멋진 여름을 보냈다!
+    </p>
+    <p>
+      우리 가족과 나는 이번 여름에 Epcot 을 방문했다. 날씨도 좋았고, Epcot은 놀라웠다! 
+      나는 가족과 함께 멋진 여름을 보냈다!
+    </p>
+    <p>
+      우리 가족과 나는 이번 여름에 Epcot 을 방문했다. 날씨도 좋았고, Epcot은 놀라웠다! 
+      나는 가족과 함께 멋진 여름을 보냈다!
+    </p>
+  </section>
+
+  <aside class="aside"> 
+    <h3 style="color: unset;">Epcot Center <h3>
+    <p style="color: black;">
+      Epcot은 Walt Disney World Resort의 테마 공원으로, 신나는 볼거리, 국제관, 수상 
+      경력에 빛나는 불꽃놀이 및 계절 특별 이벤트가 특징이다.
+    </p>
+  </aside> 
+</div>
+      </div>
+    </main>
+  </section>
+
+  <h2 id="figure">&lt;<dark>figure</dark>>, &lt;<dark>figcaption</dark>>  요소</h2>
+  <p>
+    &lt;<dark>figure</dark>> 요소는 그림, 도표, 사진, 코드 목록과 같은 요소를 포함하고, &lt;<dark>figcaption</dark>> 요소는 &lt;<dark>figure</dark>> 요소의 처음 또는 마지막에 배치하여 &lt;<dark>figure</dark>> 요소에 대한 캡션을 지정한다. <br>
+    &lt;<dark>img</dark>> 요소는 실제 이미지 / 그림을 지정한다. 
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>figure</dark>>
+    &lt;<dark>img</dark> <red>src</red>="<blue>image/img_flower.gif</blue>" <red>alt</red>="<blue>야생화</blue>">
+    &lt;<dark>figcaption</dark>>Fig1. - 들에 핀 야생화.&lt;<dark>f/igcaption</dark>>
+  &lt;<dark>/figure</dark>>
+</pre>
+<div class="pre">
+  <figure>
+    <img src="image/img_flower.gif" alt="야생화">
+    <figcaption>그림 1. - 들에 핀 야생화.<f/igcaption>
+  </figure>
+</div>
+  </div>
+
+  <p>
+    W3C에 따르면, 뜻있는 요소를 사용하면 웹의 자료를 애플리케이션, 기업 및 커뮤니티간에 공유하고 재사용할 수 있다.
+  </p>
+
+  <footer>
+    <script src="footer.js"></script>
+  </footer>
+</body>
+</html>

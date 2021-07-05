@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML, html">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML head</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>head 요소</h1>
+  <hr>
+
+  <p>
+    HTML &lt;<dark>head</dark>> 요소는 브라우저가 식별할 수 있는 문서 정보( <em>meta data</em> )를  담을 수 있는 그릇과 같은 것이다.
+  </p>
+  <p>
+    <b>참고 :</b> HTML5 호환 브라우저는 &lt;<dark>head</dark>> 가 없는 경우 자동으로 생성한다
+  </p>
+  <ul>
+    <li>&lt;<dark>head</dark>>  안에 배치할 수 있는 요소</li>
+    <ul>
+      <li>&lt;<dark>title</dark>></li>
+      <li>&lt;<dark>base</dark>></li>
+      <li>&lt;<dark>link</dark>></li>
+      <li>&lt;<dark>style</dark>></li>
+      <li>&lt;<dark>meta</dark>></li>
+      <li>&lt;<dark>script</dark>></li>
+      <li>&lt;<dark>noscript</dark>></li>
+      <li>&lt;<dark>template</dark>></li>
+    </ul>
+  </ul>
+
+  <hr>
+  <h3>&lt;<dark>title</dark>> 요소</h3>
+  <p>
+    &lt;<dark>title</dark>> 요소는 문서의 제목을 지정한다. 제목은 글자 전용이며 브라우저의 제목 표시줄이나 페이지의 탭에 표시된다. <br>
+    &lt;<dark>title</dark>> 요소는 검색 엔진 최적화 (SEO)에 매우 중요하다! 페이지 제목은 검색 엔진 알고리즘에서 검색 결과에 페이지를 나열할 때 순서를 결정하는 데 사용된다.
+  </p>
+  <ul>
+    &lt;<dark>title</dark>> 요소
+    <li>브라우저 도구 모음에 제목을 지정한다. </li>
+    <li>페이지가 즐겨 찾기에 추가될 때 페이지의 제목을 제공한다. </li>
+    <li>검색 엔진 결과에 페이지 제목을 표시한다. </li>
+    이와 같은 이유로 제목은 정확하고 의미있게 만들어야 한다.
+  </ul>
+
+  <hr>
+  <h3>&lt;<dark>style</dark>> 요소</h3>
+  <p>
+    &lt;<dark>style</dark>> 요소는 하나의 HTML 문서에 고유의 양식을 지정하는 데 사용한다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>body</dark> {<red>background-color</red>: <blue>powderblue</blue>;}
+    <dark>h1</dark> {<red>color</red>: <blue>red</blue>;}
+    <dark>p</dark> {<red>color</red>: <blue>blue</blue>;}
+  &lt;<dark>/style</dark>>
+</pre>
+  </div>
+
+  <hr>
+  <h3>&lt;<dark>link</dark>> 요소</h3>
+  <p>
+    &lt;<dark>link</dark>> 요소는 현재 문서와 외부 파일 사이의 관계를 지정한다. &lt;<dark>link</dark>> 매듭은 대부분 외부 CSS 파일에 연결하는 데 사용된다 
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>link </dark> <red>rel</red>="<blue>stylesheet</blue>" <red>href</red>="<blue>mystyle.css</blue>">
+</pre>
+  </div>
+
+  <p>즐겨찾기 아이콘( <em>favicon</em> ) 지정</p>
+  <div class="grey">
+<pre>
+  &lt;<dark>link </dark> <red>rel</red>="<blue>icon</blue>" <red>href</red>="<blue>favicon.ico</blue>">
+</pre>
+  </div>
+  <div class="grey">
+<pre>
+  &lt;<dark>link </dark> <red>rel</red>="<blue>icon</blue>" <red>href</red>="<blue>favicon32.png</blue>">
+</pre>
+  </div>
+  <div class="grey">
+<pre>
+  &lt;<dark>link </dark> <red>rel</red>="<blue>shortcut icon</blue>" <red>href</red>="<blue>https://www.example.org/img/favicon32.png</blue>">
+</pre>
+  </div>
+
+  <p>대표적 favicon 파일 : favicon.ico  크기 : 32 × 32px</p>
+  <p>
+    아이콘의 크기는 브라우저의 기본 글자 크기 16px에 맞추어지므로 크게 만들면 크기가 줄어들면서 그림이 손상될 수 있으므로 가급적 간단한 구조로 작게 만드는 것이 좋다. 32px로 하면 가끔 즐겨찾기 바로가기에 큰 아이콘을 필요로 할 때 도움이 된다. 그림 파일이면 ico 파일이 아니어도 되며, png 또는 gif 로 만들면 배경을 투명으로 하여 글자같이 보여지게 할 수 있다.
+  </p>
+
+  <h3>&lt;<dark>meta</dark>> 요소</h3>
+  <p>
+    &lt;<em>meta</em>> 요소는 일반적으로 문자 집합(charset), 문서 설명(description), 검색어(keywords), 문서 작성자(author), 화면 크기(viewport) 등을 지정하는 데 사용된다.
+    &lt;<dark>meta</dark>> 요소는 문서에 표시되지 않지만 브라우저가 내용을 표시하거나 문서를 다시 로드하는 방법, 검색 엔진의 검색어, 기타 웹 서비스에서 사용된다.
+  </p>
+
+  <p>문자 집합(charset) 지정</p>
+  <div class="border">
+  &lt;<dark>meta </dark> <red>charset</red>="<blue>UTF-8</blue>">
+  </div>
+
+  <p>검색 엔진을 위한 검색어 지정</p>
+  <div class="border">
+  &lt;<dark>meta </dark> <red>name</red>="<blue>keywords</blue>" <red>content</red>="<blue>HTML, CSS, JavaScript</blue>">
+  </div>
+
+  <p>웹 페이지에 대한 설명 지정</p>
+  <div class="border">
+  &lt;<dark>meta </dark> <red>name</red>="<blue>description</blue>" <red>content</red>="<blue>Free Web tutorials</blue>">
+  </div>
+
+  <p>웹 페이지 작성자 지정</p>
+  <div class="border">
+  &lt;<dark>meta </dark> <red>name</red>="<blue>author</blue>" <red>content</red>="<blue>이준석</blue>">
+  </div>
+
+  <p>웹 문서 새로 ​​고침 시간 지정 30초</p>
+  <div class="border">
+  &lt;<dark>meta </dark> <red>http-equiv</red>="<blue>refresh</blue>" <red>content</red>="<blue>30</blue>">
+  </div>
+
+  <p>기기의 화면 크기(viewport) 지정</p>
+  <p>
+    웹 문서를 사용자가 볼 수 있는 영역은 장치에 따라 다르며 컴퓨터 화면보다 휴대폰에서 더 작다. 따라서 모든 웹 문서는 다음의 요소를 포함해야 한다. 이것은 페이지의 크기 및 크기 조정을 제어하는 ​​방법에 대하여 브라우저에게 지침을 제공한다. <br>
+    <em>width=device-width</em> 부분은 장치의 화면 너비를 따르도록 문서 너비를 장치에 따라 다르게 설정한다. <br>
+    <em>initial-scale=1.0</em> 부분은 브라우저에서 페이지를 처음 로드할 때 초기의 확대 / 축소 수준을 설정한다.
+  </p>
+  <div class="border">
+  &lt;<dark>meta </dark> <red>name</red>="<blue>viewport</blue>" <red>content</red>="<blue>width=device-width, initial-scale=1.0</blue>">
+  </div>
+
+  <h3>&lt;<dark>base</dark>></h3>
+  <p>
+    &lt;<dark>base</dark>> 요소는 문서 안의 모든 상대 URL이 사용할 기준 URL을 지정한다. 문서에는 하나의 &lt;<dark>base</dark>> 요소만 존재할 수 있다. 닫는 매듭은 없어야 한다. 
+  </p>
+  <h4>&lt;<dark>base</dark>> 요소의 속성</h4>
+  <p>
+    다음 특성 중 하나라도 지정한 경우, 상대 URL 속성을 사용한 어떤 요소보다 &lt;<dark>base</dark>> 요소가 앞에 위치해야 한다.
+  </p>
+  <p><em>href</em></p>
+  <p>
+    문서 안에서 상대 URL이 사용할 기준 URL. 절대 및 상대 URL을 사용할 수 있다.
+  </p>
+  <p><em>target</em></p>
+  <p>
+    <em>target</em> 속성을 명시하지 않은 &lt;<dark>a</dark>>, &lt;<dark>area</dark>>, &lt;<dark>form</dark>> 요소가 탐색을 실행했을 때, 그 결과를 보여줄 기본 브라우저 창을 지정한다. 속성값은 지시어나 개발자가 지정한 이름으로 설정한다.
+  </p>
+
+  <ul>
+    <em>target</em> 속성의 기본 지시어
+    <li>_self (기본값) : 브라우저의 현재 창</li>
+    <li>_blank : 브라우저의 새로운 창</li>
+    <li>_parent : 브라우저의 현재 창의 상위 브라우저 창. 상위 창이 없으면 _self 와 동일</li>
+    <li>_top : 브라우저의 현재 창의 최상위 브라우저 창. 상위 창이 없으면 _self 와 동일</li>
+  </ul>
+
+  <p class="yellow">
+    &lt;<dark>base</dark>> 요소가 여러 개 존재하는 경우 첫 href 와 첫 target 만 사용하며 나머지는 모두 무시한다. <br>
+    &lt;<dark>a</dark> <red>href</red>="<blue>#some-id</blue>"> 처럼 문서의 책갈피( <em>bookmark</em> )를 가리키는 링크도 &lt;<dark>base</dark>>를 사용해 처리하므로, 기준 URL 뒤에 책갈피를 붙인 주소로 HTTP 요청을 한다. 
+  </p>
+  <h4>예 : </h4>
+  <ol>
+    <li>&lt;<dark>base</dark> <red>href</red>="<blue>https://example.com</blue>"> 로 지정하고</li>
+    <li>&lt;<dark>a</dark> <red>href</red>="<blue>#anchor</blue>">Anker&lt;<dark>/a</dark>>를 지정하면</li>
+    <li>Anker 링크는 <red>https://example.com/#anchor</red> 를 가리키게 된다.</li>
+  </ol>
+
+  <h3>Open Graph</h3>
+  <p>
+    Open Graph 요소는 &lt;<dark>base</dark>>를 인식하지 않으므로 항상 온전한 형태의 절대 URL을 지정해야 한다
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>meta</dark> <red>property</red>="<blue>og:image</blue>" <red>content</red>="<blue>https://example.com/thumbnail.jpg</blue>">
+</pre>
+  </div>
+  <div class="grey">
+<pre>
+  &lt;<dark>base </dark> <red>href</red>="<blue>http://www.example.com/page.html</blue>">
+  &lt;<dark>base </dark> <red>target</red>="<blue>_blank</blue>">
+  &lt;<dark>base </dark> <red>target</red>="<blue>_target</blue>" <red>href</red>="<blue>http://www.example.com/page.html</blue>">
+</pre>
+  </div>
+
+  <h3>&lt;<dark>script</dark>> 요소</h3>
+  <p>
+    &lt;<dark>script</dark>> 요소는 사용자 측 JavaScript를 정의하는 데 사용된다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <navy>function</navy> innerfunction () {
+      document.getElementById("<dark>demo</dark>").innerHTML = "<blue>Hello JavaScript!</blue>";
+    }
+  &lt;<dark>/script</dark>>
+</pre>
+    <p class="pre" id="demo"><button onclick="innerfunction()">스크립트 실행</button></p>
+  </div>
+
+  <script>
+    function innerfunction () {
+      document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    }
+  </script>
+
+  <h3>&lt;<dark>head</dark>> 지정</h3>
+  <div class="grey">
+<pre>
+  &lt;<dark>head</dark>>
+    &lt;<dark>meta </dark> <red>charset</red>="<blue>UTF-8</blue>">
+    &lt;<dark>meta </dark> <red>name</red>="<blue>description</blue>" <red>content</red>="<blue>Free Web tutorials</blue>">
+    &lt;<dark>meta </dark> <red>name</red>="<blue>keywords</blue>" <red>content</red>="<blue>HTML, CSS, JavaScript</blue>">
+    &lt;<dark>meta </dark> <red>name</red>="<blue>author</blue>" <red>content</red>="<blue>이준석</blue>">
+    &lt;<dark>meta </dark> <red>name</red>="<blue>viewport</blue>" <red>content</red>="<blue>width=device-width, initial-scale=1.0</blue>">
+    &lt;<dark>base </dark>  <red>target</red>="<blue>_blank</blue>"<red> href</red>="<blue>http://www.example.com/</blue>">
+    &lt;<dark>link </dark> <red>rel</red>="<blue>stylesheet</blue>" <red>href</red>="<blue>mystyle.css</blue>">
+    &lt;<dark>link </dark> <red>rel</red>="<blue>icon</blue>" <red>href</red>="<blue>/favicon.png</blue>">
+    &lt;<dark>title</dark>>Web Programming&lt;<dark>/title</dark>>
+    &lt;<dark>style</dark>>
+      <dark>body</dark> {<red>background-color</red>: <blue>powderblue</blue>;}
+      <dark>h1</dark> {<red>color</red>: <blue>magenta</blue>;}
+      <dark>p</dark> {<red>color</red>: <blue>blue</blue>;}
+    &lt;<dark>/style</dark>>
+    &lt;<dark>script</dark>>
+      <navy>function</navy> innerfunction () {
+        document.getElementById("<dark>demo</dark>").innerHTML = "<blue>Hello JavaScript!</blue>";
+      }
+    &lt;<dark>/script</dark>>
+  &lt;<dark>/head</dark>>
+</pre>
+    <button onclick="window.open('./exam/head.html')">예제 보기</button>
+  </div>
+
+  <script src="footer.js"></script>
+</body>
+</html>

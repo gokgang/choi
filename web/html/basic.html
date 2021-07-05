@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML 기본 구조</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>HTML 문서의 기본 구조</h1>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>!DOCTYPE</dark> <red>html</red>>
+  &lt;<dark>html</dark>>
+  &lt;<dark>head</dark>>
+      &lt;<dark>meta</dark> <red>charset</red>="<blue>UTF-8</blue>">
+      &lt;<dark>title</dark>>문서 제목&lt;<dark>/title</dark>>
+  &lt;<dark>/head</dark>>
+  &lt;<dark>body</dark>>
+  
+      &lt;<dark>h1</dark>>문서 제목&lt;<dark>/h1</dark>>
+      &lt;<dark>p</dark>>
+          이 글은 하나의 문장이다.&lt;<dark>br</dark>>
+          &lt;<dark>a</dark> <red>href</red>="<blue>https://www.w3.org/</blue>">W3C&lt;<dark>/a</dark>>는 World Wide Web Consortium 으로 웹 의 표준을 관장한다.
+      &lt;<dark>/p</dark>>
+
+      &lt;<dark>img</dark> <red>src</red>="<blue>image/img_flower.png</blue>" <red>width</red>="<blue>150px</blue>">
+
+  &lt;<dark>/body</dark>>
+  &lt;<dark>/html</dark>>
+</pre>
+  </div>
+
+  <hr>
+  <h3>&lt;<dark>!DOCTYPE</dark> <red>html</red>></h3>
+  <p>이 문서가 <em>html version 5</em> 로 작성되었음을 선언한다. </p>
+  <p>HTML 문서는 대-소문자 구분을 하지 않지만, 가급적 소문자로 작성할 것을 권장한다.</p>
+
+  <hr>
+  <h3>&lt;<dark>html</dark>></h3>
+  <p>html 문서의 처음 임을 선언한다.</p>
+
+  <hr>
+  <h3>&lt;<dark>head</dark>></h3>
+  <p>문서의 글 머리(<blue>head</blue>)임을 선언한다.
+    여기에는 문서에 포함되는 각종 정보(meta data)와 문서의 제목(title), 스타일 시트(CSS), 스크립트(JavaScript) 등을 작성 또는 포함시킨다.
+  </p>
+
+  <hr>
+  <h3>&lt;<dark>meta</dark> <red>charset</red>="<blue>UTF-8</blue>"></h3>
+  <p>
+    이 문서가 유니코드 문자 집합 <em>UTF-8</em>로 작성되었음을 선언한다.<br>
+    현재 웹 문서의 표준이 <em>UTF-8</em>이므로 작성하지 않아도 무방하지만 오래된 웹브라우저를 사용하는 사용자를 위해 선언해 주는 것이 좋다.
+  </p>
+
+  <hr>
+  <h3>&lt;<dark>title</dark>> ... &lt;<dark>/title</dark>></h3>
+  <p>문서의 제목을 선언한다</p>
+
+  <hr>
+  <h3>&lt;<dark>/head</dark>></h3>
+  <p>문서 글 머리의 끝임을 선언한다.</p>
+
+  <hr>
+  <h3>&lt;<dark>body</dark>></h3>
+  <p>
+    문서 몸체(<blue>body</blue>)가 되는 본문의 처음임을 선언한다.
+  </p>
+
+  <hr>
+  <h3>&lt;<dark>h1</dark>> ... &lt;<dark>/h1</dark>></h3>
+  <p>
+    문서의 머리(<blue>Head</blue>) 부분에 해당하는 주 제목을 작성한다. <br>
+    &lt;<dark>h1</dark>>은 글자가 가장 크고 굵으므로 문서의 주 제목을 작성할 때 사용한다. <br>
+    각 괄호로 된 기호 문자를 태그(<blue>Tag</blue>)라고 하며, 시작 태그와 빗금이 있는 끝 태그로 장식하고자 하는 문서의 내용을 하나의 매듭으로 묶는다. 매듭의 시작 태그와 끝 태그는 반드시 있어야 하지만 줄 바꿈 태그 &lt;<dark>br</dark>> 과 같이 끝 태그가 필요없는 경우도 있다.
+  </p>
+
+  <hr>
+  <h3>&lt;<dark>p</dark>> ... &lt;<dark>/p</dark>></h3>
+  <p>
+    &lt;<dark>p</dark>> 매듭 안에 있는 글은 하나의 문단임를 선언한다. 이 매듭은 한 줄을 모두 차지하며, 한 줄이 넘는 경우에 자동으로 줄 바꿈이 되고, 끝 매듭이 나올 때까지 모두 하나의 문단을 이룬다.
+  </p>
+
+  <hr>
+  <h3>&lt;<dark>br</dark>></h3>
+  <p>
+    &lt;<dark>br</dark>> 태그는 줄 바꿈(<blue>break</blue>)이 필요한 경우 사용되며, 끝 태그가 필요없다. 물론 있어도 된다. 엄격한 문법을 지켜야 하는 <em>DHTML</em> 에서는 반드시 끝 태그가 있어야 한다.
+  </p>
+
+  <hr>
+  <h3>&lt;<dark>a</dark> <red>href</red>="<blue>https://www.w3.org/</blue>">W3C&lt;<dark>/a</dark>></h3>
+  <p>
+    &lt;<dark>a</dark>> ... &lt;<dark>/a</dark>> 태그는 다른 웹 문서를 연결한다.<br>
+    연결 문서는 <red>href</red> 속성에 지정된다. 속성은 HTML 의 추가 정보를 지정한다.
+  </p>
+
+  <hr>
+  <h3>&lt;<dark>img</dark> <red>src</red>="<blue>image/img_flower.png</blue>" <red>width</red>="<blue>150px</blue>"></h3>
+  <p>
+    &lt;<dark>img</dark>> 태그는 문서에 그림을 넣는다. <br>
+    <red>src</red>="<blue>image/img_flower.png</blue>"는 그림이 있는 곳을 지정한다. <br>
+    <red>width</red>="<blue>150px</blue>는 그림의 폭을 지정한다. 지정하지 않으면 원본 그대로 보여진다.
+  </p>
+
+  <hr>
+  <h3>&lt;<dark>/body</dark>></h3>
+  <p>본문의 끝임을 선언한다.</p>
+
+  <hr>
+  <h3>&lt;<dark>/html</dark>></h3>
+  <p>HTML 문서의 끝임을 선언한다.</p>
+
+  <hr>
+  <h3>HTML 소스 보기</h3>
+  <p>
+    웹 브라우저(Chrome)에서 웹 문서를 마우스 오른쪽을 클릭하고 "페이지 소스 보기"를 선택하면, 문서에 사용된 소스 코드가 포함된 새로운 창이 열린다. <br>
+    다른 웹 브라우저도 약간의 차이가 있지만 마찬가지이다.
+  </p>
+
+  <hr>
+  <h3>HTML 요소 검사</h3>
+  <p>
+    HTML 요소 또는 빈 영역을 마우스 오른쪽 버튼으로 클릭하고 [검사] 또는 [요소 검사]를 선택하면, HTML과 CSS가 모두 표시되므로 어떤 요소로 구성되어 있는지 확인할 수 있다.<br>
+    오른쪽을 향한 삼각형를 클릭하면 한 계단 아래의 요소가 나타나며, 아래를 향한 삼각형은 현재 열려있는 요소이다.  또는 요소 위에 마우스를 올려두면 소스보기의 해당 요소를 볼 수 있다. <br>
+    아래쪽 패널에 있는 Style 탭에서는 HTML 또는 CSS를 즉석에서 확인하고 편집할 수도 있다.
+  </p>
+
+  <hr>
+
+  <p style="text-align: right;">
+    <img src="../image/img_flower.png" style="width: 50%;opacity: 0.3;">
+  </p>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HTML, html">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="./html.css">
+  <link rel="icon" href="/favicon.png">
+  <title>HTML code</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>code 요소</h1>
+  <hr>
+
+  <h2>키보드 입력</h2>
+  <p>
+    &lt;<dark>kbd</dark>>요소는 키보드 입력을 정의한다. 입력 내용은 브라우저의 기본 고정 폭 글꼴로 표시된다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>p</dark>>키보드 입력 : &lt;<dark>kbd</dark>>Ctrl + S&lt;<dark>/kbd</dark>>&lt;<dark>/p</dark>>
+</pre>
+  </div>
+  <p class="border">키보드 입력 : <kbd>Ctrl + S</kbd></p>
+
+  <h2>프로그램 출력</h2>
+  <p>
+    &lt;<dark>samp</dark>>요소는 컴퓨터 프로그램의 샘플 출력을 정의한다. 내부 내용은 브라우저의 기본 고정 폭 글꼴로 표시된다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>p</dark>>Message from my computer:&lt;<dark>/p</dark>>
+  &lt;<dark>p</dark>>&lt;<dark>samp</dark>>File not found.&lt;<dark>br</dark>>Press F1 to continue&lt;<dark>/samp</dark>>&lt;<dark>/p</dark>>
+</pre>
+<div class="pre">
+  <p>Message from my computer:</p>
+  <p><samp>File not found.<br>Press F1 to continue</samp></p>
+</div>
+  </div>
+
+  <h2>컴퓨터 코드 용 HTML &lt;<dark>code</dark>></h2>
+  <p>
+    &lt;<dark>code</dark>>요소는 컴퓨터 코드를 정의하는 데 사용된다. 내부 내용은 브라우저의 기본 고정 폭 글꼴로 표시된다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>code</dark>>
+    x = 5;
+    y = 6;
+    z = x + y;
+  &lt;<dark>/code</dark>>
+</pre>
+<div class="pre">
+  <code>
+    x = 5;
+    y = 6;
+    z = x + y;
+  </code>
+</div>
+  </div>
+
+  <p>
+    &lt;<dark>code</dark>>요소는 추가 공백과 줄 바꿈을 보존하지 않는다.
+      이 문제를 해결하려면 &lt;<dark>pre</dark>>요소 안에 &lt;<dark>code</dark>> 요소를 포함하면 된다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>pre</dark>>
+  &lt;<dark>code</dark>>
+    x = 5;
+    y = 6;
+    z = x + y;
+  &lt;<dark>/code</dark>>
+  &lt;<dark>/pre</dark>>
+</pre><pre><code>
+  x = 5;
+  y = 6;
+  z = x + y;
+</code>
+</pre>
+  </div>
+
+  <h2>변수 용 HTML &lt;<dark>var</dark>></h2>
+  <p>
+    HTML &lt;<dark>var</dark>>요소는 프로그래밍 또는 수학 표현식에서 변수를 정의하는 데 사용된다. 일반적으로 기울임 꼴로 표시된다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>p</dark>>삼각형의 면적 : 1 / 2 × &lt;<dark>var</dark>>b &lt;<dark>/var</dark>> ×  &lt;<dark>var</dark>>h &lt;<dark>/var</dark>>,  &lt;<dark>var</dark>>b &lt;<dark>/var</dark>> 는 밑변,   &lt;<dark>var</dark>>h &lt;<dark>/var</dark>>는 높이이다.&lt;<dark>/p</dark>>
+</pre>
+<div class="pre">
+  <p>삼각형의 면적 : 1 / 2 × <var>b </var> ×  <var>h </var>,  <var>b </var>는 밑변, 　<var>h </var>는 높이이다.</p>
+</div>
+  </div>
+
+  <script src="footer.js"></script>
+</body>
+</html>
