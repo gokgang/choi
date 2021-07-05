@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JavaScript, 자바스크립트">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="js.css">
+  <link rel="icon" href="/favicon.png">
+  <title>JavaScript 자료형</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>자료형</h1>
+  <p>
+    변수는 숫자, 문자열, 객체 등 다양한 자료형을 가질 수 있다 .
+  </p>
+
+  <div class="border">
+<pre class="comment">
+<blue>var</blue> length = <red>16</red>;
+<blue>var</blue> lastName = "<dark>문재인</dark>";
+<blue>var</blue> object = {familyName: "<dark>반</dark>", lastName: "<dark>기문</dark>"};
+</pre>
+<pre class="comment">
+<green> // Number</green>
+<green>// String</green>
+<green>// Object</green>
+</pre>
+  </div>
+
+  <h2>자료형의 개념</h2>
+  <p>
+    JavaScript의 기본 자료형(Primitive Data Type)은 숫자형(Number), 논리형(Boolean), 문자열(String), 기호문자(Symbol), <em>null</em>, <em>undefined</em> 가 있다.
+  </p>
+
+  <hr>
+  <h3>숫자형(Number)</h3>
+  <p>
+    JavaScript 의 숫자형은 정수와 실수를 구분하지 않으며, 64 bit 부동 소수점의 자료이다. 숫자는 비트 0~51, 지수는 비트 52~62, 부호는 비트 63에 저장된다.
+    그 외에 기호 상수 <em>Infinity</em>(무한대), <em>NaN</em>(Not a Number) 이 있다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>var</blue> x1 = <red>34.0</red>;
+    <blue>var</blue> x2 = <red>34</red>;
+    <blue>var</blue> x3 = <red>3.14</red>;
+    document.write("<dark>&lt;br> x1 := </dark>" + x1 );
+    document.write("<dark>&lt;br> x2 := </dark>" + x2 );
+    document.write("<dark>&lt;br> x3 := </dark>" + x3 );
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre">
+  <script>
+    var x1 = 34.0;
+    var x2 = 34;
+    var x3 = 3.14;
+    document.write("x1 := " + x1 );
+    document.write("<br>x2 := " + x2 );
+    document.write("<br>x3 := " + x3 );
+  </script>
+</div>
+  </div>
+  <hr>
+  <h3>문자형(String)</h3>
+  <p>
+    JavaScript 는 큰 따옴표(<b>" "</b>), 작은 따옴표(<b>' '</b>), 억음 부호(<b>` `</b>)에 묶여진 모든 글자와 숫자, 기호는 문자열로 평가한다.
+  </p>
+
+  <hr>
+  <h3>문자열 더하기</h3>
+  <p>
+    숫자에 문자열을 더하기하면 숫자가 문자로 자동 형변환되어 문자열로 취급한다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>var</blue> x = <red>16</red> + "<dark>Genesys</dark>";
+    document.write(x);
+  &lt;<dark>/script</dark>>
+</pre>
+    <p>숫자와 문자열 더하기</p>
+    <div class="pre">
+      <script>
+        var x = 16 + "Genesys";
+        document.write(x);
+      </script>
+    </div>
+  </div>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>var</blue> x = "<dark>16</dark>" + "<dark>Genesys</dark>";
+    document.write(x);
+  &lt;<dark>/script</dark>>
+</pre>
+    <p>문자열과 문자열 더하기</p>
+    <div class="pre">
+      <script>
+        var x = "16" + "Genesys";
+        document.write(x);
+      </script>
+    </div>
+  </div>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>var</blue> x = <red>16</red> + <red>4</red> + "<dark>Genesys</dark>";
+    document.write(x);
+  &lt;<dark>/script</dark>>
+</pre>
+    <p>숫자와 숫자 그리고 문자열 더하기</p>
+    <div class="pre">
+      <script>
+        var x = 16 + 4 + "Genesys";
+        document.write(x);
+      </script>
+    </div>
+  </div>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>var</blue> x = "<dark>Genesys</dark>" + <red>16</red> + <red>4</red>;
+    document.write(x);
+  &lt;<dark>/script</dark>>
+</pre>
+    <p>문자열과 숫자 그리고 숫자 더하기</p>
+    <div class="pre">
+      <script>
+        var x = "Genesys" + 16 + 4;
+        document.write(x);
+      </script>
+    </div>
+  </div>
+
+  <h3>JavaScript 의 변수는 동적으로 형변환이 된다.</h3>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>var</blue> num;  <green>// 자료형 미정</green>
+    document.write(num);
+    document.write("<dark>&lt;br></dark>");
+    num = 5;  <green>// 숫자형(Number)</green>
+    document.write(num);
+    document.write("<dark>&lt;br></dark>");
+    num = "John"; <green>// 문자형(String)</green>
+    document.write(num);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre">
+  <script>
+    var num;  // 자료형 미정
+    document.write(num);
+    document.write("<br>");
+    num = 5;  // 숫자형(Number)
+    document.write(num);
+    document.write("<br>");
+    num = "문재인"; // 문자형(String)
+    document.write(num);
+  </script>
+</div>
+  </div>
+
+  <h3>문자열(String) 따옴표 안의 따옴표</h3>
+  <p>
+    문자형은 따옴표 안에 작성한다. 큰 따옴표 안에 작은 따옴표를 포함할 수 있으며, 그 반대로도 가능하다.
+  </p>
+  <div class="border">
+    <blue>var</blue> answer1 = "<dark>문자형은 따옴표 안에 작성한다.</dark>";<br>
+    <blue>var</blue> answer2 = "<dark>문자열을 둘러싼 따옴표와 일치하지 않는 한 '문자열 안에 따옴표'를 사용할 수 있다.</dark>";<br>
+    <blue>var</blue> answer3 = '<dark>문자열을 둘러싼 따옴표와 일치하지 않는 한 "문자열 안에 따옴표"를 사용할 수 있다.</dark>';<br>
+  </div>
+
+  <h3>논리형(Boolean)</h3>
+  <p>
+    논리형의 값은 <em>true</em> 와 <em>false</em> 두 가지 값이다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+  <blue>var</blue> x = <red>5</red>;
+  <blue>var</blue> y = <red>5</red>;
+  <blue>var</blue> z = <red>6</red>;
+    document.write(x == y);
+    document.write("<dark>&lt;br></dark>");
+    document.write(x == z);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre">
+  <script>
+    var x = 5;
+    var y = 5;
+    var z = 6;
+    document.write(x == y);
+    document.write("<br>");
+    document.write(x == z);
+  </script>
+</div>
+  </div>
+
+  <h3>배열(Array)</h3>
+  <p>
+    배열은 대괄호로 작성하고, 배열 항목은 쉼표로 구분한다.
+  </p>
+  <div class="border">
+    <blue>var</blue> cars = ["<dark>Saab</dark>", "<dark>Volvo</dark>", "<dark>BMW</dark>"];
+  </div>
+  <p>
+    배열의 순번은 0부터 시작한다. 즉, 첫 번째 항목은 [0], 두 번째 항목은 [1] 등이다.
+  </p>
+
+  <h3>객체(Object)</h3>
+  <p>
+    객체는 중괄호{ ... } 안에 쉼표로 구분된 이름 : 값의 쌍으로 작성한다.
+  </p>
+  <div class="border">
+    <blue>const</blue> person = {familyName:"<dark>문</dark>", lastName:"<dark>재인</dark>", age:70, gender:"<dark>남자</dark>"};
+  </div>
+
+  <h3><em>typeof</em> 연산자</h3>
+  <p>
+    <em>typeof</em> 연산자는 변수 또는 표현식의 자료형을 반환한다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    document.write('typeof <dark>""</dark> := ' + typeof <dark>""</dark>);
+    document.write('<dark>&lt;br></dark>typeof "<dark>John</dark>" = ' + typeof "<dark>John</dark>");
+    document.write('<dark>&lt;br></dark>typeof <red>0</red> := ' + typeof <red>0</red>);
+    document.write('<dark>&lt;br></dark>typeof <red>314</red> := ' + typeof <red>314</red>);
+    document.write('<dark>&lt;br></dark>typeof <red>3.14</red> := ' + typeof <red>3.14</red>);
+    document.write('<dark>&lt;br></dark>typeof (<red>3</red> + <red>4</red>) := ' + typeof (<red>3</red> + <red>4</red>));
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre">
+  <script>
+    document.write('typeof "" := ' + typeof "");
+    document.write('<br>typeof "John" := ' + typeof "John");
+    document.write('<br>typeof 0 := ' + typeof 0);
+    document.write('<br>typeof 314 := ' + typeof 314);
+    document.write('<br>typeof 3.14 := ' + typeof 3.14);
+    document.write('<br>typeof (3 + 4) := ' + typeof (3 + 4));
+  </script>
+</div>
+  </div>
+
+  <h3><em>undefined</em> 자료형</h3>
+  <p>
+    값이 없는 변수는 <em>undefined</em> 값을 갖는다. 자료형도 <em>undefined</em> 이다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>var</blue> car;
+    document.write("<dark>car := </dark>" + car);
+    <blue>var</blue> car = <red>undefined</red>;
+    document.write("<dark>&lt;br>car := </dark>" + car);
+    document.write("<dark>&lt;br>typeof  car := </dark>" + typeof  car);
+    <blue>var</blue> car = <dark>""</dark>;
+    document.write("<dark>&lt;br>typeof  car := </dark>" + typeof  car);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre">
+  <script>
+    var car;
+    document.write("car := " + car);
+    var car = undefined;
+    document.write("<br>car := " + car);
+    document.write("<br>typeof  car := " + typeof car);
+    var car = "";
+    document.write("<br>typeof  car := " + typeof car);
+  </script>
+</div>
+  </div>
+
+  <h3><em>null</em> 자료형</h3>
+  <p>
+    JavaScript에서의 <em>null</em> 의 자료형은  객체(<em>Object</em>)이다
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>var</blue> person = {familyName:"<dark>문</dark>", lastName:"<dark>재인</dark>", age:70, gender:"<dark>남자</dark>"};
+    person = <blue>null</blue>; <green>// 값은 null이 되지만 자료형은 객체이다.</green>
+    document.write("<dark>person := </dark>" + person);
+    document.write("<dark>&lt;br>typeof person : </dark>" + typeof person);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre">
+  <script>
+    var person = {familyName:"문", lastName:"재인", age:70, gender:"남자"};
+    person = null; // 값은 null이 되지만 자료형은 객체이다.
+    document.write("person := " + person);
+    document.write("<br>typeof person : " + typeof person);
+  </script>
+</div>
+  </div>
+
+  <p>
+    다음과 같이 <em>undefined</em>  를 설정하여 객체를 비울 수도 있다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>var</blue> person = {familyName:"<dark>문</dark>", lastName:"<dark>재인</dark>", age:70, gender:"<dark>남자</dark>"};
+    person = <blue>undefined</blue>; <green>// 값과 자료형이 모두 undefined 가 된다.</green>
+    document.write("<dark>person := </dark>" + person);
+    document.write("<dark>&lt;br>typeof person : </dark>" + typeof person);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre">
+  <script>
+    var person = {familyName:"문", lastName:"재인", age:70, gender:"남자"};
+    person = undefined; // 값은 null이 되지만 자료형은 객체이다.
+    document.write("person := " + person);
+    document.write("<br>typeof person : " + typeof person);
+  </script>
+</div>
+  </div>
+
+  <h3><em>undefined</em> 와 <em>null</em> 의 차이</h3>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    document.write("<dark>typeof undefined := </dark>" + (typeof undefined));
+    document.write("<dark>&lt;br>typeof null := </dark>" + (typeof null));
+    document.write("<dark>&lt;br>(null === undefined) := </dark>" + (null === undefined));
+    document.write("<dark>&lt;br>(null == undefined) := </dark>" + (null == undefined));
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre">
+  <script>
+    document.write("typeof undefined := " + typeof undefined);
+    document.write("<br>typeof null := " + typeof null);
+    document.write("<br>(null === undefined) := " + (null === undefined));
+    document.write("<br>(null == undefined) := " + (null == undefined));
+  </script>
+</div>
+  </div>
+
+  <h3>기본 자료형(Primitive Data)</h3>
+  <ul>
+    <li><em>string</em></li>
+    <li><em>number</em></li>
+    <li><em>boolean</em></li>
+    <li><em>undefined</em></li>
+  </ul>
+  <div class="grey">
+    <div class="pre">
+<pre class="comment">
+    &lt;<dark>script</dark>>
+      document.write('typeof "반기문" := ' + typeof "반기문");
+      document.write('&lt;br>typeof 3.14 := ' + typeof 3.14);
+      document.write('&lt;br>typeof true := ' + typeof true);
+      document.write('&lt;br>typeof false := ' + typeof false);
+      document.write('&lt;br>typeof n := ' + typeof n);
+    &lt;<dark>/script</dark>>
+</pre>
+<pre class="comment">
+    
+      <green>// 문자열 </green>
+      <green>// 숫자형 </green>
+      <green>// 논리형 </green>
+      <green>// 논리형 </green>
+      <green>// "n"은 선언하지 않은 변수 </green>
+    
+</pre>
+    </div>
+<div class="pre">
+    <script>
+      document.write('typeof "반기문" := ' + typeof "반기문");
+      document.write('<br>typeof 3.14 := ' + typeof 3.14);
+      document.write('<br>typeof true := ' + typeof true);
+      document.write('<br>typeof false := ' + typeof false);
+      document.write('<br>typeof n := ' + typeof n);
+    </script>
+</div>
+  </div>
+
+  <h3>복합 자료(Complex Data)</h3>
+  <p>
+    <em>typeof</em> 연산자는 복합 자료에 대하여 객체(<em>object</em>)와 배열(<em>array</em>) 그리고 값이 <em>null</em> 인 경우 "<em>object</em>" 를 반환하고, 함수는 "<em>function</em>" 을 반환한다.
+  </p>
+
+  <div class="grey">
+    <div class="pre">
+<pre class="comment">
+  &lt;<dark>script</dark>>
+    document.write('<dark>typeof {name: "반기문", age: 70} := </dark>' + typeof {name: "<dark>반기문</dark>", age: <reed>70</reed>});
+    document.write('<dark>&nbsp;br>typeof [1, 2, 3, 4] := </dark>' + typeof [<red>1</red>, <red>2</red>, <red>3</red>, <red>4</red>]); 
+    document.write('<dark>&nbsp;br>typeof null := </dark>' + typeof null);
+    document.write('<dark>&nbsp;br>typeof function fnuc(){} := </dark>' + typeof function fnuc(){}); 
+  &lt;<dark>/script</dark>>
+</pre>
+<pre class="comment">
+  
+    <green>// 객체</green>
+    <green>// 배열</green>
+    <green>// null</green>
+    <green>// 함수</green>
+  
+</pre>
+    </div>
+    <div class="pre">
+      <script>
+        document.write('typeof {name: "반기문", age: 70} := ' + typeof {name: "반기문", age: 70}); // 객체
+        document.write('<br>typeof [1, 2, 3, 4] := ' + typeof [1, 2, 3, 4]); // 배열
+        document.write('<br>typeof null := ' + typeof null); // null
+        document.write('<br>typeof function fnuc(){} := ' + typeof function fnuc(){}); // 함수
+      </script>
+    </div>
+  </div>
+  <p class="yellow">
+    예제와 같이 JavaScript 에서 배열(<em>array</em>)은 객체(<em>object</em>)이다.
+  </p>
+
+  <script src="footer.js"></script>
+</body>
+</html>

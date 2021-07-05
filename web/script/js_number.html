@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JavaScript, 자바스크립트">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="js.css">
+  <link rel="icon" href="/favicon.png">
+  <title>JavaScript 숫자 자료형</title>
+  <style>
+    blue {font-style: italic;}
+  </style>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>JavaScript 숫자형</h1>
+  <div class="border">
+    <a href="#floating">숫자</a>
+    <a href="#precision">정확도</a>
+    <a href="#concat">문자열 덧셈</a>
+    <a href="#number">문자열 숫자</a>
+    <a href="#nan">NaN</a>
+    <a href="#infinity">무한대 </a>
+    <a href="#hexa">16 진수</a>
+    <a href="#obj">숫자 객체</a>
+  </div>
+  <p>
+    JavaScript에는 한 가지의 숫자형(<em>Number</em>) ​​만 있다. 숫자형은 정수와 소수의 구분없이 모두 쓸 수 있다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>var</blue> num = <red>3.14</red>; <green>// a number with decimals</green>
+    document.writeln("<dark>num := </dark>" + num);
+    <blue>var</blue> int = <red>3</red>;    <green>// a number without decimals</green>
+    document.write("<dark>int := </dark>" + int);
+  &lt;<dark>/script</dark>>
+</pre>
+<pre><script>
+    var num = 3.14; // a number with decimals
+    document.writeln("num := " + num);
+    var int = 3;    // a number without decimals
+    document.write("int := " + int);
+</script></pre>
+  </div>
+
+  <p>
+    매우 크거나 매우 작은 숫자는 과학적 지수 표기법으로 작성할 수 있다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>var</blue> num = <red>123E-5</red>; <green>// 0.00123 </green>
+    document.writeln("<dark>num := </dark>" + num);
+    <blue>var</blue> int = <red>123e5</red>;    <green>// 12300000 </green>
+    document.write("<dark>int := </dark>" + int);
+  &lt;<dark>/script</dark>>
+</pre>
+<pre><script>
+    var num = 123E-5; // 0.00123
+    document.writeln("num := " + num);
+    var int = 123e5;    // 12300000
+    document.write("int := " + int);
+</script></pre>
+  </div>
+
+  <h2 id="floating">숫자는 항상 64 비트 부동 소수점</h2>
+  <p>
+    다른 많은 프로그래밍 언어와 달리 JavaScript는 정수, short, long, 부동 소수점 등과 같은 다른 유형의 숫자를 구분하지 않는다. <br>
+    JavaScript 숫자는 국제 <em>IEEE 754</em> 표준에 따라 항상 배정밀도 부동 소수점 숫자로 저장된다. <br>
+    이 형식은 64 비트로 숫자를 저장한다. 숫자는 비트 0 ~ 51( 52bits ), 지수는 비트 52 ~ 62( 11bits ), 부호는 비트 63( 1bit )에 저장된다. <br>
+  </p>
+
+  <h3 id="precision">정확도</h3>
+  <p>
+    소숫점 또는 지수 표기법이 없는 정수는 최대 15 자리까지 정확도를 갖는다.
+  </p>
+  <div class="border pre">&lt;<dark>script</dark>>
+    <blue>var</blue> maxNum = <red>999999999999999</red>;   <green>// maxNum will be 999999999999999</green>
+    <blue>var</blue> overflowNum = <red>9999999999999999</red>;   <green>// overflowNum will be 10000000000000000</green>
+      var maxNum =999999999999999;
+      var overflowNum = 9999999999999999;
+      document.writeln("maxNum := " + maxNum);
+      document.write("overflowNum := " + overflowNum);
+    &lt;<dark>/script</dark>>
+
+    <script>
+      var maxNum =999999999999999;
+      var overflowNum = 9999999999999999;
+      document.writeln("maxNum := " + maxNum);
+      document.write("overflowNum := " + overflowNum);
+    </script>
+  </div>
+
+  <p>
+    최대 소수점 수는 17 개이지만 부동 소수점 산술이 항상 100 % 정확한 것은 아니다.
+  </p>
+  <div class="grey">
+<pre>
+    &lt;<dark>script</dark>>
+      <blue>let</blue> x = <red>0.2 </red>+ <red>0.1</red>;  <green>// 연산결과 x 의 값 0.30000000000000004</green>
+      document.<i>write</i> ("<dark> x := </dark>" + x);
+    &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = 0.2 + 0.1;  // 연산결과 x 의 값 0.30000000000000004
+    document.write(" x := " + x);
+  </script>
+</div>
+  </div>
+
+  <p>
+    위와 같은 문제는 다음과 같이 해결한다. 
+  </p>
+  <div class="grey">
+<pre>
+    &lt;<dark>script</dark>>
+      <blue>let</blue> x = (<red>0.2 </red> * <red>10</red> + <red>0.1</red> * <red>10</red>) / <red>10</red>;  <green>// 연산결과 x 의 값 0.3</green>
+      document.<i>write</i> ("<dark> x := </dark>" + x);
+    &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = (0.2 * 10 + 0.1 * 10) / 10;  // 연산결과 x 의 값 0.3
+    document.write(" x := " + x);
+  </script>
+</div>
+  </div>
+
+  <h2 id="concat">숫자와 문자열 덧셈</h2>
+  <p>
+    JavaScript 는 더하기와 문자열 연결에 모두 <red>+</red> 연산자를 사용한다.
+  </p>
+
+  <p>두 개의 숫자를 더하면 결과는 숫자</p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>let</blue> x = <red>10</red>;
+    <blue>let</blue> y = <red>20</red>;
+    <blue>let</blue> sum = x + y;  <green>// sum 은 숫자 30 할당</green>
+    document.write("<dark>sum := </dark>" + sum);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = 10;
+    var y = 20;
+    var sum = x + y;  // sum 은 숫자 30 할당
+    document.write("sum := " + sum);
+  </script>
+</div>
+  </div>
+  
+  <p>
+    두 개의 문자열을 더하면 결과는 문자열 연결
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>let</blue> x = "<dark>10</dark>";
+    <blue>let</blue> y = "<dark>20</dark>";
+    <blue>let</blue> sum = x + y;  <green>// sum 은 글자 1020 할당</green>
+    document.write("<dark>sum := </dark>" + sum);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = "10";
+    var y = "20";
+    var sum = x + y;  // sum 은 문자열 1020 할당
+    document.write("sum := " + sum);
+  </script>
+</div>
+  </div>
+
+  <p>
+    숫자에 문자열을 더하면 결과는 문자열
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>let</blue> x = <red>10</red>;
+    <blue>let</blue> y = "<dark>20</dark>";
+    <blue>let</blue> sum = x + y;  <green>// sum 은 글자 1020 할당</green>
+    document.write("<dark>sum := </dark>" + sum);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = 10;
+    var y = "20";
+    var sum = x + y;  // sum 은 문자열 1020 할당
+    document.write("sum := " + sum);
+  </script>
+</div>
+  </div>
+
+  <p>
+    문자열에 숫자를 더하면 결과는 문자열
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>let</blue> x = "<dark>10</dark>";
+    <blue>let</blue> y = <red>20</red>;
+    <blue>let</blue> sum = x + y;  <green>// sum 은 글자 1020 할당</green>
+    document.write("<dark>sum := </dark>" + sum);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = "10";
+    var y = 20;
+    var sum = x + y;  // sum 은 문자열 1020 할당
+    document.write("sum := " + sum);
+  </script>
+</div>
+  </div>
+
+  <p>
+    다음과 같은 일반적인 실수는 이 연산 결과가 <red>30</red> 일 것으로 예상하는 것
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>let</blue> x = <red>10</red>;
+    <blue>let</blue> y = <red>20</red>;
+    <blue>let</blue> result = "<dark>연산 결과 : </dark>" +  x + y;
+    document.write(result);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = "10";
+    var y = 20;
+    var result = "연산 결과 : " +  x + y;
+    document.write(result);
+  </script>
+</div>
+  </div>
+
+  <p>
+    다음과 같은 일반적인 실수는 이 연산 결과가 102030이 될 것으로 예상하는 것
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>let</blue> x = <red>10</red>;
+    <blue>let</blue> y = <red>20</red>;
+    <blue>let</blue> z = "<dark>30</dark>";
+    <blue>let</blue> result =  x + y + z;
+    document.write(result);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = 10;
+    var y = 20;
+    var z = "30";
+    var result = x + y + z;
+    document.write("result := " + result);
+  </script>
+</div>
+  </div>
+
+  <p class="yellow">
+    JavaScript 해석기(<i>interpreter</i>)는 왼쪽에서 오른쪽으로 작동한다. <br>
+    x와 y가 모두 숫자이기 때문에 처음 10 + 20 = 30이 된다. <br>
+    다음으로 z는 문자열이기 때문에 30 + "30"으로 문자열 연결이 된다.
+  </p>
+
+  <h2 id="number">문자열 숫자</h2>
+  <p>
+    JavaScript 문자열은 숫자를 내용에 포함할 수 있다. 모든 숫자 연산에서 문자열을 숫자로 변환하려고 한다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+  <blue>let</blue> x = "<red>100</red>";
+  <blue>let</blue> y = "<red>10</red>";
+  <blue>let</blue> result = x / y;   <green>// result 10</green>
+    document.write("<dark>result := </dark>" + result);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = "100"
+    var y = "10";
+    var result = x / y;   // result 10
+    document.write("result := " + result);
+  </script>
+</div>
+  </div>
+
+  <p>이것 또한 가능 </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+  <blue>let</blue> x = "<red>100</red>";
+  <blue>let</blue> y = "<red>10</red>";
+  <blue>let</blue> result = x * y;   <green>// result 1000</green>
+    document.write("<dark>result := </dark>" + result);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = "100"
+    var y = "10";
+    var result = x * y;   // result 1000
+    document.write("result := " + result);
+  </script>
+</div>
+  </div>
+
+  <p>이것 또한 가능 </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+  <blue>let</blue> x = "<red>100</red>";
+  <blue>let</blue> y = "<red>10</red>";
+  <blue>let</blue> result = x - y;   <green>// result 90</green>
+    document.write("<dark>result := </dark>" + result);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = "100"
+    var y = "10";
+    var result = x - y;   // result 90
+    document.write("result := " + result);
+  </script>
+</div>
+  </div>
+
+  <p>이것은 문자열 연결 </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+  <blue>let</blue> x = "<red>100</red>";
+  <blue>let</blue> y = "<red>10</red>";
+  <blue>let</blue> result = x + y;   <green>// result 10010</green>
+    document.write("<dark>result := </dark>" + result);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = "100"
+    var y = "10";
+    var result = x + y;   // result 10010
+    document.write("result := " + result);
+  </script>
+</div>
+  </div>
+
+  <h2 id="nan">NaN - 숫자 아님</h2>
+  <p>
+    <em>NaN</em> 은 숫자가 아님을 나타내는 JavaScript 예약어이다. <br>
+    숫자가 아닌 문자열로 산술 연산을 하려고 하면 <em>NaN</em> <i>(Not a Number)</i>이 된다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+  <blue>let</blue> num = <red>100</red> / "<dark>Apple</dark>";  <green>// result NaN(Not a Number)</green>
+    document.write("<dark>num := </dark>" + num)
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var num = 100 / "apple";  // result NaN(Not a Number)
+    document.write("num := " + num)
+  </script>
+</div>
+  </div>
+
+  <p>
+    문자열에 숫자 값이 포함된 경우 결과는 숫자
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+  <blue>let</blue> num = <red>100</red> / "<dark>10</dark>";  <green>// result 10</green>
+    document.write("<dark>num := </dark>" + num)
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var num = 100 / "10";  // result 10
+    document.write("num := " + num);
+  </script>
+</div>
+  </div>
+
+  
+  <p>
+    JavaScript 전역 함수 <em>isNaN()</em> 을 사용하여 값이 숫자인지 확인
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+  <blue>let</blue> num = <red>100</red> / "<dark>Apple</dark>";  <green>// num is NaN(Not a Number)</green>
+  document.write("<dark>isNaN(num) := </dark>" + isNaN(num));  <green>// return true</green>
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var num = 100 / "Apple";
+    document.write("isNaN(num) := " + isNaN(num));  // return true
+  </script>
+</div>
+  </div>
+
+  <p>주의 </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+  <blue>let</blue> x = "<blue>NaN</blue>";
+  <blue>let</blue> y = "<red>2</red>";
+  <blue>let</blue> result = x + y;   <green>// result NaN</green>
+    document.write("<dark>result := </dark>" + result);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = NaN;
+    var y = 2;
+    var result = x + y;   // result NaN
+    document.write("result := " + result);
+  </script>
+</div>
+  </div>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+  <blue>let</blue> x = "<blue>NaN</blue>";
+  <blue>let</blue> y = "<dark>2</dark>";
+  <blue>let</blue> result = x + y;   <green>// result NaN2</green>
+    document.write("<dark>result := </dark>" + result);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    var x = NaN;
+    var y = "2";
+    var result = x + y;   // result NaN2
+    document.write("result := " + result);
+  </script>
+</div>
+  </div>
+
+  <p>
+    <em>NaN</em> 은 숫자 자료형
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    document.write("<dark> typeof NaN := </dark>" + <blue> typeof NaN</blue>);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    document.write(" typeof NaN := " + typeof NaN);
+  </script>
+</div>
+  </div>
+
+  <h3 id="infinity">무한대 (<em>Infinity</em> or <em>-Infinity</em>)</h3>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>let</blue> letNum = <red>2</red>;
+    <blue>while</blue> (letNum != <red>Infinity</red>) {  <green>// 무한대가 될 때까지 실행</green>
+      letNum = letNum * letNum;
+      document.<blue>writeln</blue>(letNum);
+    }
+  &lt;<dark>/script</dark>>
+</pre>
+<pre>
+  <script>
+    {
+      let letNum = 2;
+      while (letNum != Infinity) {  // 무한대가 될 때까지 실행
+        letNum = letNum * letNum;
+        document.writeln(letNum);
+      }
+  }
+  </script>
+</pre>
+  </div>
+
+  <p>
+    숫자를 <red>0</red>으로 나누면 무한대( <em>Infinity</em> )
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    document.writeln("<dark>2 / 0 := </dark>" +( <red>2</red> / <red>0</red>));  <green>// x will be Infinity</green>
+    document.write("<dark>-2 / 0 := </dark>" +(<red>- 2</red> / <red>0</red>));  <green>// y will be -Infinity</green>
+  &lt;<dark>/script</dark>>
+</pre>
+<pre>
+  <script>
+    document.writeln("2 / 0 := <red>" +( 2 / 0) + "</red>");  // x will be Infinity
+    document.write("-2 / 0 := <red>" +(- 2 / 0) + "</red>");  // y will be -Infinity
+  </script>
+</pre>
+  </div>
+
+  <p>
+    <em>Infinity</em> 은 숫자 자료형
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    document.write("<dark> typeof Infinity := </dark>" + <blue> typeof Infinity</blue>);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+    document.write(" <blue>typeof Infinity </blue>:= " + typeof Infinity);
+  </script>
+</div>
+  </div>
+
+  <h2 id="hexa">16 진수( <i>Hexadecimal</i> )</h2>
+  <p>
+    JavaScript는 숫자 상수 앞에 0x가 있는 경우 16 진수로 해석한다. 
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>let</blue> x = <red>0xFF</red>;
+    document.<i>write</i>("<dark>0xFF := </dark>" + x);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="border">
+  <script>
+  {
+    let x = 0xFF;
+    document.write("<dark>0xFF := </dark>" + x);
+  }
+  </script>
+</div>
+  </div>
+
+  <p class="yellow">
+    <red>07</red> 과 같이 숫자 앞에 <red>0</red> 을 붙이지 말 것. <br>
+    일부 JavaScript 버전에서 숫자 앞에 <red>0</red> 이 있으면 <red>8</red> 진수로 해석할 수 있다.
+  </p>
+
+  <p>
+    기본적으로 JavaScript는 숫자를 10 진수로 표시한다. 10진수 이외의 숫자를 표시하려면 <em>toString()</em> 함수를 사용하여 나타낼 수 있다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>let</blue> myNumber = <red>32</red>;
+    document.<i>writeln</i>("<dark>myNumber.toString(10) := </dark>" + myNumber.toString(<red>10</red>));  <green>// returns 32</green>
+    document.<i>writeln</i>("<dark>myNumber.toString(32) := </dark>" + myNumber.toString(<red>32</red>));  <green>// returns 10</green>
+    document.<i>writeln</i>("<dark>myNumber.toString(16) := </dark>" + myNumber.toString(<red>16</red>));  <green>// returns 20</green>
+    document.<i>writeln</i>("<dark>myNumber.toString(8) := </dark>" + myNumber.toString(<red>8</red>));  <green>// returns 40</green>
+    document.<i>writeln</i>("<dark>myNumber.toString(2) := </dark>" + myNumber.toString(<red>2</red>));  <green>// returns 100000</green>
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre"><script>{
+    let myNumber = 32;
+    document.writeln("<dark>myNumber.toString(10) := </dark>" + myNumber.toString(10));  // returns 32
+    document.writeln("<dark>myNumber.toString(32) := </dark>" + myNumber.toString(32));  // returns 10
+    document.writeln("<dark>myNumber.toString(16) := </dark>" + myNumber.toString(16));  // returns 20
+    document.writeln("<dark>myNumber.toString(8) := </dark>" + myNumber.toString(8));  // returns 40
+    document.write("<dark>myNumber.toString(2) := </dark>" + myNumber.toString(2));  // returns 100000
+  }</script>
+</div>
+  </div>
+
+  <h2 id="obj">숫자 객체</h2>
+  <p>
+    JavaScript 숫자는 실효값으로 생성된 기본값이다.
+  </p>
+
+  <p>
+    숫자를 <em>new</em> 지시어를 사용하여 객체로 정의할 수도 있다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+      <blue>let</blue> num = <red>123</red>;
+      <blue>let</blue> obj_num = <blue>new</blue> Number(<red>123</red>);
+      document.<i>writeln</i>("<dark>typeof num := </dark>" + typeof num );
+      document.<i>write</i>("<dark>typeof obj_num := </dark>" + typeof obj_num );
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre"><script>
+    {
+      let num = 123;
+      let obj_num = new Number(123);
+      document.writeln("<dark>typeof num := </dark>" + typeof num );
+      document.write("<dark>typeof obj_num := </dark>" + typeof obj_num );
+    }
+  </script></div>
+  </div>
+
+  <p class="yellow">
+    <em>new</em> 지시어로 Number 개체를 만들면 코드가 복잡해지고 실행속도가 느려지며, 예상하지 못한 결과가 발생할 수도 있다.
+  </p>
+
+  <p>논리 연산자 "<red>==</red>"로 값의 비교</p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    {
+      <blue>let</blue> num = <red>500</red>;
+      <blue>let</blue> obj_num = <blue>new</blue> Number(<red>500</red>);
+      document.write("<dark>(num == obj_num) := </dark>" + (num == obj_num));
+    }
+  &lt;<dark>/script</dark>>
+</pre>
+<pre>
+  <script>
+    {
+      let num = 500;
+      let obj_num = new Number(500);
+      document.write("<dark>(num == obj_num) := </dark>" + (num == obj_num));
+    }
+  </script>
+</pre>
+  </div>
+
+  <p>논리 연산자 "<red>===</red>"로 값과 자료형 모두 비교</p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    {
+      <blue>let</blue> num = <red>500</red>;
+      <blue>let</blue> obj_num = <blue>new</blue> Number(<red>500</red>);
+      document.write("<dark>(num === obj_num) := </dark>" + (num === obj_num));
+    }
+  &lt;<dark>/script</dark>>
+</pre>
+<pre>
+  <script>
+    {
+      let num = 500;
+      let obj_num = new Number(500);
+      document.write("<dark>(num === obj_num) := </dark>" + (num === obj_num));
+    }
+  </script>
+</pre>
+  </div>
+
+  <p>객체 끼리는 비교할 수 없다.</p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    {
+      <blue>let</blue> obj_n = <blue>new</blue> Number(<red>500</red>);
+      <blue>let</blue> obj_m = <blue>new</blue> Number(<red>500</red>);
+      document.write("<dark>결과 := </dark>" + (obj_n == obj_m));
+    }
+  &lt;<dark>/script</dark>>
+</pre>
+<pre>
+  <script>
+    {
+      let obj_n = new Number(500);
+      let obj_m = new Number(500);
+      document.write("<dark>결과 := </dark>" + (obj_n == obj_m));
+    }
+  </script>
+</pre>
+  </div>
+
+  <p class="yellow">
+    "<red>==</red>" 연산자는 값을 비교하고, "<red>===</red>" 연산자는 값과 자료형을 모두 비교하며, 객체와 객체를 비교하면 항상 "<em>false</em>" 이다.
+    </p>
+
+  <script src="footer.js"></script>
+</body>
+</html>

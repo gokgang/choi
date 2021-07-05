@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JavaScript, 자바스크립트">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="js.css">
+  <link rel="icon" href="/favicon.png">
+  <title>JavaScript 객체</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1>객체(Object)</h1>
+  <div class="border">
+    <a href="#define">객체 정의</a>
+    <a href="#property">객체 속성</a>
+    <a href="#access">속성 접근</a>
+    <a href="#method">기능 정의</a>
+    <a href="#this">this</a>
+    <a href="#accessMethod">기능 접근</a>
+  </div>
+  <hr>
+
+  <h2>JavaScript 객체</h2>
+  <p>JavaScript 변수는 데이터 값을 담을 수 있는 그릇이다.</p>
+  <p>다음의 코드는 car라는 변수에 단순한 값을 저장한다.</p>
+
+  <div class="grey">
+<pre>
+  <blue>var</blue> car = "<dark>Genesys</dark>";
+  document.getElementById("car").innerHTML = car;
+</pre>
+    <div class="pre">예제 결과 : <span id="car"></span></div>
+    <script>
+      // 변수 생성과 화면 표시
+      var car = "Genesys";
+      document.getElementById("car").innerHTML = car;
+    </script>
+  </div>
+
+  <p>객체는 많은 값을 가질 수 있는 변수이다. </p>
+  <p>다음의 코드는 <blue><b>car_type</b></blue> 이라는 변수에 많은 값을 할당한다.</p>
+  <div class="grey">
+<pre>
+    <blue>var</blue> car_type = {type:"<dark>Genesys</dark>", model:"<dark>GV80</dark>", color:"<dark>grey</dark>"};
+    document.getElementById("<dark>genesys</dark>").innerHTML = 
+      `형식 : ${car_type.type}, 모델 : ${car_type.model}, 색상 : ${car_type.color}`;
+</pre>
+<div class="pre">예제 결과 : <span id="genesys"></span></div>
+<script>
+    // Create an object
+    var car_type = {type:"Genesys", model:"GV80", color:"grey"};
+    document.getElementById("genesys").innerHTML = 
+      `형식 : ${car_type.type}, 모델 : ${car_type.model}, 색상 : ${car_type.color}`;
+</script>
+  </div>
+
+  <p>객체의 속성값은 Colon( <b>:</b> )으로 구분한 <blue>이름: 값</blue> 의 짝으로 작성한다.</p>
+  <p class="yellow">JavaScript 객체는 속성(<i>Property</i>)과 기능(<i>Methods</i>)을 담을 수 있는 그릇이다.</p>
+
+  <hr>
+
+  <h2 id="define">객체 정의(Object Definition)</h2>
+  <div class="grey">
+<pre>
+  <green>// Create an object:</green>
+  <blue>var</blue> person = {familyName:"<dark>반</dark>", lastName:"<dark>기문</dark>", age:<red>50</red>};
+  document.getElementById("<dark>person</dark>").innerHTML = 
+    person.familyName + " " + person.lastName +  " " + person.age + "<dark>세</dark>";
+</pre>
+<div class="pre">예제 결과 : <span id="person"></span></div>
+    <script>
+      // Create an object:
+      var person = {familyName:"반", lastName:"기문", age:75};
+      document.getElementById("person").innerHTML = 
+        person.familyName +" " + person.lastName +  " : " + person.age + "세";
+    </script>
+  </div>
+
+  <p>객체의 정의는 여러 줄에 걸쳐 작성할 수 있다.</p>
+  <div class="grey">
+<pre>
+  <green>// Create an object:</green>
+  <blue>var</blue> person = {
+    familyName:"<dark>반</dark>",
+    lastName:"<dark>기문</dark>",
+    age:<red>75</red>
+  };
+  document.getElementById("<dark>obj_person</dark>").innerHTML = 
+    person.familyName + " " + person.lastName +  " " + person.age + "<dark>세</dark>";
+</pre>
+<div class="pre">예제 결과 : <span id="obj_person"></span></div>
+  <script>
+    document.getElementById("obj_person").innerHTML = 
+      person.familyName +" " + person.lastName +  " : " + person.age + "세";
+  </script>
+  </div>
+
+  <h2 id="property">객체 속성(Object Properties)</h2>
+  <p>JavaScript에서 객체의 <blue>이름: 값</blue> 의 짝을 속성(property)이라 한다.</p>
+  <table style="width: 100%;">
+      <colgroup><col style="width: 120px;"><col></colgroup>
+      <tr style="text-align: left;"><th>속성(property)</th><th>값(value)</th></tr>
+      <tr><td>familyName</td><td><dark>반</dark></td></tr>
+      <tr><td>lastName</td><td><dark>기문</dark></td></tr>
+      <tr><td>age</td><td><red>75</red></td></tr>
+  </table>
+
+  <h2 id="access">객체 속성 접근(Accessing Object Properties)</h2>
+
+  <p>객체의 속성에 접근하는 방법은 두 가지이다.</p>
+  <div class="grey">
+    <div class="pre">
+        <i>objectName.propertyName</i>
+    </div>
+    <dd><i>or</i></dd>
+    <div class="pre">
+        <i>objectName["<dark>propertyName</dark>"]</i>
+    </div>
+  </div>
+  <p>방법 1 : person.lastName;</p>
+  <div class="grey">
+<pre>
+  document.getElementById("<dark>exam1</dark>").innerHTML = person.lastName;
+</pre>
+    <div class="pre"  id="exam1">
+      <script>
+        document.getElementById("exam1").innerHTML = person.lastName;
+      </script>
+    </div>
+  </div>
+
+  <p>방법 2 : person["<dark>lastName</dark>"];</p>
+  <div class="grey">
+<pre>
+  document.getElementById("exam2").innerHTML = person["lastName"];
+</pre>
+<div class="pre" id="exam2">
+  <script>
+    document.getElementById("exam2").innerHTML = person["lastName"];
+  </script>
+</div>
+  </div>
+
+  <h2 id="method">객체의 기능(Methods) 정의</h2>
+  <p>객체는 여러가지 기능(Methods)을 가질 수 있다. 함수(Function)를 정의하는 방법으로 객체에서 실행할 기능을 정의한다.</p>
+  <table>
+    <tr style="text-align: left;">
+      <th>속성</th><th>값(value)</th>
+    </tr>
+    <tr>
+      <td>familyName</td><td><dark>반</dark></td>
+    </tr>
+    <tr>
+      <td>lastName</td><td><dark>기문</dark></td>
+    </tr>
+    <tr>
+      <td>age</td><td><red>75</red></td>
+    </tr>
+      <td>fullName</td><td>function() {return this.familyName + " " + this.lastName;}</td>
+    </tr>
+  </table>
+  <p class="yellow">기능(Methods)은 객체의 속성으로 포함된 함수이다.</p>
+
+  <hr>
+
+  <div class="grey">
+<pre>
+  <blue>var</blue> obj_person = {
+      familyName: "<dark>반</dark>",
+      lastName: "<dark>기문</dark>",
+      id: <red>5566</red>,
+      fullName: <blue>function</blue>() {
+          <blue>return</blue> <blue>this</blue>.familyName + " " + <blue>this</blue>.lastName;
+      }
+  };
+
+  document.getElementById("<dark>exam</dark>").innerHTML = obj_person.fullName();
+</pre>
+<div class="pre">Result : <span id="exam"></span></div>
+  <script>
+    var obj_person = {
+      familyName: "반",
+      lastName: "기문",
+      id: 5566,
+      fullName: function() {
+          return this.familyName + " " + this.lastName;
+      }
+    };
+
+    document.getElementById("exam").innerHTML = obj_person.fullName();
+  </script>
+  </div>
+
+  <hr>
+
+  <h2 id="this"><em>this</em> 지시어(Keyword)</h2>
+  <p>객체의 기능 정의에서 <em>this</em> 는 객체 그 자신을 말한다. </p>
+  <p>위의 예에서 함수 정의에 사용된 <em>this</em>는 <blue>person</blue> 객체 그 자신이다. </p>
+  <p>즉, <navy>this.familyName</navy>은 <navy>person</navy> 객체의 <navy>familyName</navy>이다.</p>
+  <hr>
+
+  <h2 id="accessMethod">객체의 기능(Methods)에 접근</h2>
+  <p>다음과 같이 객체의 기능에 접근한다.</p>
+  <div class="grey">
+      <div class="pre">
+          <em>objectName.methodName()</em>
+      </div>
+  </div>
+
+  <div class="grey">
+      <div class="pre">
+        document.getElementById("<dark>ex</dark>").innerHTML = obj_person.fullName();
+      </div>
+      <div class="pre" id="ex">
+        <script>
+          document.getElementById("ex").innerHTML = obj_person.fullName();
+        </script>
+      </div>
+  </div>
+
+  <p>() 괄호없이 기능에 접근하면 기능의 정의 코드를 반환한다.</p>
+  <div class="grey">
+      <div class="pre">
+        document.getElementById("ex2").innerHTML = obj_person.fullName;
+      </div>
+      <div class="pre" id="ex2">
+        <script>
+          document.getElementById("ex2").innerHTML = obj_person.fullName;
+        </script>
+      </div>
+  </div>
+
+  <hr>
+
+  <p>이미 만들어져 있는 String, Number, Boolean 객체를 <em>new</em> 생성자로 객체를 다시 또 만들어서는 않된다.</p>
+  <div class="grey" style="padding: 10px;">
+      <div class="red">
+          <p><blue>var</blue> x = <blue>new</blue> String(); <green>// Declares x as a String object</green> </p>
+          <p><blue>var</blue> y = <blue>new</blue> Number(); <green>// Declares y as a Number object</green> </p>
+          <p><blue>var</blue> z = <blue>new</blue> Boolean(); <green>// Declares z as a Boolean object</green> </p>
+      </div>
+  </div>
+  <p>위와 같이 하면 코드가 복잡해 지고 실행속도가 느려진다.</p>
+
+  <script src="footer.js"></script>
+</body>
+</html>

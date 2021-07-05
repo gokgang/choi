@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JavaScript, 자바스크립트">
+  <base href="" target="_blank">
+  <link rel="stylesheet" href="js.css">
+  <link rel="icon" href="/favicon.png">
+  <title>JavaScript 배치</title>
+</head>
+<body>
+  <a href="/">곡강최가</a>
+  <h1><em>JavaScript</em> Code 배치</h1>
+  <hr>
+
+  <h3> &lt;<dark>script</dark>> 매듭</h3>
+  <p>
+    HTML 문서에서 <em>JavaScript</em> Code는 &lt;<dark>script</dark>> 와  &lt;<dark>/script</dark>> 매듭 사이에 작성한다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    document.getElementById("<dark>id</dark>").innerHTML = "<dark>Hello, JavaScript...!</dark>";
+  &lt;<dark>/script</dark>>
+</pre>
+    <div id="id" class="border">
+      <script>
+        document.getElementById("id").innerHTML="Hello, JavaScript...!";
+      </script>
+    </div>
+  </div>
+
+  <p class="yellow">
+    <em>ECMAScript</em> 2015 이전 <em>JavaScript</em> 에서는 형식 속성인 &lt;<dark>script</dark> <red>type</red> = "<blue>text / javascript</blue>"> 를 사용하였지만, 현재는 <em>JavaScript</em> 가 HTML 문서의 기본 <em>Script</em> 언어이므로 형식 속성은 필요가 없다.
+  </p>
+
+  <hr>
+  <h3>함수(Function)와 사건(Event)</h3>
+  <p>
+    <em>JavaScript</em> 함수는 사용자가 버튼을 클릭할 때와 같은 사건이 발생할 때 호출하여 실행될 수 있는 <em>JavaScript</em> 코드 묶음이다.
+  </p>
+
+  <h3><em>Script</em> 배치</h3>
+  <p>
+    HTML 문서의 &lt;<dark>head</dark>> 또는 &lt;<dark>body</dark>> 매듭의 어디이든 원하는 수의 스크립트를 배치할 수 있다.
+  </p>
+
+  <h3>&lt;<dark>head</dark>>의 JavaScript</h3>
+  <div class="grey">
+<pre>
+  &lt;<dark>!DOCTYPE</dark> <red>html</red>>
+  &lt;<dark>html</dark>>
+  &lt;<dark>head</dark>>
+    &lt;<dark>script</dark>>
+        <blue>function</blue> change_paragaph() {
+          document.getElementById("<dark>head</dark>").innerHTML = "<dark>Hello, JavaScript...!</dark>";
+        }
+    &lt;<dark>/script</dark>>
+  &lt;<dark>/head</dark>>
+  &lt;<dark>body</dark>>
+  
+      &lt;<dark>h1</dark>>자바스크립트<dark>/h1</dark>>
+      &lt;<dark>p</dark> <red>id</red>="<blue>head</blue>">안녕, 자바 스크립트...!&lt;<dark>/p</dark>>
+      &lt;<dark>button</dark> <red>type</red>="<blue>button</blue>" <red>onclick</red>="<blue>change_paragaph()</blue>">문단 내용 바꾸기&lt;<dark>/button</dark>>
+  
+  &lt;<dark>/body</dark>>
+  &lt;<dark>/html</dark>>
+</pre>
+<div class="border">
+  <h1>JavaScript</h1>
+  <p id="head">안녕, 자바 스크립트...!</p>
+  <button type="button" onclick="change_paragaph()">문단 내용 바꾸기</button>
+  <script>
+    function change_paragaph() {
+      document.getElementById("head").innerHTML = "Hello, JavaScript...!";
+    }
+</script>
+</div>
+  </div>
+
+  <h3>&lt;<dark>body</dark>>의 JavaScript</h3>
+  <div class="grey">
+<pre>
+  &lt;<dark>!DOCTYPE</dark> <red>html</red>>
+  &lt;<dark>html</dark>>
+  &lt;<dark>body</dark>>
+  
+      &lt;<dark>h1</dark>>자바스크립트<dark>/h1</dark>>
+      &lt;<dark>p</dark> <red>id</red>="<blue>demo</blue>">안녕, 자바 스크립트...!&lt;<dark>/p</dark>>
+      &lt;<dark>button</dark> <red>type</red>="<blue>button</blue>" <red>onclick</red>="<blue>changeParagaph()</blue>">문단 내용 바꾸기&lt;<dark>/button</dark>>
+
+      &lt;<dark>script</dark>>
+          <blue>function</blue> changeParagaph() {
+            document.getElementById("<dark>body</dark>").innerHTML = "<dark>Hello, JavaScript...!</dark>";
+          }
+      &lt;<dark>/script</dark>>
+
+  &lt;<dark>/body</dark>>
+  &lt;<dark>/html</dark>>
+</pre>
+<div class="border">
+  <h1>JavaScript</h1>
+  <p id="body">안녕, 자바 스크립트...!</p>
+  <button type="button" onclick="changeParagaph()">문단 내용 바꾸기</button>
+  <script>
+    function changeParagaph() {
+      document.getElementById("body").innerHTML = "Hello, JavaScript...!";
+    }
+</script>
+</div>
+  </div>
+  <p class="yellow">
+    <em>Script</em> 는 웹 브라우저에 의해서 순차적으로 해석되므로  &lt;<dark>head</dark>> 요소 부분에 <em>Script</em> 가 있으면 <em>Script</em> 를 먼저 다운로드하게 되어 문서의 보여지는 속도가 느려진다. 그렇기 때문에 &lt;<dark>body</dark>> 요소의 맨 아래에 <em>Script</em> 를 배치하면 표시 속도가 향상된다.
+  </p>
+
+  <h3>외부 <em>JavaScript</em></h3>
+  <p>
+    <em>Script </em> 는 외부 파일에도 배치할 수 있다.
+  </p>
+  <div class="grey">
+    외부 파일 : extScript.js
+  </div>
+  <div class="grey">
+<pre>
+  <blue>function</blue> changeParagaph() {
+    document.getElementById("<dark>para</dark>").innerHTML = "<dark>Hello, JavaScript...!"</dark>";
+  }
+</pre>
+<pre>
+  &lt;<dark>script</dark> <red>src</red>="<blue>extScript.js</blue>">&lt;<dark>/script</dark>>
+</pre>
+  </div>
+
+  <p>
+    외부 <em>Script </em> 는 여러 개의 웹 문서에서 같은 코드를 사용할 수 있게 한다. <br>
+    <em>JavaScript</em> 파일의 파일 확장자는 <blue>*.js</blue> 이다. <br>
+    외부 <em>Script </em> 를 사용하려면 &lt;<dark>script</dark>> 매듭의 <em>src</em>(source) 속성에 <em>Script </em> 파일의 이름을 지정한다. <br>
+    외부 <em>Script</em> 는 &lt;<dark>head</dark>>또는 &lt;<dark>body</dark>> 부분의 어느 곳이든 원하는 대로 <em>Script</em> 참조를 배치할 수 있다. <br>
+    외부 <em>Script</em> 는 &lt;<dark>script</dark>> 매듭이 배치된 위치에 있는 것처럼 작동한다. <br>
+  </p>
+  <p class="yellow">
+    외부 <em>Script</em> 는 &lt;<dark>script</dark>> 매듭을 포함할 수 없다.
+  </p>
+
+  <h3>외부 <em>JavaScript</em> 장점</h3>
+  <ul>
+    <li>HTML과 코드를 분리한다.</li>
+    <li>HTML과 <em>JavaScript</em> 를 읽고 유지 보수하기가 더 쉬워진다.</li>
+    <li>먼저 내려받은 <em>JavaScript</em> 파일은 재사용되므로 문서 표시 속도를 높일 수 있다.</li>
+  </ul>
+
+  <p>
+    하나의 문서에 여러 <em>Script </em> 파일을 추가하려면 여러 개의 &lt;<dark>script</dark>> 매듭을 사용해야 한다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark> <red>src</red>="<blue>extScript_1.js</blue>">&lt;<dark>/script</dark>>
+  &lt;<dark>script</dark> <red>src</red>="<blue>extScript_2.js</blue>">&lt;<dark>/script</dark>>
+</pre>
+  </div>
+
+  <h3>외부 참조</h3>
+  <p>
+    외부 <em>Script </em> 는 전체 <em>URL</em> 또는 현재 웹 문서에 상대적인 경로로 참조될 수 있다.
+  </p>
+  <p class="grey">
+    전체 URL을 사용하여 <em>Script </em> 에 연결
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark> <red>src</red>="<blue>https://gokgang.github.io/choi/script/js/extScript_1.js</blue>">&lt;<dark>/script</dark>>
+</pre>
+  </div>
+  <p class="grey">
+    현재 웹 사이트의 지정된 폴더(js)에 있는 <em>Script </em> 사용
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark> <red>src</red>="<blue>js/extScript_1.js</blue>">&lt;<dark>/script</dark>>
+</pre>
+  </div>
+  <p class="grey">
+    현재 페이지와 같은 폴더에 있는 <em>Script </em> 사용
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark> <red>src</red>="<blue>extScript_1.js</blue>">&lt;<dark>/script</dark>>
+</pre>
+  </div>
+
+  <script src="./footer.js"></script>
+</body>
+</html>

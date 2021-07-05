@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="JavaScript, 자바스크립트">
+  <base target="_blank">
+  <link rel="stylesheet" href="js.css">
+  <link rel="icon" href="/favicon.png">
+  <title>JavaScript Number Methods</title>
+</head>
+<body>
+  <a href="/choi/">곡강최가</a>
+  <h1>숫자 처리 방법(Number Methods)</h1>
+  <p>
+    3.14 또는 12345와 같은 실효값(<i>Primitive values</i>)은 객체가 아니기 때문에 속성(<i>properties</i>)과 처리 방법(<i>Methods</i>)을 가질 수 없다. 그러나 JavaScript는 실효값도 객체로 취급하기 때문에 속성과 처리 방법을 사용할 수 있다.
+  </p>
+  <hr>
+
+  <h2>toString() 처리 방법(Method)</h2>
+  <p>
+    <em>toString()</em> 처리 방법은 숫자를 문자열로 반환한다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+    <blue>let</blue> num = <red>12345</red>;
+    <blue>let</blue> str = ""
+    str += num.toString(); <green>// 변수 num에서 문자열 "12345" 를 반환한다.</green>
+    str += "&lt;<dark>br</dark>>";
+    str += (<red>6789</red>).toString();  <green>// 실효값 6789 에서 문자열 "6789" 를 반환한다.</green>
+    str += "&lt;<dark>br</dark>>";
+    str += (<red>50000</red> + <red>4321</red>).toString();  <green>// 식 50000 + 4321 에서 문자열 "54321" 을 반환한다.</green>
+    str += "&lt;<dark>br</dark>>";
+    document.write(str);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre"><script>
+  {
+    let num = 12345;
+    let str = ""
+    str += num.toString(); // 변수 num에서 문자열 "12345" 를 반환한다.
+    str += "<br>";
+    str += (6789).toString();  // 실효값 6789 에서 문자열 "6789" 를 반환한다.
+    str += "<br>";
+    str += (50000 + 4321).toString();  // 식 50000 + 4321 에서 문자열 "54321" 을 반환한다.
+    str += "<br>";
+    document.write(str);
+  }
+</script></div>
+  </div>
+
+  <h2>toExponential() 처리 방법(Method)</h2>
+  <p>
+    <em>toExponential()</em> 은 지수 표기법을 사용하여 반올림하여 기록한 숫자가 있는 문자열을 반환한다. 매개 변수는 소수점 뒤의 자릿 수를 정의한다. 지정하지 않으면 반올림하지 않는다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>script</dark>>
+  <blue>let</blue> num = <dark>9.656</dark>;
+  <blue>let</blue> str = "";
+    str += num.toExponential(); <green>// 9.656e+0 반환</green>
+    str += "&lt;<dark>br</dark>>";
+    str += num.toExponential(<red>2</red>); <green>// 9.66e+0 반환</green>
+    str += "&lt;<dark>br</dark>>";
+    str += num.toExponential(<red>4</red>); <green>// 9.6560e+0 반환</green>
+    str += "&lt;<dark>br</dark>>";
+    str += num.toExponential(<red>6</red>); <green>// 9.656000e+0 반환</green>
+    str += "&lt;<dark>br</dark>>";
+    document.write(str);
+  &lt;<dark>/script</dark>>
+</pre>
+<div class="pre"><script>
+    {
+      let num = 9.656;
+      let str = "";
+      str += num.toExponential(); // 9.656e+0 반환
+      str += "<br>";
+      str += num.toExponential(2); // 9.66e+0 반환
+      str += "<br>";
+      str += num.toExponential(4); // 9.6560e+0 반환
+      str += "<br>";
+      str += num.toExponential(6); // 9.656000e+0 반환
+      str += "<br>";
+      document.write(str);
+    }
+</script></div>
+  </div>
+
+  <h2>toFixed () 처리 방법(Method)</h2>
+  <p>
+    <em>toFixed()</em> 는 지정된 소수 자릿수로 쓰여진 숫자가 있는 문자열을 반환한다.
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="footer.js"></script>
+</body>
+</html>
