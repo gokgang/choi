@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS, css">
+  <base target="_blank">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="/favicon.png">
+  <title>CSS 배경 이미지</title>
+</head>
+<body>
+  <h1>바탕 그림</h1>
+  <em>background-image</em> 속성은 요소의 바탕에 사용할 그림 지정한다. <br>
+  기본적으로 그림은 전체를 덮도록 반복된다. <br>
+  <div class="border">
+    <a href="#image">Background Image</a>
+    <a href="#repeat">바탕 그림 반복</a>
+    <a href="#position">바탕 그림 위치</a>
+    <a href="#fixed">바탕 그림 고정</a>
+    <a href="#shorthand">바탕 양식 줄임 속성</a>
+  </div>
+  <hr>
+  <h2 id="image">Background Image</h2>
+  <p>
+    바탕 그림은 특정 요소에 설정할 수도 있다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>div</navy> {
+      <red>background-image</red>: <blue>url("paper.gif")</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<div class="pre" style="background-image: url('paper.gif');">
+  <h1>Hello World!</h1>
+  <p>이 DIV 요소에는 바탕 그림이 있다!</p>
+</div>
+  </div>
+
+  <h3>잘못된 조합</h3>
+  <p>
+    다음은 바탕에 사용된 그림 때문에 글을 읽기 어렵다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>div</navy> {
+      <red>background-image</red>: <blue>url("bgdesert.jpg")</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<div class="pre" style="background-image: url('bgdesert.jpg');">
+  <h1>Hello World!</h1>
+  <p>이 DIV 요소는 바탕 그림 때문에 글을 읽기가 어렵다!</p>
+</div>
+  </div>
+
+  <h2 id="repeat">바탕 그림 반복</h2>
+  <p>
+    기본적으로 이<em> background-image</em> 속성은 이미지를 가로 및 세로로 반복한다.<br>
+    일부 이미지는 가로 또는 세로로 만 반복되어야 한다. 그렇지 않으면 다음과 같이 이상하게 보인다.
+  </p>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>div</navy> {
+      <red>background-image</red>: <blue>url("gradient_bg.png")</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<div class="pre" style="background-image: url('gradient_bg.png'); height: 400px;">
+  <h1>Hello World!</h1>
+  <p>이상한 바탕 그림 ...</p>
+</div>
+  </div>
+  <p>
+    위의 바탕 그림이 가로 ( background-repeat: repeat-x;) 로만 반복되면 배경이 더 좋아 보인다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>div</navy> {
+      <red>background-image</red>: <blue>url("gradient_bg.png")</blue>;
+      <red>background-repeat</red>: <blue>repeat-x</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<div class="pre" style="background-image: url('gradient_bg.png'); background-repeat: repeat-x; height: 400px;">
+  <h1>Hello World!</h1>
+  <p>여기에서는 바탕 그림이 가로로만 반복된다!</p>
+</div>
+  </div>
+  <p class="yellow">
+    <b>참고 :</b> 이미지를 세로로 반복하려면 <red>background-repeat</red>: <blue>repeat-y</blue>;
+  </p>
+
+  <h3>반복 없음</h3>
+  <p>
+    바탕 그림을 한 번만 표시하려면 <em>background-repeat</em> 속성을 <em>no-repeat</em> 로 지정한다 .
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>div</navy> {
+      <red>background-image</red>: <blue>url("img_tree.png")</blue>;
+      <red>background-repeat</red>: <blue>no-repeat</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+    <div class="pre" style="background-image: url('img_tree.png'); background-repeat: no-repeat; height: 400px;">
+      <h1>Hello World!</h1>
+      <p>
+        바탕 그림이 한 번만 표시되지만 그림이 글자와 겹쳐서 읽어보기가 어렵다.
+      </p>
+    </div>
+  </div>
+
+  <h3 id="position">바탕 그림 위치</h3>
+  <p>
+    <em>background-position</em> 속성은 바탕 그림의 위치를 ​​지정할 수 있다.
+  </p>
+  <p>
+    다음은 오른쪽 위 모서리에 바탕 그림을 배치한다. 
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>div</navy> {
+      <red>background-image</red>: <blue>url("img_tree.png")</blue>;
+      <red>background-repeat</red>: <blue>no-repeat</blue>;
+      <red>background-position</red>: <blue>right top</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+    <div class="pre" style="background-image: url('img_tree.png'); background-repeat: no-repeat; height: 400px;background-position: right top;">
+      <h1>Hello World!</h1>
+      <p>
+        바탕 그림은 한 번만 표시되고 글에서 멀리 떨어져 있다.<br>
+        이 예에서는 오른쪽에 여백도 추가하여 바탕 그림이 글자를 방해하지 않는다.<br>
+      </p>
+    </div>
+  </div>
+
+  <h2 id="fixed">바탕 그림 고정</h2>
+  <p>
+    background-attachment 속성은 바탕 그림을 화면을 따라 움직일 지 고정할지 여부를 지정한다.
+  </p>
+  <p>
+    바탕 그림 고정
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>body</navy> {
+      <red>background-image</red>: <blue>url("img_tree.png")</blue>;
+      <red>background-repeat</red>: <blue>no-repeat</blue>;
+      <red>background-position</red>: <blue>right top</blue>;
+      <red>background-attachment</red>: <blue>fixed</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+  </div>
+  <button onclick="window.open('./exam/css_background_image.html')">예제 보기</button>
+  </p>
+  <p>
+    바탕 그림 글과 함께 따라서 움직임
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>body</navy> {
+      <red>background-image</red>: <blue>url("img_tree.png")</blue>;
+      <red>background-repeat</red>: <blue>no-repeat</blue>;
+      <red>background-position</red>: <blue>right top</blue>;
+      <red>background-attachment</red>: <blue>scroll</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+  </div>
+  <button onclick="window.open('./exam/css_background_image_attachment.html')">예제 보기</button>
+
+  <h2 id="shorthand">바탕 양식 줄임 속성</h2>
+  <p>
+    코드를 줄이려면 하나의 속성에 모든 바탕 양식을 지정할 수 있다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>body</navy> {
+      <red>background</red>: <blue>#ffffff url("img_tree.png"), no-repeat right top</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+  </div>
+  <ul>
+    <h3>줄임 속성의 속성값 순서</h3>
+    <li><em>background-color</em></li>
+    <li><em>background-image</em></li>
+    <li><em>background-repeat</em></li>
+    <li><em>background-attachment</em></li>
+    <li><em>background-position</em></li>
+  </ul>
+  <p>
+    순서에 있는 속성 값 중 하나가 누락되었는지 여부는 중요하지 않다. 위의 예에서 <em>background-attachment</em> 속성은 값이 없기 때문에 사용하지 않았다.
+  </p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="footer.js"></script>
+</body>
+</html>

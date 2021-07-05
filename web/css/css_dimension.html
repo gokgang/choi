@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS, css">
+  <base target="_blank">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="/favicon.png">
+  <title>CSS 높이, 너비</title>
+</head>
+<body>
+  <h1>높이(<em>height</em>) 와 너비(<em>width</em>)</h1>
+  <hr>
+  <p>
+    요소의 높이는 <b>height</b> , 너비는 <b>width</b> 를 사용하여 설정한다.<br>
+    요소의 최대 너비는 <b>max-width</b> 로 지정한다.
+  </p>
+
+<pre style="height: 200px;width: 100%; max-width: 600px; border: 1px solid skyblue;">
+  &lt;<dark>style</dark>>
+    <dark>div</dark> {
+      <red>height</red>: <blue>200px</blue>;
+      <red>width</red>: <blue>100%</blue>;
+      <red>max-width</red>: <blue>600px</blue>;
+      <red>border</red>: <blue>1px solid skyblue</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+
+  <p>
+    <b>height</b> 및 <b>width</b> 속성에는 <b>padding</b>, <b>border</b>, <b>margin</b> 등이 포함되지 않는다.
+  </p>
+
+  <h3>속성값</h3>
+  <p>
+    <em>height</em> 및 <em>width</em> 속성은 다음과 같은 값을 가질 수 있다
+  </p>
+  <div>
+  <pre class="comment">
+    ● <navy>auto</navy> : 
+    ● <i>length</i> : 
+    ● <navy>%</navy> : 
+    ● <navy>initial</navy> : 
+    ● <navy>inherit</navy> : 
+  </pre>
+  <pre class="comment">
+    기본값, 브라우저가 높이와 너비를 계산
+    높이와 너비를 px, cm 등으로 설정
+    포함한 상위 요소의 높이와 너비의 백분율로 설정
+    기본값으로 설정
+    포함한 상위 요소에서 상속
+  </pre>
+  </div>
+
+  <script src="footer.js"></script>
+</body>
+</html>

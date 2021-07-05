@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS, css">
+  <base target="_blank">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="/favicon.png">
+  <title>CSS text Style</title>
+  <style>
+    div.text {
+      border: 1px solid gray;
+      padding: 8px;
+    }
+
+    div.text h1 {
+      text-align: center;
+      text-transform: uppercase;
+      color: #4CAF50;
+    }
+
+    div.text p {
+      text-indent: 50px;
+      text-align: justify;
+      letter-spacing: 3px;
+    }
+
+    div.text a {
+      text-decoration: none;
+      color: darkblue;
+    }
+
+    span.overline {
+    text-decoration: overline;
+  }
+  span.linethrough {
+    text-decoration: line-through;
+  }
+  span.underline {
+    text-decoration: underline;
+  }
+
+    p.uppercase {
+      text-transform: uppercase;
+    }
+    p.lowercase {
+      text-transform: lowercase;
+    }
+    p.capitalize {
+      text-transform: capitalize;
+    }
+
+    h1.spacing3 {
+      letter-spacing: -3px;
+    }
+    p.spacing3 {
+      letter-spacing: 3px;
+    }
+
+    p.small {
+      line-height: 0.8;
+    }
+    p.big {
+      line-height: 2.8;
+    }
+
+    h1.wordspacing {
+    word-spacing: 10px;
+  }
+  h2.wordspacing {
+    word-spacing: -5px;
+  }
+
+  p.normal {
+    white-space: normal;
+  }
+  p.nowrap {
+      white-space: nowrap;
+    }
+    p.pre {
+      white-space: pre;
+    }
+    p.preline {
+      white-space: pre-line;
+    }
+    p.prewrap {
+      white-space: pre-wrap;
+    }
+    pre, div {
+      overflow: auto;
+    }
+    
+  p.shadow {
+    font-size: 36px;
+    text-shadow: 3px 3px 5px red;
+  }
+  </style>
+</head>
+<body>
+  <h1>글(text) 양식</h1>
+  <div style="border: 1px solid lightgrey;margin: 3px 1px;text-align: center;">
+    <a href="#color">글자색</a>
+    <a href="#align">글 정렬</a>
+    <a href="#direction">글 방향</a>
+    <a href="#vertical">세로 정렬</a>
+    <a href="#decoration">글 꾸미기</a><br>
+    <a href="#transform">글자 전환</a>
+    <a href="#indent">글자 간격</a>
+    <a href="#lineheight">줄 간격</a>
+    <a href="#wordspacing">단어 간격</a>
+    <a href="#whitespace">공백 처리</a>
+    <a href="#shadow">그림자 효과</a>
+  </div>
+  <div class="text">
+    <h1>글(text) 서식</h1>
+    <p>
+      이 텍스트는 일부 서식 속성으로 양식이 지정된다. 제목은 가운데 정렬, 텍스트 변환 및 색상 속성을 사용한다. 단락이 들여 쓰기되고 정렬되며 문자 사이의 공백이 지정됩니다. 색상이 <a href="">지정된 이 링크</a>에는 밑줄이 제거된다 
+    </p>
+  </div>
+
+  <h2 id="color">글자색</h2>
+  <p>
+    <em>color</em> 속성은 글자색을 설정하는 데 사용한다. 색상값은 다음과 같이 지정한다.
+  </p>
+  <ul>
+    <li>색상이름 - 예) <blue>red</blue></li>
+    <li>HEX 값 - 예) <blue>#ff0000</blue></li>
+    <li>RGB 값 - 예) <blue>rgb(255, 0, 0)</blue></li>
+  </ul>
+
+  <p>
+    웹 문서의 기본 양식은 선택자 <em>body</em> 에 정의한다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>body</dark> {
+      <red>background-color</red>: <blue>lightgrey</blue>;
+      <red>color</red>: <blue>blue</blue>;
+    }
+    <dark>h1</dark> {
+      <red>background-color</red>: <blue>grey</blue>;
+      <red>color</red>: <blue>yellow</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+  </div>
+  <button onclick="window.open('exam/css_text_color.html')">예제 보기</button>
+
+  <h2 id="align">글 정렬</h2>
+  <p>
+    <em>text-align</em> 속성은 글의 가로 정렬을 설정한다. 글은 왼쪽(<em>left</em>), 오른쪽(<em>right</em>), 가운데(<em>center</em>), 양쪽 맞춤(<em>justify</em>)이 가능하다. 글의 방향(<em>direction</em>)이 왼쪽에서 오른쪽이면 왼쪽 정렬이 기본값이고, 글의 방향이 오른쪽에서 왼쪽이면 오른쪽 정렬이 기본값이다.
+  </p>
+
+  <div class="grey">
+<pre>
+    <dark>h1</dark> {
+      <red>text-align</red>: <blue>center</blue>;
+    }
+</pre>
+<div class="pre">
+  <h1 style="text-align: center;">Heading 1 - <red>text-align</red>: <blue>center</blue>;</h1>
+</div>
+  </div>
+  <div class="grey">
+<pre>
+    <dark>h2</dark> {
+      <red>text-align</red>: <blue>left</blue>;
+    }
+</pre>
+<div class="pre">
+  <h2 style="text-align: left;">Heading 2 - <red>text-align</red>: <blue>left</blue>;</h2>
+</div>
+  </div>
+  <div class="grey">
+<pre>
+    <dark>h3</dark> {
+      <red>text-align</red>: <blue>right</blue>;
+    }
+</pre>
+<div class="pre">
+  <h2 style="text-align: right;">Heading 3 - <red>text-align</red>: <blue>right</blue>;</h2>
+</div>
+  </div>
+  <p>
+    정렬 속성이 <em>justify</em> 로 설정된 경우 각 줄이 확장되어 모든 줄이 같은 너비를 가지며, 왼쪽 및 오른쪽이 가지런하게 정렬된다.
+  </p>
+
+  <div class="grey">
+<pre>
+    <dark>p</dark> {
+      <red>border</red>: <blue>1px solid grey</blue>;
+      <red>padding</red>: <blue>16px</blue>;
+      <red>width</red>: <blue>200px</blue>;
+      <red>height</red>: <blue>220px</blue>;
+      <red>text-align</red>: <blue>justify</blue>;
+    }
+</pre>
+  </div>
+
+  <div>
+    <p style="border: 1px solid grey;padding: 16px;margin: 3px; width: 200px;height: 220px;text-align: justify;display: inline-block;">
+      <red>text-align</red>: <blue>justify</blue>;<br>
+        젊고 취약한 시절에 아버지는 그 이후로 마음 속으로 돌아가고 있는 조언을 해주셨습니다. '누군가를 비난하고 싶을 때마다 이 세상의 모든 사람들이 당신이 가진 이점을 얻지 못했다는 것을 기억하십시오.'
+      </p>
+    <p style="border: 1px solid grey;padding: 16px;margin: 3px; width: 200px;height: 220px;text-align: left; display: inline-block;">
+      <red>text-align</red>: <blue>left</blue>;<br>
+        젊고 취약한 시절에 아버지는 그 이후로 마음 속으로 돌아가고 있는 조언을 해주셨습니다. '누군가를 비난하고 싶을 때마다 이 세상의 모든 사람들이 당신이 가진 이점을 얻지 못했다는 것을 기억하십시오.'
+      </p>
+  </div>
+  <h2 id="direction">글 방향</h2>
+
+  <p>
+    <em>direction</em> 및 <em>unicode-bidi</em> 속성은 글의 방향을 지정하는데 사용된다. 
+  </p>
+  <div class="grey">
+<pre>
+    <dark>p.rtl</dark> {
+      <red>direction</red>: <blue>rtl</blue>;
+      <red>unicode-bidi</red>: <blue>bidi-override</blue>;
+    }
+</pre>
+<style>
+  p.rtl {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+  }
+</style>
+    <div class="pre">
+      <p>이 글은 글의 기본 방향이다.</p>
+      <p class="rtl">이 글은 글의 방향이 오른쪽에서 왼쪽으로 보여진다.</p>
+    </div>
+  </div>
+
+  <style>
+    p.col {
+      display: inline-block;
+      vertical-align: text-top;
+      font-size: 1.2em;
+      width: 1.6rem;
+    }
+    div.rtl {
+      direction: rtl;
+      unicode-bidi: bidi-override;
+      text-align: center;
+    }
+  </style>
+
+  <div class="rtl">
+    <p class="col">
+      나 보기가<br><br> 역겨워
+    </p>
+    <p class="col">
+      가실<br><br> 때에는
+    </p>
+    <p class="col">
+      말없이<br><br> 고이<br><br> 보내드리오리다<br>.
+    </p>
+    <p class="col">
+      영변에<br><br> 약산
+    </p>
+    <p class="col">
+      진달래꽃<br>,
+    </p>
+    <p class="col">
+      아름<br><br> 따다 <br><br>가실<br><br> 길에 뿌리오리다<br>.
+    </p>
+    <p class="col">
+      가시는<br><br> 걸음걸음
+    </p>
+    <p class="col">
+      놓인<br><br> 그 꽃을
+    </p>
+    <p class="col">
+      사뿐히<br><br> 지르밟고<br><br> 가시옵소서<br>!
+    </p>
+    <p class="col">
+      나<br><br> 보기가<br><br> 역겨워
+    </p>
+    <p class="col">
+      가실<br><br> 때에는
+    </p>
+    <p class="col">
+      죽어도<br><br> 아니<br><br> 눈물<br><br> 흘리오리다<br>.
+    </p>
+  </div>
+
+  <h2 id="vertical">세로 정렬</h2>
+  <p>
+    <em>vertical-align</em> 속성은 요소의 세로 방향의 정렬을 설정한다.
+  </p>
+  <div class="grey">
+<pre>
+    <dark>img.baseline</dark> {
+      <red>vertical-align</red>: <blue>baseline</blue>;
+    }
+    <dark>img.middle</dark> {
+      <red>vertical-align</red>: <blue>middle</blue>;
+    }
+    <dark>img.top</dark> {
+      <red>vertical-align</red>: <blue>top</blue>;
+    }
+    <dark>img.text_top</dark> {
+      <red>vertical-align</red>: <blue>text-top</blue>;
+    }
+    <dark>img.bottom</dark> {
+      <red>vertical-align</red>: <blue>bottom</blue>;
+    }
+    <dark>img.textbottom</dark> {
+      <red>vertical-align</red>: <blue>textbottom</blue>;
+    }
+    <dark>img.sub</dark> {
+      <red>vertical-align</red>: <blue>sub</blue>;
+    }
+    <dark>img.super</dark> {
+      <red>vertical-align</red>: <blue>super</blue>;
+    }
+</pre>
+  </div>
+
+  <style>
+    img.baseline {
+      vertical-align: baseline;
+      width: 50px;
+    }
+    img.top {
+      vertical-align: top;
+      width: 50px;
+    }
+    img.middle {
+      vertical-align: middle;
+      width: 50px;
+    }
+    img.text_top {
+      vertical-align: text-top;
+      width: 50px;
+    }
+    img.bottom {
+      vertical-align: bottom;
+      width: 50px;
+    }
+    img.textbottom {
+      vertical-align: text-bottom;
+      width: 50px;
+    }
+    img.sub {
+      vertical-align: sub;
+      width: 50px;
+    }
+    img.super {
+      vertical-align: super;
+      width: 50px;
+    }
+  </style>
+
+  <h3><navy>vertical-align</navy></h3>
+  <div style="border: 1px solid grey;margin: 3px;min-width: 860px;">
+    <img src="./klematis_small.jpg"class="baseline"><navy>baseline</navy>&nbsp;
+    <img src="./klematis_small.jpg"class="top"><navy>top</navy>&nbsp;
+    <img src="./klematis_small.jpg"class="middle"><navy>middle</navy>&nbsp;
+    <img src="./klematis_small.jpg"class="text_top"><navy>text-top</navy>&nbsp;
+    <img src="./klematis_small.jpg"class="bottom"><navy>bottom</navy>&nbsp;
+    <img src="./klematis_small.jpg"class="textbottom"><navy>text-bottom</navy>&nbsp;
+    <img src="./klematis_small.jpg"class="sub"><navy>sub</navy>&nbsp;
+    <img src="./klematis_small.jpg"class="super"><navy>super</navy>
+  </div>
+
+  <h2 id="decoration">글 꾸미기</h2>
+  <p>
+    <em>text-decoration</em> 속성은 글에 장식을 설정하거나 설정된 장식을 제거하는 데 사용한다.
+  </p>
+  <p>
+    다음은 <dark>&lt;a></dark> 요소에 설정된 밑줄을 제거한다.
+  </p>
+  <div class="grey">
+<pre>
+  <dark>a</dark> {
+    <red>text-decoration</red>: <blue>none</blue>;
+  }
+</pre>
+  </div>
+
+  <p>
+    <em>text-decoration</em> 속성은 글에 장식을 설정한다
+  </p>
+  <div class="grey">
+<pre>
+  <dark>span.overline</dark> {
+    <red>text-decoration</red>: <blue>overline</blue>;
+  }
+  <dark>span.linethrough</dark> {
+    <red>text-decoration</red>: <blue>line-through</blue>;
+  }
+  <dark>span.underline</dark> {
+    <red>text-decoration</red>: <blue>underline</blue>;
+  }
+</pre>
+
+    <div class="pre">
+      <span class="overline">Over Line</span><br>
+      <span class="linethrough">Line Through</span><br>
+      <span class="underline">Under Line</span><br>
+    </div>
+  </div>
+
+  <p class="yellow">
+    링크가 아닌 글에 밑줄이 있으며 사용자에게 혼란을 줄 수 있다.
+  </p>
+
+  <h2 id="transform">글자 전환</h2>
+  <p>
+    <em>text-transform</em> 속성은 글자를 대문자와 소문자를 지정하는 데 사용된다.
+    모든 글자를 대문자 또는 소문자로 바꾸거나 각 단어의 첫 글자를 대문자로 바꾸는 데 사용할 수 있다.
+  </p>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <dark>p.uppercase</dark> {
+      <red>text-transform</red>: <blue>uppercase</blue>;
+    }
+    <dark>p.lowercase</dark> {
+      <red>text-transform</red>: <blue>lowercase</blue>;
+    }
+    <dark>p.capitalize</dark> {
+      <red>text-transform</red>: <blue>capitalize</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+<pre>
+  &lt;<dark>p</dark> <red>class</red>="<blue>uppercase</blue>">This is sample text.&lt;<dark>/p</dark>>
+  &lt;<dark>p</dark> <red>class</red>="<blue>lowercase</blue>">This is sample text.&lt;<dark>/p</dark>>
+  &lt;<dark>p</dark> <red>class</red>="<blue>capitalize</blue>">This is sample text.&lt;<dark>/p</dark>>
+</pre>
+    <div class="pre">
+      <p class="uppercase">This is sample text.</p>
+      <p class="lowercase">This is sample text.</p>
+      <p class="capitalize">This is sample text.</p>
+    </div>
+  </div>
+
+  <h2 id="indent">글자 간격</h2>
+  <hr>
+  <h3>들여 쓰기(<navy>indent</navy>)</h3>
+  <p>
+    <em>text-indent</em> 속성은 첫 줄의 들여 쓰기를 설정한다.
+  </p>
+  <div class="grey">
+<pre>
+  <dark>p</dark> {
+    <red>text-indent</red>: <blue>50px</blue>;
+  }
+</pre>
+  </div>
+
+  <h3>글자 간격</h3>
+  <p>
+    <em>letter-spacing</em> 속성은 문장에서 글자 사이의 간격을 설정한다.
+  </p>
+  <div class="grey">
+<pre>
+  <dark>h1</dark> {
+    <red>letter-spacing</red>:<blue> -3px</blue>;
+  }
+  <dark>p</dark> {
+    <red>letter-spacing</red>:<blue> 3px</blue>;
+  }
+</pre>
+<pre>
+  &lt;<dark>h1</dark>>This is Heading 1&lt;<dark>/h1</dark>>
+  &lt;<dark>p</dark>>This paragraph is a example.&lt;<dark>/p</dark>>
+</pre>
+<div class="pre">
+  <h1 class="spacing3">This is Heading 1, the letter spacing is -3px</h1>
+  <p class="spacing3">This paragraph is a example. The letter spacing is 3px.</p>
+</div>
+  </div>
+
+  <h2 id="lineheight">줄 간격</h2>
+  <div class="grey">
+<pre>
+  <dark>p.small</dark> {
+    <red>line-height</red>: <blue>0.8</blue>;
+  }
+  <dark>p.big</dark> {
+    <red>line-height</red>: <blue>2.8</blue>;
+  }
+</pre>
+<pre>
+  &lt;<dark>p</dark> <red>class</red>="<blue>small</blue>">
+    This is a paragraph with a smaller line-height.&lt;<dark>br</dark>>
+    This is a paragraph with a smaller line-height.&lt;<dark>br</dark>>
+    &lt;<dark>/p</dark>>
+</pre>
+<div class="pre">
+  <p class="small">
+    This is a paragraph with a smaller line-height.<br>
+    This is a paragraph with a smaller line-height.<br>
+  </p>
+</div>
+<pre>
+  &lt;<dark>p</dark> <red>class</red>="<blue>big</blue>">
+    This is a paragraph with a bigger line-height.&lt;<dark>br</dark>>
+    This is a paragraph with a bigger line-height.&lt;<dark>br</dark>>
+  &lt;<dark>/p</dark>>
+</pre>
+<div class="pre">
+  <p class="big">
+    This is a paragraph with a bigger line-height.<br>
+    This is a paragraph with a bigger line-height.<br>
+  </p>
+</div>
+  </div>
+
+  <h2 id="wordspacing">단어 간격</h2>
+  <p>
+    <em>word-spacing</em> 속성은 단어 사이의 간격을 지정한다.
+  </p>
+  <div class="grey">
+<pre>
+  <dark>h1.wordspacing</dark> {
+    <red>word-spacing</red>: <blue>10px</blue>;
+  }
+  <dark>h2.wordspacing</dark> {
+    <red>word-spacing</red>: <blue>-5px</blue>;
+  }
+</pre>
+<pre>
+  &lt;<dark>h1</dark> <red>class</red>="<blue>wordspacing</blue>">This wordspacing is 10px&lt;<dark>/h1</dark>>
+  &lt;<dark>h2</dark> <red>class</red>="<blue>wordspacing</blue>">This wordspacing is -5px&lt;<dark>/h2</dark>>
+</pre>
+<div class="pre">
+  <h1 class="wordspacing">This wordspacing is 10px</h1>
+  <h2 class="wordspacing">This wordspacing is -5px</h2>
+</div>
+  </div>
+
+  <h2 id="whitespace">공백(<navy>white space</navy>) 처리</h2>
+  <p>
+    <em>white-space</em> 속성은 요소 내부의 공백을 처리하는 방법을 설정한다.
+  </p>
+
+  <h3>normal</h3>
+  <p>
+    연속 공백을 하나로 합침. 개행 문자도 다른 공백 문자와 동일하게 처리한다. 한 줄이 너무 길어서 넘칠 경우 자동으로 줄 바꿈을 한다.
+  </p>
+  <div class="grey">
+<pre>
+  <dark>p.normal</dark> {
+    <red>white-space</red>: <blue>normal</blue>;
+  }
+  </pre>
+<pre>
+  &lt;<dark>p</dark> <red>class</red>="<blue>normal</blue>">
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+    &lt;<dark>/p</dark>>
+</pre>
+    <div class="pre">
+      <p class="normal">
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+      </p>
+    </div>
+  </div>
+
+  <h3>nowrap</h3>
+  <p>
+    연속 공백을 하나로 합침. 줄 바꿈은 &lt;<dark>br</dark>> 요소에서만 일어난다.
+  </p>
+  <div class="grey">
+<pre>
+  <dark>p.nowrap</dark> {
+    <red>white-space</red>: <blue>nowrap</blue>;
+  }
+  </pre>
+<pre>
+  &lt;<dark>p</dark> <red>class</red>="<blue>nowrap</blue>">
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+    &lt;<dark>/p</dark>>
+</pre>
+    <div class="pre">
+      <p class="nowrap" style="overflow: auto;">
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+      </p>
+    </div>
+  </div>
+
+  <h3>pre</h3>
+  <p>
+    연속 공백 유지. 줄 바꿈은 개행 문자와 &lt;<dark>br</dark>> 요소에서만 일어난다.
+  </p>
+  <div class="grey">
+<pre>
+  <dark>p.pre</dark> {
+    <red>white-space</red>: <blue>pre</blue>;
+  }
+</pre>
+<pre>
+  &lt;<dark>p</dark> <red>class</red>="<blue>pre</blue>">
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+  &lt;<dark>/p</dark>>
+</pre>
+    <div class="pre">
+      <p class="pre">
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+      </p>
+    </div>
+  </div>
+
+  <h3>pre line</h3>
+  <p>
+    연속 공백을 하나로 합침. 줄바꿈은 개행 문자와 &lt;<dark>br</dark>> 요소에서 일어나며, 한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꾼다.
+  </p>
+  <div class="grey">
+<pre>
+  <dark>p.preline</dark> {
+    <red>white-space</red>: <blue>pre-line</blue>;
+  }
+</pre>
+<pre>
+  &lt;<dark>p</dark> <red>class</red>="<blue>preline</blue>">
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+  &lt;<dark>/p</dark>>
+</pre>
+    <div class="pre">
+      <p class="preline">
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+    </div>
+  </div>
+
+  <h3>pre wrap</h3>
+  <p>
+    연속 공백 유지. 줄 바꿈은 개행 문자와 &lt;<dark>br</dark>> 요소에서 일어나며, 한 줄이 너무 길어서 넘칠 경우 자동으로 줄을 바꾼다.
+  </p>
+  <div class="grey">
+<pre>
+  <dark>p.prewrap</dark> {
+    <red>white-space</red>: <blue>pre-wrap</blue>;
+  }
+</pre>
+<pre>
+  &lt;<dark>p</dark> <red>class</red>="<blue>prewrap</blue>">
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+  이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+  &lt;<dark>/p</dark>>
+</pre>
+    <div class="pre">
+      <p class="prewrap">
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+        이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 이 글은 예문이다. 
+      </p>
+    </div>
+  </div>
+
+  <h3>break-spaces</h3>
+  <p>
+    다음 차이점을 제외하면 <em>pre-wrap</em> 과 동일하다.
+  </p>
+  <ul>
+    <li>연속 공백이 줄의 끝에 위치하더라도 공간을 차지한다.</li>
+    <li>연속 공백의 중간과 끝에서도 자동으로 줄을 바꿀 수 있다.</li>
+    <li>유지한 연속 공백은 <em>pre-wrap</em> 과 달리 요소 바깥으로 넘치지 않으며, 공간도 차지하므로 요소의 크기(<em>min-content</em>, <em>iconmax-content</em>)에 영향이 미친다.</li>
+  </ul>
+
+  <h2 id="shadow">그림자 효과</h2>
+  <p>
+    <em>text-shadow</em> 속성은 글자에 그림자를 추가한다.
+  </p>
+  <p>
+    글씨와 그 장식에 적용할  X 및 Y 간격, 흐림 반경, 색상의 조합으로 설정한다.
+  </p>
+  <h3>구문(Syntax)</h3>
+  <div class="border">
+    <green>/* offset-x | offset-y | blur-radius | color */</green><br>
+    <red>text-shadow</red>: <blue>3px 3px 5px red</blue>;<br><br>
+    <green>/*  color | offset-x | offset-y | blur-radius */</green><br>
+    <red>text-shadow</red>: <blue>red 3px 3px 5px</blue>;<br><br>
+    <green>/*  offset-x | offset-y | color  */</green><br>
+    <red>text-shadow</red>: <blue>3px 3px red </blue>;<br><br>
+    <green>/*  color | offset-x | offset-y */</green><br>
+    <red>text-shadow</red>: <blue>red 3px 3px </blue>;<br><br>
+    <green>/*  offset-x | offset-y */</green><br>
+    <red>text-shadow</red>: <blue>3px 3px</blue>;<br>
+  </div>
+
+  <div class="grey">
+<pre>
+  p.shadow {
+    font-size: 36px;
+    text-shadow: 3px 3px 5px red;;
+  }
+</pre>
+<pre>
+  &lt;<dark>p</dark> <red>class</red>="<blue>shadow</blue>">
+    글자의 그림자 효과
+  &lt;<dark>/p</dark>>
+</pre>
+<div class="pre">
+  <p class="shadow">
+    글자의 그림자 효과
+  </p>
+</div>
+  </div>
+
+  <script src="footer.js"></script>
+</body>
+</html>

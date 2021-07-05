@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS, css">
+  <base target="_blank">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="/favicon.png">
+  <title>CSS 기본</title>
+</head>
+<body>
+  <h1>CSS 기본</h1>
+  <hr>
+  <p>CSS는 웹 문서의 양식을 지정하는 데 사용하는 언어이다.</p>
+  <ul>
+    <li>CSS는 Cascading Style Sheets를 의미한다.</li>
+    <li>CSS는 HTML 요소가 화면, 종이 또는 기타 미디어에 표시되는 양식을 선언한다.</li>
+    <li>CSS는 많은 작업을 줄여 주고 한 번에 여러 웹 페이지의 양식을 제어 할 수 있다.</li>
+    <li>외부 스타일 시트는 CSS 파일을 사용하면 여러 개의 문서가 공유할 수 있다.</li>
+  </ul>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>!DOCTYPE</dark> <red>html</red>>
+  &lt;<dark>html</dark>>
+  &lt;<dark>head</dark>>
+  <green>&lt;!-- CSS는 style 태그 안에 작성한다. --></green>
+    &lt;<dark>style</dark>>
+    <green>/* body 의 바탕색을 lightblue로 선언한다. */</green>
+    <dark>body</dark> {
+        <red>background-color</red>: <blue>lightblue</blue>;
+      }
+
+      <green>/* h1 태그로 매듭을 한 글을 빨간색에 가운데 맞춤을 한다. */</green>
+      <dark>h1</dark> {
+        <red>color</red>: <blue>white</blue>;
+        <red>text-align</red>: <blue>center</blue>;
+      }
+
+      <dark>p</dark> {
+        <red>font-family</red>: <blue>verdana</blue>;
+        <red>font-size</red>: <blue>20px</blue>;
+      }
+    &lt;<dark>/style</dark>>
+  &lt;<dark>/head</dark>>
+  &lt;<dark>body</dark>>
+
+    &lt;<dark>h1</dark>>CSS 예제 &lt;<dark>/h1</dark>>
+    &lt;<dark>p</dark>>이 글은 예제를 위한 글입니다.&lt;<dark>p</dark>>
+
+  &lt;<dark>/body</dark>>
+  &lt;<dark>/html</dark>>
+</pre>
+  </div>
+
+  <button onclick="document.write(strExam)">예제 양식 적용하기</button>
+
+  <script>
+    let strExam = 
+    `
+    <style>
+      body {
+        background-color: lightblue;
+      }
+
+      h1 {
+        color: white;
+        text-align: center;
+      }
+
+      p {
+        font-family: verdana;
+        font-size: 20px;
+      }
+    </style>
+    <h1>CSS 예제 </h1>
+    <p>이 글은 예제를 위한 글입니다.<p>
+    <br><br>
+    <p>원래대로 돌아가려면 새로고침을 하세요!</p>
+    `;
+  </script>
+
+<script src="./footer.js"></script>
+</body>
+</html>

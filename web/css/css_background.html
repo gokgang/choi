@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="CSS, css">
+  <base target="_blank">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="/favicon.png">
+  <title>CSS 배경</title>
+</head>
+<body>
+  <h1>CSS 바탕</h1>
+  <p>
+    CSS 바탕(background) 속성은 바탕 양식을 지정한다.
+  </p>
+  <ul>
+    <li>background-color</li>
+    <li>background-image</li>
+    <li>background-repeat</li>
+    <li>background-attachment</li>
+    <li>background-position</li>
+    <li>background (줄임 속성)</li>
+  </ul>
+
+  <hr>
+  <h2>바탕색</h2>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>body</navy> {
+      <red>background-color</red>: <blue>lightblue</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+  </div>
+  <p>
+    <ul>
+      <h3>색상 값</h3>
+      <li>"<dark>red</dark>" 와 같은 브라우저에서 사용 가능한 색상 이름</li>
+      <li>"<navy>#</navy><red>FF0000</red>"과 같은 HEX 값</li>
+      <li>"rgb (<red>255</red>, <red>0</red>, <red>0</red>)"과 같은 RGB 값</li>
+    </ul>
+  </p>
+
+  <h3>HTML 요소의 바탕색 지정</h3>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>h1</navy> {
+      <red>background-color</red>: <blue>green</blue>;
+    }
+    <navy>div</navy> {
+      <red>background-color</red>: <blue>lightblue</blue>;
+    }
+    <navy>p</navy> {
+      <red>background-color</red>: <blue>yellow</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+  </div>
+
+  <h3>불투명도(opacity)</h3>
+  <p>
+    opacity 속성은 요소의 불투명도를 지정한다. <br>
+    0.0 ~ 1.0 사이의 값을 가질 수 있다. <br>
+    값이 낮을수록 더 투명해 진다. <br>
+  </p>
+  <div>
+    <div style="background-color: green; opacity: 1.0; display: inline-block; color: navy;height: 60px;padding-top: 30px;font-size: 1.6rem; width: 24.6%;text-align: center;">
+      불투명도 1.0
+    </div>
+    <div style="background-color: green; opacity: 0.6; display: inline-block; color: navy;height: 60px;padding-top: 30px;font-size: 1.6rem; width: 24.6%;text-align: center;">
+      불투명도 0.6
+    </div>
+    <div style="background-color: green; opacity: 0.3; display: inline-block; color: navy;height: 60px;padding-top: 30px;font-size: 1.6rem; width: 24.6%;text-align: center;">
+      불투명도 0.3
+    </div>
+    <div style="background-color: green; opacity: 0.0; display: inline-block; color: navy;height: 60px;padding-top: 30px;font-size: 1.6rem; width: 24.6%;text-align: center;">
+      불투명도 0.0
+    </div>
+  </div>
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>div</navy> {
+      <red>background-color</red>: <blue>green</blue>;
+      <red>opacity</red>: <blue>0.3</blue>;
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+  </div>
+
+  <p class="yellow">
+    <b>참고 : </b><em>opacity</em> 속성을 사용하여 요소의 바탕에 투명도를 추가하면 모든 하위 요소가 동일한 투명도를 상속한다. 이로 인해 완전히 투명한 요소는 글자를 읽기가 어려울 수 있다.
+  </p>
+
+  <h3>RGBA를 사용한 투명도</h3>
+  <p>
+    하위 요소에 불투명도를 적용하지 않으려면 RGBA 색상 값을 사용하면 된다.<br>
+    다음은 바탕색의 불투명도를 설정해도 글자는 영향을 받지 않는다.
+  </p>
+
+  <div>
+    <div style="background-color: rgba(0, 128, 0, 1.0); display: inline-block; color: navy; height: 60px; padding-top: 30px; font-size: 1.6rem; width: 24.6%; text-align: center;">
+      불투명도 1.0
+    </div>
+    <div style="background-color: rgba(0, 128, 0, 0.6); display: inline-block; color: navy; height: 60px; padding-top: 30px; font-size: 1.6rem; width: 24.6%; text-align: center;">
+      불투명도 0.6
+    </div>
+    <div style="background-color: rgba(0, 128, 0, 0.3); display: inline-block; color: navy; height: 60px; padding-top: 30px; font-size: 1.6rem; width: 24.6%; text-align: center;">
+      불투명도 0.3
+    </div>
+    <div style="background-color: rgba(0, 128, 0, 0.0); display: inline-block; color: navy; height: 60px; padding-top: 30px; font-size: 1.6rem; width: 24.6%; text-align: center;">
+      불투명도 0.0
+    </div>
+  </div>
+
+  <div class="grey">
+<pre>
+  &lt;<dark>style</dark>>
+    <navy>div</navy> {
+      <red>background-color</red>: <blue>rgba(0, 128, 0, 0.3)</blue>; <green>/* Green background with opacity 30% */</green>
+    }
+  &lt;<dark>/style</dark>>
+</pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="footer.js"></script>
+</body>
+</html>
