@@ -2468,7 +2468,7 @@ const Family = [];
     {father: "계영",    self: "준경",    url: "page064_2.html"},
   ];
 
-  Family[64] = [
+  Family[65] = [
     {father: "철영",    self: "학우",    url: "page065.html"},
     {father: "학우",    self: "홍근",    url: "page065.html"},
     {father: "홍근",    self: "석환",    url: "page065.html"},
