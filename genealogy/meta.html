@@ -14,7 +14,10 @@
 </head>
 <body style="width: 100%; min-width: 1280px; font-size: 16px;padding-top: 8px;">
   <section style="text-align: center; background-color: rgb(213, 213, 213);">
-    아버지  <input type="radio" id="fatherSelector" value="true" onclick="hide('father')"><label for="fatherSelector">모름</label> <input name="father" id="father" type="text" value=""onkeypress="findFamily(this.value, document.getElementById('selfName').value);" onclick="this.value=''">　　　　
+    아버지
+    <input type="radio" id="fatherSelector" onclick="hide('father')"  tabindex="0">
+    <label for="fatherSelector">모름</label>
+    <input name="father" id="father" type="text" value=""onkeypress="findFamily(this.value, document.getElementById('selfName').value);" onclick="this.value=''">
     찾는 이름 <input id="selfName" type="text" value="" onkeypress="findFamily(document.getElementById('father').value, this.value);" onclick="this.value=''">
     <button onclick="findFamily(document.getElementById('father').value, document.getElementById('selfName').value);">찾기</button>
   </section>
