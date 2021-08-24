@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>곡강최가 간지연표</title>
+  <style>
+    * {font-family: serif;}
+    body {
+      min-width: 990px;
+      max-width: 1600px;
+      margin: auto;
+      padding: 16px;
+      line-height: 1.6rem;
+    }
+    table {
+      border: 1px solid grey;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table tr:nth-child(even){
+      background-color: #eee;
+    }
+    table tr:hover {
+      background-color: #def;
+    }
+    table td {
+      border: 1px solid grey;
+      text-align: right;
+    }
+    table td:first-child {
+      text-align: center;
+    }
+  </style>
+	<script>
+		function findName(){
+			const id_input = document.getElementById('input');
+      if(!find(id_input.value)) alert("올바른 간지가 아닙니다!");
+		}
+	</script>
+</head>
+<body>
+  <h1>천간 지지 연표</h1>
+  <input type="text" id="input" value="갑자" onclick="value='';" onkeypress="findName();"><button onclick="findName();">찾 기</button></p>
+<pre class="border">
+  <table>
+<script>
+  var 천간 = ['갑', '을', '병', '정', '무', '기', '경', '신', '임', '계'];
+  var gan = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸']
+  var 지지 = ['자', '축', '인', '묘', '진', '사', '오', '미', '신', '유', '술', '해']
+  var jiji = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥']
+
+  let base = 904;
+  for (let i=0, j=0, k=0, y=1002; k < 60; k++, y++) {
+    // if (k == 0) document.writeln('<tr>');
+    document.writeln('<tr>');
+    document.writeln('<td>'+천간[i]+지지[j]+'</td>');
+    document.writeln('<td>'+gan[i]+jiji[j]+'</td>');
+    for (let y=base; y < 2044; y += 60) {
+      document.writeln('<td>' + y + '</td>');
+    }
+    base++;
+    i++;
+    if (i == 천간.length) {
+      i = 0;
+    }
+    j++;
+    if (j ==지지.length){
+      j = 0;
+    }
+    // if (k == 59) document.writeln('</tr>');
+    document.writeln('</tr>');
+  }
+</script>
+  </table>
+</pre>
+</body>
+</html>
