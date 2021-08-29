@@ -989,7 +989,7 @@ const Family = [];
     {father: "덕문",    self: "운상",    url: "page039.html"},
     {father: "덕문",    self: "세진",    url: "page039.html"},
 
-    {father: "능택",    self: "정식",    url: "page039_1.html"},
+    {father: "임택",    self: "정식",    url: "page039_1.html"},
     {father: "정식",    self: "덕민",    url: "page039_1.html"},
     {father: "덕민",    self: "윤상",    url: "page039_1.html"},
     {father: "윤상",    self: "동수",    url: "page039_1.html"},
