@@ -1855,6 +1855,7 @@ const Family = [];
     {father: "종구",    self: "기석",    url: "page057.html"},
     {father: "기석",    self: "재무",    url: "page057.html"},
     {father: "종구",    self: "성석",    url: "page057.html"},
+    {father: "성석",    self: "경무",    url: "page057.html"},
     {father: "도섭",    self: "종욱",    url: "page057.html"},
     {father: "종욱",    self: "홍석",    url: "page057.html"},
 
