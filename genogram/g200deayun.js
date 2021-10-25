@@ -234,7 +234,7 @@ document.write(`
 
     <tr>
       <td colspan="3"></td>
-      <td><a href="./g200.php#유항">▼</a></td>
+      <td><a href="./g200.php">▼</a></td>
       <td class="right">├───</td>
       <td>───┬───</td>
       <td>───┬───</td>
