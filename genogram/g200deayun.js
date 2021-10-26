@@ -234,16 +234,16 @@ document.write(`
 
     <tr>
       <td colspan="3"></td>
-      <td><a href="./g200.php">▼</a></td>
+      <td><a href="./g200.html">▼</a></td>
       <td class="right">├───</td>
       <td>───┬───</td>
       <td>───┬───</td>
       <td>───┬───</td>
       <td class="left">───┐</td>
       <td colspan="2"></td>
-      <td><a href="./g200.php#남두">▼</a></td>
-      <td><a href="./g221.php#유진">▼</a></td>
-      <td><a href="./g270.php#유장">▼</a></td>
+      <td><a href="./g200.html#남두">▼</a></td>
+      <td><a href="./g221.html#유진">▼</a></td>
+      <td><a href="./g270.html#유장">▼</a></td>
     <tr>
       <td>20세</td>
       <td colspan="3"></td>
