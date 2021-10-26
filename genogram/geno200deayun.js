@@ -1,5 +1,4 @@
 document.write(`
-  <h1><a href="./default.html">곡강최가 가계도</a></h1>
   <hr>
   <table>
     <tr>
