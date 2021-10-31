@@ -44,8 +44,8 @@ td{
 
 a {
   text-decoration: none;
-  margin: 6px 16px;
-  padding: 6px 36px;
+  margin: 6px;
+  padding: 6px;
 }
 a:link, a:visited{
 	text-decoration: none;
@@ -53,6 +53,7 @@ a:link, a:visited{
 }
 a:hover, a:active{
     color: blue;
+    background-color: #cde;
 }
 li{
     padding:4px;
@@ -84,7 +85,7 @@ span {
 }
 
 h1 {
-    background-color: blanchedalmond;
+    color: navy;
 }
 
 b {
