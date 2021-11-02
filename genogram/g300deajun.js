@@ -1,6 +1,6 @@
 document.write(`
 <body>
-  <h1><a href="./default.html">곡강최가 가계도</a></h1>
+  <h1><a href="./genogram.html">곡강최가 가계도</a></h1>
   <hr>
   <table>
     <tr>
