@@ -18,13 +18,14 @@
       곡 강 최 가 계 보
     </h1>
     아버지
-    <input name="father" id="father" type="text" value=""onkeypress="findFamily(this.value, document.getElementById('selfName').value);" onclick="this.value=''">
+    <input name="father" id="father" type="text" size="3" value="" onkeypress="findFamily(this.value, document.getElementById('selfName').value);" onclick="this.value=''">
     <input type="radio" id="fatherSelector" onclick="hide('father')"  tabindex="0">
-    <label for="fatherSelector">모름</label><br>
-    찾는 이름 <input id="selfName" type="text" value="" onkeypress="findFamily(document.getElementById('father').value, this.value);" onclick="this.value=''">
-    <button onclick="findFamily(document.getElementById('father').value, document.getElementById('selfName').value);">&nbsp;찾 기&nbsp;</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <label for="fatherSelector">모름 &nbsp;</label>
+    이름 <input id="selfName" type="text" size="3" value="" onkeypress="findFamily(document.getElementById('father').value, this.value);" onclick="this.value=''">
+    <button onclick="findFamily(document.getElementById('father').value, document.getElementById('selfName').value);">&nbsp;찾 기&nbsp;</button>
   </section>
-  <iframe id="mainframe" src="page001.html" name="mainframe" style="width: 98%; height: 1080px;border: none; margin: auto;">
+  <hr>
+  <!-- <iframe id="mainframe" src="page001.html" name="mainframe" style="width: 98%; height: 1080px;border: none; margin: auto;"> -->
     <table class="family">
       <tr height="200">
         <td class="textCenter">
@@ -197,7 +198,7 @@
         </td>
       </tr>
     </table>
-  </iframe>
+  <!-- </iframe> -->
 
 </body>
 </html>
@@ -237,7 +238,8 @@
           if (Family[i][j].father === fatheName && Family[i][j].self === selfName) {
             count++;
             if (count  === 1) {
-              document.getElementById("mainframe").src = Family[i][j].url;
+              // document.getElementById("mainframe").src = Family[i][j].url;
+              window.open(Family[i][j].url);
               break;
             } else if (count > 1) {
               window.open(Family[i][j].url);
@@ -255,7 +257,8 @@
             // window.open(Family[i][j].url);
             count++;
             if (count  === 1) {
-              document.getElementById("mainframe").src = Family[i][j].url;
+              // document.getElementById("mainframe").src = Family[i][j].url;
+              window.open(Family[i][j].url);
               break;
             } else if (count > 1) {
               window.open(Family[i][j].url);
