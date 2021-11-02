@@ -18,11 +18,11 @@
       곡강최가 가계도
     </h1>
     아버지
-    <input name="father" id="father" type="text" size="3" value=""onkeypress="findFamily(this.value, document.getElementById('selfName').value);" onclick="this.value=''">
+    <input name="father" id="father" type="text" size="4" value=""onkeypress="findFamily(this.value, document.getElementById('selfName').value);" onclick="this.value=''">
     <input type="radio" id="fatherSelector" onclick="hide('father')"  tabindex="0">
     <label for="fatherSelector">모름 &nbsp;</label>&nbsp;
     이름
-    <input id="selfName" type="text" size="3" value="" onkeypress="findFamily(document.getElementById('father').value, this.value);" onclick="this.value=''">
+    <input id="selfName" type="text" size="4" value="" onkeypress="findFamily(document.getElementById('father').value, this.value);" onclick="this.value=''">
     <button onclick="findFamily(document.getElementById('father').value, document.getElementById('selfName').value);">찾기</button><br>
   </section>
   <!-- <iframe id="mainframe" src="g200.html" name="mainframe" style="width: 100%; height: 950px;border: none;"></iframe> -->
