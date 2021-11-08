@@ -19,8 +19,10 @@
     </h1>
     아버지
     <input name="father" id="father" type="text" size="4" value="" onkeypress="findFamily(this.value, document.getElementById('selfName').value);" onclick="this.value=''">
+    <!--
     <input type="radio" id="fatherSelector" onclick="hide('father')"  tabindex="0">
     <label for="fatherSelector">모름 &nbsp;</label>
+    -->
     이름 <input id="selfName" type="text" size="4" value="" onkeypress="findFamily(document.getElementById('father').value, this.value);" onclick="this.value=''">
     <button onclick="findFamily(document.getElementById('father').value, document.getElementById('selfName').value);">&nbsp;찾 기&nbsp;</button>
   </section>
