@@ -108,7 +108,7 @@ ul.menu {
 }
 ul.menu li{
   display: inline-block;
-  width: 8em;
+  width: 10em;
   margin: 6px;
   padding: 6px;
 }
