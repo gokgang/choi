@@ -581,9 +581,9 @@ const Family = [];
     {father: "신출",    self: "재홍",    url: "page030_5.html"},
     {father: "재홍",    self: "상근",    url: "page030_5.html"},
     {father: "상근",    self: "철익",    url: "page030_5.html"},
-    {father: "재홍",    self: "상렬",    url: "page030_5.html"},
-    {father: "상렬",    self: "지운",    url: "page030_5.html"},
-    {father: "상렬",    self: "기운",    url: "page030_5.html"},
+    {father: "재홍",    self: "상열",    url: "page030_5.html"},
+    {father: "상열",    self: "지운",    url: "page030_5.html"},
+    {father: "상열",    self: "기운",    url: "page030_5.html"},
     {father: "재홍",    self: "상만",    url: "page030_5.html"},
   ];
   Family[31] = [
@@ -2975,7 +2975,7 @@ const Family = [];
     {father: "태운",    self: "주식",    url: "page077_2.html"},
     {father: "태운",    self: "주범",    url: "page077_2.html"},
     {father: "주범",    self: "진성",    url: "page077_2.html"},
-    {father: "태운",    self: "명렬",    url: "page077_2.html"},
+    {father: "태운",    self: "명열",    url: "page077_2.html"},
     {father: "두석",    self: "태경",    url: "page077_2.html"},
     {father: "태경",    self: "도식",    url: "page077_2.html"},
     {father: "도식",    self: "한나",    url: "page077_2.html"},
@@ -2988,7 +2988,7 @@ const Family = [];
     {father: "석쇠",    self: "삼진",    url: "page077_3.html"},
     {father: "삼진",    self: "용대",    url: "page077_3.html"},
     {father: "용대",    self: "준영",    url: "page077_3.html"},
-    {father: "삼진",    self: "정렬",    url: "page077_3.html"},
+    {father: "삼진",    self: "정열",    url: "page077_3.html"},
 
     {father: "기순",    self: "세우",    url: "page077_4.html"},
     {father: "세우",    self: "선돌",    url: "page077_4.html"},
