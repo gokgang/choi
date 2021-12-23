@@ -503,6 +503,7 @@ genogram[14]= [
   {father: "영원", self: "창걸",      url: "g201.html"},
   {father: "창걸", self: "민향",      url: "g201.html"},
   {father: "명상", self: "영벽",      url: "g201.html"},
+  {father: "명상", self: "상준",      url: "g201.html"},
   {father: "영벽", self: "광호",      url: "g201.html"},
   {father: "광호", self: "재혁",      url: "g201.html"},
   {father: "도식", self: "덕립",      url: "g201.html"},
