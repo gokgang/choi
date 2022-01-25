@@ -243,7 +243,7 @@ document.write(`
       <td>│</td>
       <td class="right">├───</td>
       <td class="left">───┐</td>
-      <td><a href="./g250.html#유장">▼</a></td>
+      <td><a href="./g270.html#유장">▼</a></td>
     </tr>
 
     <tr>
