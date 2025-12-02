@@ -243,7 +243,7 @@ document.write(`
       <td>│</td>
       <td class="right">├───</td>
       <td class="left">───┐</td>
-      <td><a href="./g250.html#유장">▼</a></td>
+      <td><a href="./g270.html#유장">▼</a></td>
     </tr>
 
     <tr>
@@ -258,4 +258,5 @@ document.write(`
       <td id="준걸">준걸<br>俊傑</td>
       <td id="인걸">인걸<br>仁傑</td>
     </tr>
+
     `);
